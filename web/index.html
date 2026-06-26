@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather EarthQuake Simulator</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQnK0FjSE0c7WKpMpCFNoJwirt0a5rM="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel panel-active" id="earthquake-panel" aria-labelledby="earthquake-tab">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Earthquake Simulation</p>
+            <h1>地震</h1>
+          </div>
+          <div class="status" id="map-status">地図データを読み込み中</div>
+        </header>
+
+        <div class="map-wrap">
+          <div id="map" aria-label="地震地域区分の日本地図"></div>
+          <aside class="legend" aria-label="地震地域区分">
+            <div class="legend-title">地震地域区分</div>
+            <div id="legend-items"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="panel" id="weather-panel" aria-labelledby="weather-tab">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Weather Simulation</p>
+            <h1>気象</h1>
+          </div>
+          <div class="status">準備中</div>
+        </header>
+        <div class="empty-state">
+          <p>気象タブの表示エリアです。</p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-tabs" aria-label="シミュレーション切り替え">
+      <button class="tab active" id="earthquake-tab" type="button" data-panel="earthquake-panel">
+        地震
+      </button>
+      <button class="tab" id="weather-tab" type="button" data-panel="weather-panel">気象</button>
+    </nav>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
