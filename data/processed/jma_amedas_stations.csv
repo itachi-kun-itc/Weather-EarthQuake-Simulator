@@ -1,0 +1,1317 @@
+﻿source,station_id,station_name,prefecture,address,latitude,longitude,elevation_m,observed_items,raw_file
+jma_amedas,11001,宗谷岬,,稚内市宗谷岬,45.52,141.935,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11016,稚内,,稚内市開運　稚内地方気象台,45.415,141.67833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11046,礼文,,礼文郡礼文町大字香深村トンナイ,45.305,141.045,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11061,声問,,稚内市大字声問村字声問　稚内航空気象観測所,45.403333333333336,141.80166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11076,浜鬼志別,,宗谷郡猿払村浜鬼志別,45.335,142.17,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11091,本泊,,利尻郡利尻富士町鴛泊字本泊　利尻航空気象観測所,45.24166666666667,141.18666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11121,沼川,,稚内市声問村沼川,45.248333333333335,141.85166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11151,沓形,,利尻郡利尻町沓形泉町,45.178333333333335,141.13833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11176,豊富,,天塩郡豊富町豊富東2条,45.10166666666667,141.78,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11206,浜頓別,,枝幸郡浜頓別町クッチャロ湖畔,45.125,142.35,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11276,中頓別,,枝幸郡中頓別町上駒,44.965,142.28,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11291,北見枝幸,,枝幸郡枝幸町本町　北見枝幸特別地域気象観測所,44.94,142.585,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,11316,歌登,,枝幸郡枝幸町歌登東町,44.84166666666667,142.48,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13011,幌延,,天塩郡幌延町上幌延,45.00666666666667,141.85166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12011,中川,,中川郡中川町中川,44.82833333333333,142.07666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12041,音威子府,,中川郡音威子府村音威子府,44.72666666666667,142.265,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12066,小車,,中川郡美深町小車,44.608333333333334,142.295,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12141,美深,,中川郡美深町西町,44.48,142.34166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12181,名寄,,名寄市大橋,44.37,142.45666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12217,西風連,,名寄市風連町西風連,44.295,142.35833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12231,下川,,上川郡下川町南町,44.295,142.63666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12256,剣淵,,上川郡剣淵町旭町,44.10666666666667,142.35333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12261,士別,,士別市武徳町,44.18666666666667,142.41666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12266,朝日,,士別市朝日町中央,44.11833333333333,142.595,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12301,和寒,,上川郡和寒町日ノ出,44.028333333333336,142.41,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12386,江丹別,,旭川市江丹別町芳野,43.87,142.26,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12396,比布,,上川郡比布町北2線,43.87,142.47,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12411,上川,,上川郡上川町栄町,43.846666666666664,142.75333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12442,旭川,,旭川市宮前1条　旭川地方気象台,43.75666666666667,142.37166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12451,東川,,上川郡東川町北町,43.70166666666667,142.50833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12457,瑞穂,,旭川市東旭川町瑞穂,43.736666666666665,142.63833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12471,層雲峡,,上川郡上川町層雲峡高山,43.75333333333333,142.93,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12501,東神楽,,上川郡東神楽町東2線　旭川航空気象観測所,43.67,142.44666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12512,志比内,,上川郡東神楽町志比内,43.64333333333333,142.58166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12551,美瑛,,上川郡美瑛町原野5線,43.58833333333333,142.49333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12596,上富良野,,空知郡上富良野町大町,43.455,142.465,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12607,白金,,上川郡美瑛町白金,43.475,142.65,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12626,富良野,,富良野市東町,43.333333333333336,142.4,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12632,麓郷,,富良野市麓郷市街地,43.30166666666667,142.52166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12686,金山,,空知郡南富良野町金山地先,43.138333333333335,142.41666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12691,幾寅,,空知郡南富良野町幾寅,43.16833333333334,142.56833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,12746,占冠,,勇払郡占冠村中央,42.97833333333333,142.395,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15041,朱鞠内,,雨竜郡幌加内町朱鞠内,44.281666666666666,142.16166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15076,幌加内,,雨竜郡幌加内町幌加内,44.01,142.16,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13061,天塩,,天塩郡天塩町川口,44.89333333333333,141.76166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13086,遠別,,天塩郡遠別町幸和,44.718333333333334,141.80666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13121,初山別,,苫前郡初山別村初山別,44.52333333333333,141.77,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13146,焼尻,,苫前郡羽幌町焼尻白浜,44.428333333333335,141.42166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13181,羽幌,,苫前郡羽幌町南3条　羽幌特別地域気象観測所,44.36333333333334,141.7,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13206,古丹別,,苫前郡苫前町古丹別,44.265,141.72166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13261,達布,,留萌郡小平町達布,44.04833333333333,141.85666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13277,留萌,,留萌市大町　留萌特別地域気象観測所,43.945,141.63166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13311,増毛,,増毛郡増毛町別苅,43.848333333333336,141.51,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,13321,幌糠,,留萌市幌糠町,43.85333333333333,141.76,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14026,浜益,,石狩市浜益区川下,43.58166666666666,141.38666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14071,厚田,,石狩市厚田区別狩,43.39666666666667,141.43666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14101,新篠津,,石狩郡新篠津村第46線北,43.22,141.645,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14116,山口,,札幌市手稲区手稲山口,43.14833333333333,141.22166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14121,石狩,,石狩市生振,43.193333333333335,141.37,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14136,江別,,江別市江別太,43.11,141.60166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14157,手稲山,,札幌市手稲区手稲金山,43.083333333333336,141.20166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14163,札幌,,札幌市中央区北2条西　札幌管区気象台,43.06,141.32833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14163,札幌,,札幌市中央区北2条西,43.06,141.32666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14191,小金湯,,札幌市南区小金湯,42.96333333333333,141.21666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14206,恵庭島松,,恵庭市下島松,42.92666666666667,141.565,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14286,支笏湖畔,,千歳市支笏湖温泉番外地,42.77166666666667,141.40666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,14296,千歳,,千歳市美々　新千歳航空測候所,42.775,141.69166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15116,石狩沼田,,雨竜郡沼田町緑町,43.815,141.92666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15156,秩父別,,雨竜郡秩父別町５条,43.78,141.96166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15161,深川,,深川市一已町一已,43.718333333333334,142.07333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15197,雨竜,,雨竜郡雨竜町満寿,43.66,141.89166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15216,新城,,芦別市新城,43.611666666666665,142.20333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15231,空知吉野,,樺戸郡新十津川町吉野,43.595,141.73166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15241,滝川,,滝川市南滝の川,43.57,141.93833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15247,赤平,,赤平市東豊里町,43.553333333333335,142.06666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15251,芦別,,芦別市北2条東,43.52,142.19,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15276,浦臼,,樺戸郡浦臼町浦臼内,43.428333333333335,141.80833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15311,月形,,樺戸郡月形町知来乙,43.33,141.61666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15321,美唄,,美唄市北美唄町二区,43.36333333333334,141.82666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15356,岩見沢,,岩見沢市5条東　岩見沢特別地域気象観測所,43.211666666666666,141.785,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15391,栗沢,,岩見沢市栗沢町東本町,43.12166666666667,141.745,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15431,長沼,,夕張郡長沼町本町北,43.01166666666666,141.69333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15442,夕張,,夕張市鹿の谷山手町,43.038333333333334,141.95666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15451,鹿島,,夕張市鹿島富士見町,43.08,142.1,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,15491,沼の沢,,夕張市沼ノ沢,42.96,142.02,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16026,美国,,積丹郡積丹町美国町船澗,43.27166666666667,140.56333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16061,神恵内,,古宇郡神恵内村神恵内村,43.145,140.42333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16076,余市,,余市郡余市町豊丘町,43.181666666666665,140.75833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16091,小樽,,小樽市勝納町　小樽特別地域気象観測所,43.181666666666665,141.015,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16126,赤井川,,余市郡赤井川村赤井川,43.083333333333336,140.82,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16156,共和,,岩内郡共和町南幌似,42.98,140.60333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16206,蘭越,,磯谷郡蘭越町蘭越町,42.81,140.54166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16217,倶知安,,虻田郡倶知安町南1条東　倶知安特別地域気象観測所,42.9,140.75666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16252,寿都,,寿都郡寿都町新栄町　寿都特別地域気象観測所,42.795,140.22333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16272,ニセコ,,虻田郡ニセコ町宮田,42.778333333333336,140.66666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16281,真狩,,虻田郡真狩村美原,42.775,140.88,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16286,喜茂別,,虻田郡喜茂別町伏見,42.79333333333334,140.94833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,16321,黒松内,,寿都郡黒松内町黒松内,42.663333333333334,140.31,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17036,雄武,,紋別郡雄武町雄武　雄武特別地域気象観測所,44.58,142.96333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17076,興部,,紋別郡興部町興部,44.47,143.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17091,西興部,,紋別郡西興部村西興部,44.33166666666666,142.935,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17112,紋別,,紋別市南が丘町　紋別特別地域気象観測所,44.345,143.355,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17116,紋別小向,,紋別市小向　紋別航空気象観測所,44.303333333333335,143.40333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17166,湧別,,紋別郡湧別町東,44.21333333333333,143.61833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17196,滝上,,紋別郡滝上町滝ノ上原野5線南,44.17666666666667,143.06166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17211,上藻別,,紋別市上藻別,44.18666666666667,143.335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17246,常呂,,北見市常呂町岐阜,44.115,144.03666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17306,遠軽,,紋別郡遠軽町東町,44.053333333333335,143.54,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17316,佐呂間,,常呂郡佐呂間町西富,44.01833333333333,143.76,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17341,網走,,網走市台町　網走地方気象台,44.016666666666666,144.27833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17351,宇登呂,,斜里郡斜里町ウトロ高原,44.05166666666667,144.98166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17386,丸瀬布,,紋別郡遠軽町丸瀬布武利,43.95166666666667,143.32833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17482,白滝,,紋別郡遠軽町白滝北支湧別,43.865,143.15333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17501,生田原,,紋別郡遠軽町生田原,43.916666666666664,143.53166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17512,仁頃山,,北見市富里,43.86,143.74666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17521,北見,,北見市広郷,43.776666666666664,143.84166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17531,女満別,,網走郡大空町女満別中央　女満別航空気象観測所,43.88,144.16333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17541,東藻琴,,網走郡大空町東藻琴,43.84,144.285,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17546,小清水,,斜里郡小清水町泉,43.84166666666667,144.485,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17561,斜里,,斜里郡斜里町以久科南,43.885,144.7,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17596,留辺蘂,,北見市留辺蘂町大和,43.74166666666667,143.45,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17607,境野,,常呂郡置戸町豊住,43.70666666666666,143.64333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17631,美幌,,網走郡美幌町福住,43.77,144.17166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17642,山園,,網走郡大空町東藻琴山園,43.74333333333333,144.33666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17686,置戸常元,,常呂郡置戸町常元,43.62,143.44,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17717,津別,,網走郡津別町豊永,43.70166666666667,144.03333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,17776,津別二又,,網走郡津別町二又,43.583333333333336,143.865,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18038,羅臼,,目梨郡羅臼町栄町,44.02333333333333,145.18666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18091,糸櫛別,,標津郡標津町川北糸櫛別,43.721666666666664,144.98833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18136,標津,,標津郡標津町北2条西,43.66166666666667,145.13166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18161,上標津,,標津郡中標津町上標津,43.52,144.74666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18171,中標津,,標津郡中標津町桜ヶ丘,43.54333333333334,144.97833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18174,根室中標津,,標津郡中標津町北中　中標津航空気象観測所,43.57666666666667,144.96,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18256,別海,,野付郡別海町川上町,43.38166666666667,145.11833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18273,根室,,根室市弥栄町　根室特別地域気象観測所,43.33,145.585,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18281,納沙布,,根室市温根元,43.39333333333333,145.75833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,18311,厚床,,根室市西厚床,43.22,145.22666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19021,川湯,,川上郡弟子屈町川湯駅前,43.61666666666667,144.45666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19051,弟子屈,,川上郡弟子屈町弟子屈原野,43.51,144.46666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19076,阿寒湖畔,,釧路市阿寒町阿寒湖温泉,43.43666666666667,144.08333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19151,標茶,,川上郡標茶町開運,43.291666666666664,144.58666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19191,鶴居,,阿寒郡鶴居村鶴居東,43.23166666666667,144.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19261,中徹別,,釧路市阿寒町徹別中央34線,43.19833333333333,144.14166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19281,塘路,,川上郡標茶町塘路,43.14833333333333,144.49666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19301,茶内原野,,厚岸郡浜中町茶内西13線,43.17333333333333,144.96666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19311,榊町,,厚岸郡浜中町榊町,43.12,145.11,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19346,阿寒,,釧路市阿寒町中央,43.11333333333334,144.12333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19347,鶴丘,,釧路市鶴丘　釧路航空気象観測所,43.04,144.19166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19376,太田,,厚岸郡厚岸町太田,43.09,144.77833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19406,二俣,,釧路市音別町音別原野基線,42.971666666666664,143.875,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19416,白糠,,白糠郡白糠町西2条北,42.97,144.06166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19432,釧路,,釧路市幸町　釧路地方気象台,42.985,144.37666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,19451,知方学,,釧路郡釧路町仙鳳趾村知方学,42.93833333333333,144.735,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20047,三股,,河東郡上士幌町三股,43.51,143.14833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20071,小利別,,足寄郡陸別町小利別本通東1条,43.58833333333333,143.68,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20146,陸別,,足寄郡陸別町陸別原野基線,43.471666666666664,143.75333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20186,ぬかびら源泉郷,,河東郡上士幌町ぬかびら源泉郷北区,43.36666666666667,143.19166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20202,柏倉,,足寄郡足寄町茂喜登牛,43.361666666666665,143.45833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20222,上螺湾,,足寄郡足寄町上螺湾,43.318333333333335,143.80166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20266,上士幌,,河東郡上士幌町東3線,43.24166666666667,143.295,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20276,足寄,,足寄郡足寄町南1条,43.24333333333333,143.55333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20331,押帯,,中川郡本別町押帯,43.115,143.44333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20341,本別,,中川郡本別町新町,43.13166666666667,143.6,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20356,新得,,上川郡新得町4条南,43.07666666666667,142.84,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20361,鹿追,,河東郡鹿追町緑町,43.10333333333333,142.995,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20371,駒場,,河東郡音更町駒場北町,43.05,143.18333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20421,芽室,,河西郡芽室町西3条南,42.9,143.04333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20432,帯広,,帯広市東4条南　帯広測候所,42.92166666666667,143.21166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20432,帯広,,帯広市東9条南,42.90833333333333,143.22333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20441,池田,,中川郡池田町清見,42.92,143.45833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20451,留真,,十勝郡浦幌町留真,42.916666666666664,143.66166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20506,浦幌,,十勝郡浦幌町桜町,42.80833333333333,143.65666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20551,帯広泉,,帯広市泉町西9線中　帯広航空気象観測所,42.733333333333334,143.21666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20556,糠内,,中川郡幕別町五位,42.78666666666667,143.32833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20601,上札内,,河西郡中札内村元札内西1線,42.641666666666666,143.09666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20606,更別,,河西郡更別村更別南2線,42.651666666666664,143.195,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20631,大津,,中川郡豊頃町大津寿町,42.68666666666667,143.64666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20696,大樹,,広尾郡大樹町柏木町,42.5,143.27333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,20751,広尾,,広尾郡広尾町並木通東　広尾特別地域気象観測所,42.29333333333334,143.31666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21031,安平,,勇払郡安平町安平,42.815,141.82833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21111,厚真,,勇払郡厚真町朝日,42.73,141.88833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21126,穂別,,勇払郡むかわ町穂別,42.76166666666667,142.14333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21161,大滝,,伊達市大滝区本町,42.67,141.07833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21171,森野,,白老郡白老町森野,42.63,141.24666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21187,苫小牧,,苫小牧市しらかば町　苫小牧特別地域気象観測所,42.623333333333335,141.54666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21226,大岸,,虻田郡豊浦町大岸,42.59,140.64333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21237,洞爺湖温泉,,虻田郡洞爺湖町洞爺湖温泉,42.565,140.80666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21251,カルルス,,登別市カルルス町,42.516666666666666,141.10666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21261,白老,,白老郡白老町高砂町,42.54333333333334,141.35166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21276,鵡川,,勇払郡むかわ町豊城,42.59,141.93333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21297,伊達,,伊達市館山下町,42.475,140.84833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21312,登別,,登別市札内町,42.458333333333336,141.11833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,21323,室蘭,,室蘭市山手町　室蘭地方気象台,42.31166666666667,140.975,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22036,日高,,沙流郡日高町本町東,42.876666666666665,142.44166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22072,仁世宇,,沙流郡平取町仁世宇,42.77166666666667,142.35833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22106,旭,,沙流郡平取町旭地区,42.62833333333333,142.39333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22141,日高門別,,沙流郡日高町富浜,42.49666666666667,142.05333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22156,新和,,新冠郡新冠町新和,42.54333333333334,142.33333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22206,笹山,,日高郡新ひだか町静内御園,42.43333333333333,142.48166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22241,静内,,日高郡新ひだか町静内山手町,42.343333333333334,142.36166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22291,三石,,日高郡新ひだか町三石美野和,42.245,142.66166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22306,中杵臼,,浦河郡浦河町上杵臼,42.223333333333336,142.94833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22327,浦河,,浦河郡浦河町潮見町　浦河特別地域気象観測所,42.16166666666667,142.77666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22356,目黒,,幌泉郡えりも町目黒,42.12833333333333,143.31166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22366,幌満,,様似郡様似町幌満,42.07666666666667,143.035,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,22391,えりも岬,,幌泉郡えりも町東洋,41.925,143.24333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23031,長万部,,山越郡長万部町字長万部,42.516666666666666,140.37333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23086,八雲,,二海郡八雲町本町,42.251666666666665,140.27166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23166,森,,茅部郡森町姫川,42.06666666666667,140.58833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23191,大沼,,亀田郡七飯町上軍川,41.97666666666667,140.715,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23206,川汲,,函館市川汲町,41.906666666666666,140.97,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23226,北斗,,北斗市本町,41.88666666666667,140.65333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23232,函館,,函館市美原　函館地方気象台,41.81666666666667,140.75333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23281,高松,,函館市高松町　函館航空気象観測所,41.77,140.82166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23291,戸井泊,,函館市泊町,41.71666666666667,141.00333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23321,知内,,上磯郡知内町上雷,41.598333333333336,140.375,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23326,木古内,,上磯郡木古内町字本町,41.68,140.43666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23356,千軒,,松前郡福島町千軒,41.55833333333333,140.27166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,23376,松前,,松前郡松前町建石,41.42333333333333,140.08666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24141,熊石,,二海郡八雲町熊石根崎町,42.12833333333333,139.985,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24041,せたな,,久遠郡せたな町瀬棚区本町,42.45,139.85166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24051,今金,,瀬棚郡今金町今金,42.428333333333335,140.00833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24101,奥尻,,奥尻郡奥尻町稲穂,42.248333333333335,139.55666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24156,米岡,,奥尻郡奥尻町字米岡　奥尻航空気象観測所,42.071666666666665,139.43166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24166,潮見,,爾志郡乙部町潮見,42.038333333333334,140.08833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24201,鶉,,檜山郡厚沢部町鶉町,41.93,140.31166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24217,江差,,檜山郡江差町姥神町　江差特別地域気象観測所,41.86666666666667,140.12333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,24236,石崎,,檜山郡上ノ国町石崎,41.7,140.02833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31001,大間,,下北郡大間町大間字狼丁,41.526666666666664,140.91166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31036,湯野川,,むつ市川内町湯野川,41.31333333333333,140.95666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31111,むつ,,むつ市金曲　むつ特別地域気象観測所,41.28333333333333,141.21,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31121,小田野沢,,下北郡東通村小田野沢字中川目,41.235,141.39666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31136,今別,,東津軽郡今別町今別字中沢,41.18,140.48166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31156,脇野沢,,むつ市脇野沢桂沢,41.145,140.82166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31186,市浦,,五所川原市相内,41.056666666666665,140.34666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31201,蟹田,,東津軽郡外ヶ浜町字蟹田鰐ケ淵,41.045,140.63333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31296,五所川原,,五所川原市松島町,40.80833333333333,140.45833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31312,青森,,青森市花園　青森地方気象台,40.821666666666665,140.76833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31321,大和山,,東津軽郡平内町外童子字滝ノ沢,40.848333333333336,140.985,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31332,野辺地,,上北郡野辺地町有戸鳥井平,40.885,141.16,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31336,六ケ所,,上北郡六ヶ所村倉内字笹崎,40.885,141.27166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31366,鰺ケ沢,,西津軽郡鰺ヶ沢町舞戸町字小夜,40.776666666666664,140.205,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31386,青森大谷,,青森市大字大谷字小谷　青森航空気象観測所,40.733333333333334,140.68833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31411,七戸,,上北郡七戸町鶴児平,40.708333333333336,141.12833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31436,深浦,,西津軽郡深浦町大字深浦字岡町　深浦特別地域気象観測所,40.645,139.93166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31451,岳,,弘前市常盤野字湯の沢,40.62833333333333,140.26333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31461,弘前,,弘前市和田町,40.611666666666665,140.455,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31466,黒石,,黒石市馬場尻南,40.666666666666664,140.585,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31482,酸ケ湯,,青森市荒川字南荒川山国有林酸ヶ湯沢,40.64833333333333,140.84833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31506,三沢,,三沢市東町,40.675,141.375,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31551,大鰐,,南津軽郡大鰐町大字鯖石字浅瀬渕,40.53,140.555,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31562,温川,,平川市切明津根川森,40.515,140.78333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31586,十和田,,十和田市東十六番町,40.60666666666667,141.23333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31602,八戸,,八戸市湊町字館鼻　八戸特別地域気象観測所,40.526666666666664,141.52166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31602,八戸,,八戸市湊町字館鼻,40.526666666666664,141.52166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31646,碇ケ関,,平川市碇ヶ関阿原,40.48166666666667,140.62,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31662,休屋,,十和田市大字奥瀬字十和田湖畔休屋,40.42666666666667,140.89833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31671,戸来,,三戸郡新郷村大字戸来字金ヶ沢坂ノ下,40.468333333333334,141.17666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,31721,三戸,,三戸郡三戸町川守田字寺ノ沢,40.38333333333333,141.25666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32056,八森,,山本郡八峰町八森字チコキ,40.413333333333334,139.94833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32071,藤里,,山本郡藤里町藤琴字大落,40.32,140.29333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32091,陣場,,大館市長走字陣場,40.415,140.61,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32096,藤原,,鹿角郡小坂町上向字藤原,40.35333333333333,140.78,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32111,能代,,能代市緑町,40.19833333333333,140.03166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32126,鷹巣,,北秋田市旭町,40.22666666666667,140.37166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32136,大館,,大館市出川字上野,40.251666666666665,140.505,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32146,鹿角,,鹿角市花輪字荒田,40.215,140.78666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32181,脇神,,北秋田市脇神字葈岱　大館能代航空気象観測所,40.19166666666667,140.37166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32206,湯瀬,,鹿角市八幡平湯瀬字一羽根,40.12,140.84,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32266,八幡平,,鹿角市八幡平字熊沢外8国有林,40.013333333333335,140.80166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32276,男鹿真山,,男鹿市北浦相川字小屋ケ沢,39.93833333333333,139.78166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32286,男鹿,,男鹿市脇本脇本字上野,39.91166666666667,139.9,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32287,大潟,,南秋田郡大潟村大潟,40.0,139.95,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32296,五城目,,南秋田郡五城目町上樋口字屋岸,39.93833333333333,140.115,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32311,阿仁合,,北秋田市阿仁水無字畑町東裏,39.99333333333333,140.40333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32312,比立内,,北秋田市阿仁幸屋渡字山根,39.903333333333336,140.45,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32376,桧木内,,仙北市西木町上桧木内字宮田,39.81166666666667,140.585,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32402,秋田,,秋田市山王　秋田地方気象台,39.71666666666667,140.09833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32407,岩見三内,,秋田市河辺三内字外川原,39.70666666666666,140.28666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32408,仁別,,秋田市仁別字マンタラメ,39.8,140.21666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32426,鎧畑,,仙北市田沢湖町田沢字鎧畑,39.775,140.665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32431,田沢湖高原,,仙北市田沢湖生保内字駒ヶ岳,39.778333333333336,140.76166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32451,雄和,,秋田市雄和椿川字山籠　秋田航空気象観測所,39.615,140.21833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32466,角館,,仙北市角館町小勝田鵜の崎,39.60333333333333,140.55666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32476,田沢湖,,仙北市田沢湖生保内字宮の後,39.69833333333333,140.73166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32496,大正寺,,秋田市雄和新波字寺沢,39.526666666666664,140.23333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32551,大曲,,大仙市四ツ屋字下古道,39.49,140.495,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32571,本荘,,由利本荘市埋田字用堰南,39.36,140.055,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32581,東由利,,由利本荘市東由利老方字後田,39.305,140.28833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32596,横手,,横手市横手町大樋,39.32,140.555,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32616,にかほ,,にかほ市金浦字南金浦,39.255,139.91333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32626,矢島,,由利本荘市矢島町城内字築舘,39.235,140.13666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32681,笹子,,由利本荘市鳥海町上笹子字石神,39.10166666666667,140.28666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32691,湯沢,,湯沢市金谷字樋ノ口,39.18666666666667,140.46333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32701,東成瀬,,雄勝郡東成瀬村田子内字仙人下,39.178333333333335,140.64833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,32771,湯の岱,,湯沢市秋の宮字湯の岱,38.96,140.52833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33006,種市,,九戸郡洋野町種市第21地割,40.403333333333336,141.7,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33026,軽米,,九戸郡軽米町大字上舘第15地割,40.325,141.46666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33071,二戸,,二戸市堀野字馬場,40.29833333333333,141.29833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33086,大野,,九戸郡洋野町大野,40.281666666666666,141.66666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33136,山形,,久慈市山形町川井,40.14833333333333,141.57166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33146,久慈,,久慈市小久慈町第24地割,40.16833333333334,141.74833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33166,荒屋,,八幡平市叺田,40.10333333333333,141.05,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33176,奥中山,,二戸郡一戸町小繋字西田子,40.06,141.225,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33186,葛巻,,岩手郡葛巻町葛巻第7地割字元町,40.04,141.45666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33201,下戸鎖,,久慈市山根町下戸鎖,40.085,141.71166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33206,普代,,下閉伊郡普代村第13地割字普代,40.00333333333333,141.88333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33226,岩手松尾,,八幡平市野駄,39.95166666666667,141.065,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33231,一方井,,岩手郡岩手町大字一方井第15地割,39.973333333333336,141.16666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33296,好摩,,盛岡市好摩字芋田向,39.86833333333333,141.16666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33326,岩泉,,下閉伊郡岩泉町岩泉字中家,39.846666666666664,141.795,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33336,小本,,下閉伊郡岩泉町小本字下中野,39.846666666666664,141.96333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33351,葛根田,,岩手郡雫石町西根第3地割上篠崎,39.776666666666664,140.945,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33361,滝沢,,滝沢市湯舟沢,39.78,141.09666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33371,薮川,,盛岡市薮川字外山,39.78333333333333,141.32833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33421,雫石,,岩手郡雫石町第40地割字千刈田,39.696666666666665,140.975,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33431,盛岡,,盛岡市山王町　盛岡地方気象台,39.69833333333333,141.165,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33441,区界,,宮古市区界第2地割,39.65,141.35333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33472,宮古,,宮古市鍬ケ崎下町　宮古特別地域気象観測所,39.64666666666667,141.965,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33486,沢内,,和賀郡西和賀町沢内字貝沢4地割,39.54833333333333,140.84333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33501,紫波,,紫波郡紫波町稲藤字七郷,39.54666666666667,141.12666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33526,川井,,宮古市川井,39.598333333333336,141.68166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33566,豊沢,,花巻市北豊沢山国有林,39.48,140.96833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33576,花巻,,花巻市葛第3地割　花巻航空気象観測所,39.428333333333335,141.135,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33581,大迫,,花巻市大迫町大迫第13地割,39.47,141.27833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33596,附馬牛,,遠野市附馬牛町上附馬牛19地割,39.45666666666666,141.50666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33611,大槌,,上閉伊郡大槌町金沢,39.43833333333333,141.80666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33616,山田,,下閉伊郡山田町織笠第11地割,39.45,141.95666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33631,湯田,,和賀郡西和賀町上野々第39地割,39.31,140.77666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33671,遠野,,遠野市松崎町白岩24地割,39.33833333333333,141.54333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33711,金ケ崎,,胆沢郡金ケ崎町西根千貫石,39.225,141.015,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33716,北上,,北上市芳町,39.288333333333334,141.11,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33726,米里,,奥州市江刺米里字荒田表,39.233333333333334,141.31,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33751,釜石,,釜石市港町,39.27,141.87833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33776,若柳,,奥州市胆沢若柳字倉舘,39.14,141.06333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33781,江刺,,奥州市江刺愛宕字八日市,39.18333333333333,141.16166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33801,住田,,気仙郡住田町世田米字川向,39.141666666666666,141.57333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33831,祭畤,,一関市厳美町祭畤,39.01166666666666,140.865,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33841,衣川,,奥州市衣川懸田,39.05,141.045,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33856,大東,,一関市大東町猿沢字上ノ洞,39.038333333333334,141.29666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33877,大船渡,,大船渡市大船渡町字赤沢　大船渡特別地域気象観測所,39.06333333333333,141.71333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33911,一関,,一関市竹山町,38.93333333333333,141.125,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,33921,千厩,,一関市千厩町千厩字北方,38.92166666666667,141.33,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34012,駒ノ湯,,栗原市栗駒沼倉耕英南,38.913333333333334,140.82833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34026,気仙沼,,気仙沼市古町,38.906666666666666,141.55666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34056,鴬沢,,栗原市鶯沢袋宮林,38.805,140.94833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34096,川渡,,大崎市鳴子温泉字蓬田,38.74333333333333,140.76,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34111,築館,,栗原市築館左足下,38.735,141.005,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34171,米山,,登米市米山町西野字新遠田,38.625,141.18666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34186,志津川,,本吉郡南三陸町志津川字城場,38.681666666666665,141.44833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34206,加美,,加美郡加美町味ヶ袋薬莱原,38.571666666666665,140.72666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34216,古川,,大崎市古川大崎字富国,38.598333333333336,140.91166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34241,雄勝,,石巻市雄勝町雄勝字下雄勝,38.52,141.465,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34262,泉ケ岳,,仙台市泉区福岡岳山,38.406666666666666,140.72166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34266,大衡,,黒川郡大衡村松の平,38.473333333333336,140.88833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34276,鹿島台,,大崎市鹿島台広長字内の浦,38.46,141.09166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34292,石巻,,石巻市泉町　石巻特別地域気象観測所,38.42666666666667,141.29833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34296,女川,,牡鹿郡女川町宮ケ崎字宮ケ崎,38.446666666666665,141.45,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34311,新川,,仙台市青葉区新川字清水尻,38.303333333333335,140.63666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34331,塩釜,,塩竈市伊保石,38.33833333333333,141.01333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34392,仙台,,仙台市宮城野区五輪　仙台管区気象台,38.26166666666666,140.89666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34436,名取,,名取市下増田字南原　仙台航空気象観測所,38.138333333333335,140.91666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34461,白石,,白石市福岡長袋字湯殿山,38.015,140.61166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34462,蔵王,,刈田郡蔵王町大字平沢字内屋敷,38.126666666666665,140.68,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34471,亘理,,亘理郡亘理町字油田,38.025,140.85833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34506,丸森,,伊具郡丸森町舘矢間舘山字新賢中,37.931666666666665,140.77833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,34526,筆甫,,伊具郡丸森町筆甫字和田,37.82666666666667,140.72833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35002,飛島,,酒田市飛島字勝浦乙,39.18333333333333,139.54333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35052,酒田,,酒田市亀ケ崎　酒田特別地域気象観測所,38.90833333333333,139.84333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35056,酒田大沢,,酒田市大蕨字二タ子,38.965,139.99833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35071,差首鍋,,最上郡真室川町差首鍋,38.91833333333334,140.2,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35086,浜中,,酒田市浜中字村東　庄内航空気象観測所,38.81166666666667,139.78666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35116,金山,,最上郡金山町金山字本町,38.87833333333333,140.33166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35141,鶴岡,,鶴岡市錦町,38.735,139.82833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35146,狩川,,東田川郡庄内町狩川字矢倉,38.8,139.97333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35162,新庄,,新庄市東谷地田町　新庄特別地域気象観測所,38.75666666666667,140.31166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35171,瀬見,,最上郡最上町大堀,38.755,140.41333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35176,向町,,最上郡最上町向町,38.75833333333333,140.51666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35201,櫛引,,鶴岡市桂荒俣字上桂,38.67166666666667,139.84833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35216,肘折,,最上郡大蔵村南山,38.60666666666667,140.16333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35231,尾花沢,,尾花沢市新町,38.608333333333334,140.41166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35246,鼠ケ関,,鶴岡市鼠ケ関字横路,38.56666666666667,139.55166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35257,上田沢,,鶴岡市上田沢字中明,38.52333333333333,139.78833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35332,村山,,村山市大字大久保字寄込,38.46,140.34833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35334,東根,,東根市大字羽入字柏原新林　山形航空気象観測所,38.41166666666667,140.37,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35361,大井沢,,西村山郡西川町大井沢字中村,38.39,139.99333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35376,左沢,,西村山郡大江町本郷字下夕原己,38.37,140.19166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35426,山形,,山形市緑町　山形地方気象台,38.255,140.345,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35456,長井,,長井市平山,38.105,140.015,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35466,上山中山,,上山市中山字壁屋敷,38.11666666666667,140.21333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35486,小国,,西置賜郡小国町増岡字下林,38.07833333333333,139.735,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35511,高畠,,東置賜郡高畠町安久津字加茂川原,38.00333333333333,140.20666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35537,中津川,,西置賜郡飯豊町岩倉,37.91,139.84333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35541,高峰,,西置賜郡飯豊町高峰,37.99,139.95333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,35552,米沢,,米沢市アルカディア,37.91166666666667,140.14333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36056,茂庭,,福島市飯坂町茂庭字滑滝道,37.891666666666666,140.43666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36066,梁川,,伊達市梁川町粟野字作田,37.85166666666667,140.58833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36106,桧原,,耶麻郡北塩原村桧原字墓下,37.721666666666664,140.05833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36127,福島,,福島市松木町　福島地方気象台,37.75833333333333,140.47,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36127,福島,,福島市八島田字琵琶渕,37.76833333333333,140.435,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36151,相馬,,相馬市成田字五郎右エ門橋,37.78333333333333,140.925,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36176,喜多方,,喜多方市字押切,37.65833333333333,139.86333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36196,鷲倉,,福島市土湯温泉町字鷲倉山国有林,37.66833333333334,140.26,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36221,飯舘,,相馬郡飯舘村飯樋字笠石,37.665,140.72666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36231,原町,,南相馬市原町区高見町,37.638333333333335,140.98333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36251,西会津,,耶麻郡西会津町尾野本字樋ノ口原乙,37.58833333333333,139.65666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36276,猪苗代,,耶麻郡猪苗代町大字千代田字中島,37.55166666666667,140.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36291,二本松,,二本松市金色久保,37.583333333333336,140.43,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36307,津島,,双葉郡浪江町下津島字町,37.56,140.75333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36342,金山,,大沼郡金山町大字中川字沖根原,37.473333333333336,139.52833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36361,若松,,会津若松市材木町　若松特別地域気象観測所,37.48833333333334,139.91,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36391,船引,,田村市船引町船引字新房院,37.435,140.57666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36411,浪江,,双葉郡浪江町大字川添字北上ノ原,37.49166666666667,140.965,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36426,只見,,南会津郡只見町只見字原,37.343333333333334,139.31333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36461,湖南,,郡山市湖南町福良字家老,37.388333333333335,140.09,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36476,郡山,,郡山市安積町成田字東丸山,37.36833333333333,140.33,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36501,川内,,双葉郡川内村上川内字小山平,37.336666666666666,140.80833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36511,富岡,,双葉郡富岡町小浜,37.346666666666664,141.01666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36536,南郷,,南会津郡南会津町界字梨木平,37.265,139.53666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36562,湯本,,岩瀬郡天栄村田良尾字持石,37.276666666666664,140.06333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36571,長沼,,須賀川市長沼字町尻,37.288333333333334,140.21833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36581,玉川,,石川郡玉川村大字北須釜字はばき田　福島航空気象観測所,37.22666666666667,140.42666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36591,小野新町,,田村郡小野町小野新町字舘廻,37.28666666666667,140.625,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36597,川前,,いわき市川前町下桶売字久保田,37.24666666666667,140.72333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36611,広野,,双葉郡広野町下北迫字大谷地原,37.233333333333334,141.0,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36641,田島,,南会津郡南会津町田島字東下原,37.20666666666666,139.795,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36667,白河,,白河市郭内　白河特別地域気象観測所,37.13166666666667,140.215,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36676,石川,,石川郡石川町双里字本宮,37.14666666666667,140.46,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36716,桧枝岐,,南会津郡檜枝岐村字上河原,37.01,139.375,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36726,舘岩,,南会津郡南会津町松戸原,37.09166666666667,139.53166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36781,平,,いわき市好間町今新田字宮西,37.065,140.87666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36821,東白川,,東白川郡塙町大字上石井字新田,36.93833333333333,140.40833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36836,山田,,いわき市山田町大谷,36.93333333333333,140.73333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36846,小名浜,,いわき市小名浜字船引場　小名浜特別地域気象観測所,36.946666666666665,140.90333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,36846,小名浜,,いわき市小名浜大原字芳際,36.96333333333333,140.88333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40041,花園,,北茨城市華川町花園,36.86833333333333,140.63666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40046,北茨城,,北茨城市関南町関本下,36.833333333333336,140.77166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40061,大子,,久慈郡大子町大子,36.778333333333336,140.345,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40066,徳田,,常陸太田市徳田町,36.778333333333336,140.48166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40076,大能,,高萩市大能,36.74333333333333,140.59333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40091,常陸大宮,,常陸大宮市上小瀬,36.60666666666667,140.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40126,中野,,常陸太田市中野町,36.515,140.47333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40136,日立,,日立市会瀬町,36.58,140.645,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40181,門井,,筑西市門井,36.333333333333336,140.03333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40191,笠間,,笠間市箱田,36.395,140.24,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40201,水戸,,水戸市金町　水戸地方気象台,36.38,140.46666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40221,古河,,古河市北町,36.20166666666667,139.71666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40231,下館,,筑西市西石田,36.281666666666666,139.98833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40241,柿岡,,石岡市柿岡,36.233333333333334,140.18833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40251,美野里,,小美玉市部室,36.236666666666665,140.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40281,下妻,,下妻市二本紀,36.16833333333334,139.945,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40311,鉾田,,鉾田市安房,36.16833333333334,140.52666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40326,坂東,,坂東市辺田,36.04333333333334,139.89166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40336,つくば,,つくば市長峰　高層気象台,36.056666666666665,140.125,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40341,土浦,,土浦市木田余東台,36.10333333333333,140.22,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40391,江戸崎,,稲敷市江戸崎甲,35.96,140.32,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40406,鹿嶋,,鹿嶋市城山,35.96333333333333,140.62166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,40426,龍ケ崎,,龍ケ崎市大徳町,35.89,140.21166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41011,那須高原,,那須郡那須町大島,37.123333333333335,140.035,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41076,五十里,,日光市五十里堀割,36.92166666666667,139.695,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41091,黒磯,,那須塩原市埼玉,36.98166666666667,140.01833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41116,土呂部,,日光市土呂部,36.891666666666666,139.56833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41141,大田原,,大田原市宇田川,36.84,140.035,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41166,奥日光,,日光市中宮祠　日光特別地域気象観測所,36.73833333333333,139.5,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41172,日光東町,,日光市稲荷町,36.75,139.615,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41181,塩谷,,塩谷郡塩谷町大字田所,36.75666666666667,139.88333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41211,足尾,,日光市足尾町,36.64666666666667,139.44833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41241,高根沢,,塩谷郡高根沢町上高根沢台の原,36.60666666666667,139.99833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41247,那須烏山,,那須烏山市森田字小塙前,36.641666666666666,140.11666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41271,鹿沼,,鹿沼市見野,36.59166666666667,139.735,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41277,宇都宮,,宇都宮市明保野町　宇都宮地方気象台,36.54833333333333,139.86833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41311,葛生,,佐野市豊代町,36.431666666666665,139.59,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41331,真岡,,真岡市下籠谷,36.47666666666667,139.98666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41356,足利,,足利市元学町,36.34166666666667,139.46166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41361,佐野,,佐野市田沼町,36.36333333333334,139.57,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41371,栃木,,栃木市平井町,36.373333333333335,139.70333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,41376,小山,,小山市出井,36.33833333333333,139.83,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42046,藤原,,利根郡みなかみ町藤原字屋倉,36.86333333333333,139.05833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42091,みなかみ,,利根郡みなかみ町湯原,36.77333333333333,138.965,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42106,片品,,利根郡片品村鎌田,36.77166666666667,139.23833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42121,草津,,吾妻郡草津町草津,36.61666666666667,138.59166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42146,沼田,,沼田市井土上町,36.66833333333334,139.02166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42186,中之条,,吾妻郡中之条町伊勢町,36.586666666666666,138.85,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42221,田代,,吾妻郡嬬恋村田代,36.46333333333333,138.46333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42241,榛名山,,高崎市榛名湖町沼ノ原甲,36.471666666666664,138.87333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42251,前橋,,前橋市昭和町　前橋地方気象台,36.405,139.06,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42251,前橋,,前橋市元総社町,36.38666666666666,139.03833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42261,黒保根,,桐生市黒保根町水沼,36.501666666666665,139.28333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42266,桐生,,桐生市元宿町,36.41,139.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42286,上里見,,高崎市上里見町,36.376666666666665,138.895,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42302,伊勢崎,,伊勢崎市宮子町,36.33166666666666,139.165,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42326,西野牧,,甘楽郡下仁田町西野牧,36.245,138.70666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42341,藤岡,,藤岡市藤岡,36.24166666666667,139.07,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42366,館林,,館林市富士原町,36.24,139.51333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,42396,神流,,多野郡神流町大字黒田字坂井道下,36.108333333333334,138.89666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43051,寄居,,大里郡寄居町大字折原,36.105,139.18333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43056,熊谷,,熊谷市桜町　熊谷地方気象台,36.15,139.38,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43091,上吉田,,秩父市上吉田,36.053333333333335,138.98,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43121,鴻巣,,鴻巣市中央,36.065,139.52166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43126,久喜,,久喜市六万部,36.086666666666666,139.635,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43151,三峰,,秩父市三峰,35.92666666666667,138.92333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43156,秩父,,秩父市上町　秩父特別地域気象観測所,35.99,139.07333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43157,浦山,,秩父市浦山,35.92,139.07,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43162,ときがわ,,比企郡ときがわ町大字大野字宮澤,35.99,139.20666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43171,鳩山,,比企郡鳩山町大字赤沼,35.985,139.335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43231,飯能,,飯能市征矢町,35.83833333333333,139.32166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43241,さいたま,,さいたま市桜区大字宿,35.875,139.58666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43256,越谷,,越谷市大字北後谷,35.88333333333333,139.75666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,43266,所沢,,所沢市勝楽寺,35.77333333333333,139.41333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44046,小河内,,西多摩郡奥多摩町原,35.791666666666664,139.05,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44051,小沢,,西多摩郡檜原村,35.735,139.12333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44056,青梅,,青梅市新町,35.788333333333334,139.31166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44071,練馬,,練馬区石神井台,35.73833333333333,139.59166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44112,八王子,,八王子市元本郷町,35.666666666666664,139.31666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44116,府中,,府中市幸町,35.68333333333333,139.48333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44126,世田谷,,世田谷区岡本,35.626666666666665,139.62,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44132,東京,,千代田区北の丸公園　東京管区気象台,35.69166666666667,139.75,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44132,東京,,千代田区北の丸公園,35.69166666666667,139.75166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44136,江戸川臨海,,江戸川区臨海町,35.638333333333335,139.86333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44166,羽田,,大田区羽田空港　東京航空地方気象台,35.553333333333335,139.78,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44172,大島,,大島町元町字家の上　大島特別地域気象観測所,34.748333333333335,139.36166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44173,大島北ノ山,,大島町元町字北の山　大島航空気象観測所,34.781666666666666,139.36,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44191,利島,,利島村,34.528333333333336,139.28166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44207,新島,,新島村川原　新島航空気象観測所,34.36833333333333,139.26833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44216,神津島,,神津島村金長　神津島航空気象観測所,34.18833333333333,139.13333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44226,三宅島,,三宅村神着　三宅島特別地域気象観測所,34.123333333333335,139.52,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44228,三宅坪田,,三宅村坪田　三宅島航空気象観測所,34.07333333333333,139.56,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44262,八重見ヶ原,,八丈島八丈町大賀郷　八丈島航空気象観測所,33.115,139.785,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44263,八丈島,,八丈島八丈町大賀郷　八丈島特別地域気象観測所,33.12166666666667,139.77833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44263,八丈島,,八丈島八丈町大賀郷,33.10333333333333,139.78333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44281,青ヶ島,,青ヶ島村,32.46666666666667,139.76,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44301,父島,,小笠原村父島字西町　父島気象観測所,27.091666666666665,142.19,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44316,母島,,小笠原村母島字評議平,26.635,142.16166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,44356,南鳥島,,小笠原村南鳥島　南鳥島気象観測所,24.288333333333334,153.98333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50066,富士山,,富士宮市富士山頂　富士山特別地域気象観測所,35.36,138.72666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45061,我孫子,,我孫子市新木野,35.86333333333333,140.11,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45081,香取,,香取市大根,35.858333333333334,140.50166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45086,東庄,,香取郡東庄町小南,35.795,140.68166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45106,船橋,,船橋市薬円台,35.711666666666666,140.04333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45116,佐倉,,佐倉市角来,35.72833333333333,140.21166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45121,成田,,成田市古込字込前　成田航空地方気象台,35.763333333333335,140.385,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45148,銚子,,銚子市川口町　銚子地方気象台,35.73833333333333,140.85666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45148,銚子,,銚子市小畑新町,35.72,140.85666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45181,横芝光,,山武郡横芝光町宮川,35.655,140.505,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45212,千葉,,千葉市中央区中央港　千葉特別地域気象観測所,35.60166666666667,140.10333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45261,茂原,,茂原市高師,35.43666666666667,140.29333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45282,木更津,,木更津市請西南,35.361666666666665,139.94,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45291,牛久,,市原市米沢,35.39666666666667,140.14833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45326,坂畑,,君津市坂畑,35.235,140.09833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45331,大多喜,,夷隅郡大多喜町松尾,35.251666666666665,140.215,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45346,鋸南,,安房郡鋸南町大六,35.12166666666667,139.83666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45361,鴨川,,鴨川市横渚,35.111666666666665,140.1,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45371,勝浦,,勝浦市墨名　勝浦特別地域気象観測所,35.15,140.31166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,45401,館山,,館山市長須賀　館山特別地域気象観測所,34.986666666666665,139.865,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46001,相模湖,,相模原市緑区与瀬,35.61333333333333,139.19333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46046,相模原中央,,相模原市中央区中央,35.571666666666665,139.37,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46061,日吉,,横浜市港北区日吉,35.55166666666667,139.65,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46076,丹沢湖,,足柄上郡山北町神尾田,35.41,139.04333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46091,海老名,,海老名市中新田,35.43333333333333,139.38666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46106,横浜,,横浜市中区山手町　横浜地方気象台,35.43833333333333,139.65166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46136,平塚,,平塚市公所,35.345,139.305,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46141,辻堂,,藤沢市辻堂西海岸,35.32,139.45,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46161,箱根,,足柄下郡箱根町芦ノ湯,35.221666666666664,139.04166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46166,小田原,,小田原市扇町,35.276666666666664,139.155,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,46211,三浦,,三浦市初声町下宮田,35.178333333333335,139.63,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48031,野沢温泉,,下高井郡野沢温泉村大字豊郷字南原,36.91166666666667,138.44166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48061,信濃町,,上水内郡信濃町柏原字小丸山,36.80833333333333,138.19666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48066,飯山,,飯山市大字飯山字大道東,36.875,138.375,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48097,小谷,,北安曇郡小谷村大字中土,36.821666666666665,137.93,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48141,白馬,,北安曇郡白馬村北城,36.69833333333333,137.86166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48146,鬼無里,,長野市鬼無里,36.68833333333333,137.965,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48156,長野,,長野市箱清水　長野地方気象台,36.66166666666667,138.19166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48172,笠岳,,上高井郡高山村大字奥山田字山田入,36.665,138.45833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48191,大町,,大町市大町,36.52333333333333,137.83166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48196,信州新町,,長野市信州新町牧田中,36.54833333333333,137.99666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48216,菅平,,上田市菅平高原,36.531666666666666,138.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48247,聖高原,,東筑摩郡麻績村麻字猿ヶ馬場峯山,36.486666666666665,138.06833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48256,上田,,上田市古里,36.4,138.265,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48296,穂高,,安曇野市穂高,36.343333333333334,137.88166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48321,東御,,東御市新張,36.38333333333333,138.38333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48331,軽井沢,,北佐久郡軽井沢町大字追分　軽井沢特別地域気象観測所,36.34166666666667,138.54666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48331,軽井沢,,北佐久郡軽井沢町大字長倉,36.335,138.56333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48346,上高地,,松本市安曇上高地国有林,36.248333333333335,137.63333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48361,松本,,松本市沢村　松本特別地域気象観測所,36.24666666666667,137.97,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48363,松本今井,,松本市大字空港東　松本航空気象観測所,36.166666666666664,137.92166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48371,鹿教湯,,上田市鹿教湯温泉,36.30166666666667,138.13666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48381,立科,,北佐久郡立科町芦田,36.27166666666667,138.31333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48386,佐久,,佐久市中込,36.24666666666667,138.47666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48436,白樺湖,,茅野市北山,36.105,138.22833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48466,奈川,,松本市奈川,36.08833333333333,137.68333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48491,諏訪,,諏訪市湖岸通り　諏訪特別地域気象観測所,36.045,138.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48491,諏訪,,諏訪市高島,36.04,138.10166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48516,北相木,,南佐久郡北相木村字板置場,36.071666666666665,138.61166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48531,開田高原,,木曽郡木曽町開田高原西野,35.93833333333333,137.60166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48536,木祖薮原,,木曽郡木祖村薮原,35.93666666666667,137.78666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48546,辰野,,上伊那郡辰野町中央,35.983333333333334,137.98333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48556,高遠,,伊那市高遠町藤沢,35.95333333333333,138.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48561,原村,,諏訪郡原村向坂上,35.97,138.22,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48571,野辺山,,南佐久郡南牧村野辺山,35.94833333333333,138.47166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48601,御嶽山,,木曽郡王滝村御岳国有林,35.87166666666667,137.50333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48606,木曽福島,,木曽郡木曽町福島,35.84,137.68833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48621,伊那,,伊那市下新田,35.825,137.955,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48681,宮田高原,,上伊那郡宮田村,35.77333333333333,137.885,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48691,杉島,,伊那市長谷杉島,35.72666666666667,138.09333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48716,須原,,木曽郡大桑村須原殿,35.69833333333333,137.69166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48717,南木曽,,木曽郡南木曽町読書,35.61,137.62,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48731,飯島,,上伊那郡飯島町七久保,35.653333333333336,137.89833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48737,大鹿,,下伊那郡大鹿村大河原,35.556666666666665,138.04,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48767,飯田,,飯田市高羽町　飯田特別地域気象観測所,35.52333333333333,137.82166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48826,浪合,,下伊那郡阿智村浪合,35.373333333333335,137.69166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48836,阿南,,下伊那郡阿南町南条,35.31333333333333,137.81166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,48841,南信濃,,飯田市南信濃和田字夜川瀬,35.321666666666665,137.93166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49036,大泉,,北杜市大泉町谷戸,35.861666666666665,138.38666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49052,乙女湖,,山梨市牧丘町柳平,35.806666666666665,138.655,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49086,韮崎,,韮崎市大草町若尾,35.693333333333335,138.44833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49142,甲府,,甲府市飯田　甲府地方気象台,35.666666666666664,138.55333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49151,勝沼,,甲州市勝沼町勝沼,35.663333333333334,138.725,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49161,大月,,大月市大月,35.608333333333334,138.93833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49172,上野原,,上野原市松留,35.62,139.105,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49187,富士川,,南巨摩郡富士川町最勝寺,35.56166666666667,138.44833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49196,古関,,甲府市古関町,35.528333333333336,138.615,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49236,切石,,南巨摩郡身延町切石,35.46666666666667,138.44166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49251,河口湖,,南都留郡富士河口湖町船津　河口湖特別地域気象観測所,35.5,138.76,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49256,山中,,南都留郡山中湖村山中字梨ヶ原,35.43666666666667,138.83666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,49316,南部,,南巨摩郡南部町南部,35.288333333333334,138.445,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50056,白糸,,富士宮市原,35.31166666666667,138.57833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50106,井川,,静岡市葵区井川,35.21666666666667,138.22166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50112,有東木,,静岡市葵区有東木,35.20666666666666,138.36833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50136,御殿場,,御殿場市萩原,35.305,138.92666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50196,富士,,富士市厚原,35.185,138.66333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50206,三島,,三島市東本町　三島特別地域気象観測所,35.11333333333334,138.925,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50226,佐久間,,浜松市天竜区佐久間町浦川,35.056666666666665,137.76166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50232,春野,,浜松市天竜区春野町五和,35.01166666666666,137.945,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50241,川根本町,,榛原郡川根本町田代,35.10166666666667,138.12833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50247,鍵穴,,静岡市葵区鍵穴,35.04833333333333,138.24666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50261,清水,,静岡市清水区興津中町,35.053333333333335,138.52166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50281,網代,,熱海市網代　網代特別地域気象観測所,35.045,139.09166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50296,熊,,浜松市天竜区熊,34.958333333333336,137.73333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50317,高根山,,藤枝市瀬戸谷,34.975,138.19666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50331,静岡,,静岡市駿河区曲金　静岡地方気象台,34.975,138.40333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50371,三ヶ日,,浜松市浜名区三ヶ日町三ヶ日,34.80166666666667,137.555,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50386,天竜,,浜松市天竜区船明,34.89,137.81333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50391,三倉,,周智郡森町三倉,34.895,137.94,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50416,土肥,,伊豆市小下田,34.876666666666665,138.76166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50426,湯ケ島,,伊豆市市山,34.9,138.925,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50427,天城山,,伊豆市菅引字天城山菅引入,34.87166666666667,139.02333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50456,浜松,,浜松市中央区高丘東　浜松特別地域気象観測所,34.75333333333333,137.71166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50466,掛川,,掛川市長谷,34.76833333333333,137.995,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50476,菊川牧之原,,菊川市倉沢,34.785,138.13833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50477,静岡空港,,牧之原市坂口　静岡航空気象観測所,34.795,138.18833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50491,松崎,,賀茂郡松崎町江奈,34.755,138.78333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50506,稲取,,賀茂郡東伊豆町稲取,34.781666666666666,139.04833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50536,磐田,,磐田市南島,34.69166666666667,137.88,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50551,御前崎,,御前崎市御前崎　御前崎特別地域気象観測所,34.60333333333333,138.21333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,50561,石廊崎,,賀茂郡南伊豆町石廊崎石室山　石廊崎特別地域気象観測所,34.60333333333333,138.84166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51011,一宮,,一宮市千秋町佐野字辻田,35.29833333333333,136.85333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51031,愛西,,愛西市江西町川原,35.21666666666667,136.69833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51056,小原,,豊田市小原町上平,35.22833333333333,137.285,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51071,稲武,,豊田市稲武町スソガエト,35.211666666666666,137.50666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51077,茶臼山,,北設楽郡豊根村坂宇場字御所平,35.22,137.66,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51096,蟹江,,海部郡蟹江町蟹江本町クノ割,35.13666666666666,136.79166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51106,名古屋,,名古屋市千種区日和町　名古屋地方気象台,35.166666666666664,136.965,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51116,豊田,,豊田市高町東山,35.13166666666667,137.17666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51192,阿蔵,,豊田市阿蔵町猫田,35.07833333333333,137.41333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51216,大府,,大府市森岡町,34.995,136.94333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51226,岡崎,,岡崎市美合町地蔵野,34.91833333333334,137.19333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51241,作手,,新城市作手高里字木戸口,34.97666666666667,137.425,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51247,新城,,新城市富沢字広瀬,34.906666666666666,137.51833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51261,セントレア,,常滑市セントレア　中部航空地方気象台,34.858333333333334,136.805,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51271,一色,,西尾市一色町一色伊那跨,34.81166666666667,137.02833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51281,蒲郡,,蒲郡市神ノ郷町上名取,34.845,137.21666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51311,南知多,,知多郡南知多町大字豊丘字浜見台,34.74,136.93833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51331,豊橋,,豊橋市神野新田町字レノ割,34.75,137.34166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51346,伊良湖,,田原市福江町字金五郎坂　伊良湖特別地域気象観測所,34.62833333333333,137.09333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,51356,田原,,田原市高松町尾村崎,34.626666666666665,137.22166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52041,河合,,飛騨市河合町角川,36.305,137.1,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52051,神岡,,飛騨市神岡町殿,36.321666666666665,137.30833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52081,白川,,大野郡白川村鳩谷字北長,36.27333333333333,136.89666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52111,栃尾,,高山市奥飛騨温泉郷今見,36.248333333333335,137.50333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52131,御母衣,,大野郡白川村牧,36.14666666666667,136.90833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52137,清見,,高山市清見町大谷,36.18,137.045,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52146,高山,,高山市桐生町　高山特別地域気象観測所,36.155,137.25333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52152,丹生川,,高山市丹生川町瓜田,36.18666666666667,137.37166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52173,ひるがの,,郡上市高鷲町ひるがの,36.01,136.89333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52181,六厩,,高山市荘川町六厩,36.06,137.035,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52192,船山,,高山市久々野町無数河,36.035,137.26,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52196,宮之前,,高山市朝日町宮之前,36.015,137.38833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52221,長滝,,郡上市白鳥町長滝字三昧,35.92333333333333,136.83166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52286,萩原,,下呂市萩原町羽根,35.888333333333335,137.20666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52321,関市板取,,関市板取,35.723333333333336,136.78333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52331,八幡,,郡上市八幡町旭田尻,35.75666666666667,136.97833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52346,宮地,,下呂市宮地,35.763333333333335,137.28833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52381,樽見,,本巣市根尾神所,35.638333333333335,136.60166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52406,金山,,下呂市金山町大船渡,35.66166666666667,137.16,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52421,付知,,中津川市付知町,35.66166666666667,137.42666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52461,美濃,,美濃市前野中川原,35.555,136.91,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52476,伽藍,,加茂郡八百津町伽藍谷,35.515,137.23,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52482,黒川,,加茂郡白川町黒川,35.598333333333336,137.31833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52511,揖斐川,,揖斐郡揖斐川町三輪,35.485,136.56666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52536,美濃加茂,,美濃加茂市西町,35.445,137.005,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52556,恵那,,恵那市長島町永田大洞,35.446666666666665,137.40333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52557,中津川,,中津川市手賀野,35.47666666666667,137.48666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52571,関ケ原,,不破郡関ケ原町関ケ原,35.36333333333334,136.46666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52581,大垣,,大垣市禾森町,35.346666666666664,136.62,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52586,岐阜,,岐阜市加納二之丸　岐阜地方気象台,35.4,136.76166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52606,多治見,,多治見市光ケ丘,35.346666666666664,137.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,52642,上石津,,大垣市上石津町堂之上,35.24666666666667,136.45833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53016,北勢,,いなべ市北勢町其原,35.14333333333333,136.53833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53041,桑名,,桑名市大字江場字正金縄,35.05,136.69333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53061,四日市,,四日市市日永　四日市特別地域気象観測所,34.94,136.58,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53091,亀山,,亀山市椿世町,34.87,136.45333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53112,上野,,伊賀市緑ケ丘本町　上野特別地域気象観測所,34.76166666666667,136.14166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53121,笠取山,,津市榊原町,34.725,136.30833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53133,津,,津市島崎町　津地方気象台,34.733333333333334,136.51833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53133,津,,津市末広町,34.721666666666664,136.525,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53141,名張,,名張市鴻之台1番町,34.626666666666665,136.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53151,白山,,津市白山町南家城,34.625,136.32166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53196,小俣,,伊勢市小俣町明野,34.528333333333336,136.665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53231,粥見,,松阪市飯南町粥見,34.44833333333333,136.39,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53257,鳥羽,,鳥羽市鳥羽,34.48166666666667,136.825,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53287,藤坂峠,,度会郡大紀町永会字中河内,34.32333333333333,136.48833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53296,南伊勢,,度会郡南伊勢町船越,34.345,136.68166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53307,阿児,,志摩市阿児町甲賀字浅野,34.30833333333333,136.87333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53321,宮川,,多気郡大台町久豆,34.278333333333336,136.20833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53326,紀伊長島,,北牟婁郡紀北町長島,34.208333333333336,136.32666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53378,尾鷲,,尾鷲市南陽町　尾鷲特別地域気象観測所,34.068333333333335,136.19333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53401,熊野新鹿,,熊野市新鹿町,33.931666666666665,136.13833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,53416,御浜,,南牟婁郡御浜町大字上野,33.85166666666667,135.98,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54012,粟島,,岩船郡粟島浦村字内浦,38.465,139.25333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54041,弾崎,,佐渡市鷲崎字弾崎,38.33,138.51166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54056,高根,,村上市高根,38.33,139.60333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54086,村上,,村上市三之町,38.22666666666667,139.47833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54097,三面,,村上市茎太,38.24666666666667,139.605,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54157,相川,,佐渡市相川三町目新浜町　相川特別地域気象観測所,38.028333333333336,138.24,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54166,両津,,佐渡市両津湊,38.07333333333333,138.44,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54181,中条,,胎内市清水,38.07666666666667,139.38833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54191,下関,,岩船郡関川村下関,38.09166666666667,139.56333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54232,新潟,,新潟市中央区美咲町　新潟地方気象台,37.89333333333333,139.01833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54232,新潟,,新潟市中央区女池南,37.888333333333335,139.04833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54236,松浜,,新潟市東区松浜町　新潟航空気象観測所,37.955,139.11166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54271,羽茂,,佐渡市羽茂本郷,37.84166666666667,138.31333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54296,新津,,新潟市秋葉区小戸上組,37.791666666666664,139.08666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54301,瓢湖,,阿賀野市中島字諏訪前,37.833333333333336,139.23666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54311,赤谷,,新発田市上赤谷字大檀原,37.835,139.415,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54341,巻,,新潟市西蒲区巻甲,37.76833333333333,138.91333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54387,寺泊,,長岡市寺泊二の関,37.64,138.76666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54396,三条,,三条市西裏館,37.64,138.955,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54406,村松,,五泉市愛宕,37.696666666666665,139.18833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54421,津川,,東蒲原郡阿賀町津川,37.67166666666667,139.44666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54462,宮寄上,,加茂市宮寄上,37.58,139.14,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54472,室谷,,東蒲原郡阿賀町神谷丙,37.55,139.37,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54501,長岡,,長岡市緑町,37.45,138.82333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54506,栃尾,,長岡市中央公園,37.47833333333333,138.99166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54541,柏崎,,柏崎市元城町,37.35166666666667,138.55333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54566,守門,,魚沼市西名,37.346666666666664,139.04333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54586,大潟,,上越市大潟区土底浜,37.225,138.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54606,小国,,長岡市小国町新町,37.291666666666664,138.70166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54616,小出,,魚沼市佐梨,37.22666666666667,138.96333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54621,大湯,,魚沼市下折立,37.205,139.06166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54651,高田,,上越市大手町　高田特別地域気象観測所,37.10666666666667,138.24666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54661,安塚,,上越市安塚区和田,37.10666666666667,138.45666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54666,川谷,,上越市吉川区川谷字宮田,37.2,138.51666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54671,松代,,十日町市松代,37.13166666666667,138.60666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54676,十日町,,十日町市小泉字北原,37.14333333333333,138.72666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54711,糸魚川,,糸魚川市東寺町,37.04333333333334,137.875,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54721,能生,,糸魚川市大字平,37.083333333333336,138.02333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54737,筒方,,上越市板倉区筒方,37.03,138.34333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54761,塩沢,,南魚沼市塩沢,37.038333333333334,138.84666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54816,関山,,妙高市大字関山字原田,36.93333333333333,138.22166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54836,津南,,中魚沼郡津南町中深見乙,36.99666666666667,138.68333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54841,湯沢,,南魚沼郡湯沢町湯沢字中島川原,36.94166666666667,138.81,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54876,平岩,,糸魚川市大所,36.88,137.86666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,54892,樽本,,妙高市大字樽本乙,36.89,138.275,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55022,朝日,,下新川郡朝日町南保町,36.93666666666667,137.56333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55041,氷見,,氷見市大浦,36.825,136.96833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55056,魚津,,魚津市六郎丸,36.821666666666665,137.42833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55063,宇奈月,,黒部市宇奈月町内山,36.846666666666664,137.55666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55091,伏木,,高岡市伏木古国府　伏木特別地域気象観測所,36.791666666666664,137.055,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55102,富山,,富山市石坂　富山地方気象台,36.708333333333336,137.20166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55141,砺波,,砺波市五郎丸,36.61,136.955,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55151,秋ヶ島,,富山市秋ヶ島　富山航空気象観測所,36.64833333333333,137.18666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55156,大山,,富山市花崎,36.608333333333334,137.28333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55166,上市,,中新川郡上市町東種,36.67,137.42333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55191,南砺高宮,,南砺市高宮,36.545,136.87166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55206,八尾,,富山市八尾町樫尾,36.57,137.15833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55217,立山芦峅,,中新川郡立山町芦峅寺,36.57666666666667,137.385,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55252,五箇山,,南砺市下梨中の平,36.43,136.94166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,55267,猪谷,,富山市猪谷,36.473333333333336,137.23666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56036,珠洲,,珠洲市正院町正院,37.446666666666665,137.28666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56052,輪島,,輪島市鳳至町畠田　輪島特別地域気象観測所,37.39,136.895,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56081,門前,,輪島市門前町北川,37.26166666666666,136.72833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56093,三井,,輪島市三井町洲衛　能登航空気象観測所,37.29333333333334,136.96166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56116,志賀,,羽咋郡志賀町富来領家町甲,37.14333333333333,136.725,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56146,七尾,,七尾市万行町43の部,37.03,136.99166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56176,羽咋,,羽咋市旭町,36.89333333333333,136.77666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56186,かほく,,かほく市内日角井,36.711666666666666,136.69166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56192,宝達志水,,羽咋郡宝達志水町坪山,36.788333333333334,136.76833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56227,金沢,,金沢市西念　金沢地方気象台,36.58833333333333,136.63333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56232,医王山,,金沢市平等本町,36.52,136.745,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56276,小松,,小松市今江町,36.38166666666667,136.435,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56286,白山河内,,白山市河内町福岡,36.39666666666667,136.62,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56301,加賀中津原,,加賀市山中温泉中津原町,36.26166666666666,136.39666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56346,白山白峰,,白山市白峰,36.18,136.625,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,56401,舳倉島,,輪島市海士町所属舳倉島高見,37.85,136.91833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57001,三国,,坂井市三国町平山,36.24333333333333,136.17333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57026,春江,,坂井市春江町江留中　福井航空気象観測所,36.141666666666666,136.22333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57051,越廼,,福井市居倉町,36.01166666666666,135.99,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57066,福井,,福井市豊島　福井地方気象台,36.055,136.22166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57071,美山,,福井市美山町,35.998333333333335,136.35833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57082,勝山,,勝山市平泉寺町平泉寺86字岡道北,36.038333333333334,136.52166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57106,武生,,越前市村国,35.905,136.17333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57121,大野,,大野市93字蛇塚四,35.971666666666664,136.49666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57176,九頭竜,,大野市貝皿,35.90833333333333,136.66833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57206,今庄,,南条郡南越前町今庄,35.766666666666666,136.2,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57248,敦賀,,敦賀市松栄町　敦賀特別地域気象観測所,35.653333333333336,136.06166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57286,美浜,,三方郡美浜町久々子,35.6,135.91666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57311,大飯,,大飯郡おおい町本郷,35.48,135.61666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,57317,小浜,,小浜市遠敷,35.483333333333334,135.78166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60026,柳ケ瀬,,長浜市余呉町柳ケ瀬字大門,35.58166666666666,136.18833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60051,今津,,高島市今津町弘川,35.41166666666667,136.02833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60061,長浜,,長浜市唐国町,35.42333333333333,136.24166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60081,朽木平良,,高島市朽木平良,35.30833333333333,135.83,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60102,米原,,米原市朝日,35.38333333333333,136.34333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60116,南小松,,大津市南小松,35.235,135.95666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60131,彦根,,彦根市城町　彦根地方気象台,35.275,136.24333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60161,近江八幡,,近江八幡市森尻町,35.111666666666665,136.075,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60196,東近江,,東近江市桜川東町,35.06166666666667,136.19,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60216,大津,,大津市萱野浦,34.99166666666667,135.91166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60226,信楽,,甲賀市信楽町牧,34.913333333333334,136.08,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,60236,土山,,甲賀市土山町北土山,34.93833333333333,136.27833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61001,間人,,京丹後市丹後町間人小字新ヶ皿,35.736666666666665,135.08666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61031,峰山,,京丹後市峰山町荒山,35.61833333333333,135.07166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61076,宮津,,宮津市字上司,35.55,135.235,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61096,坂浦,,福知山市下野条,35.41833333333334,135.08666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61111,舞鶴,,舞鶴市字下福井　舞鶴特別地域気象観測所,35.45,135.31666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61151,睦寄,,綾部市睦寄町狸岩,35.38166666666667,135.45333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61187,福知山,,福知山市字荒河,35.31166666666667,135.11333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61192,三和,,福知山市三和町千束,35.21666666666667,135.23166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61196,綾部山家,,綾部市東山町山家,35.29666666666667,135.315,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61201,本庄,,船井郡京丹波町本庄西畑,35.26,135.395,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61206,美山,,南丹市美山町静原桧野,35.275,135.55,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61241,須知,,船井郡京丹波町富田蒲生野,35.17666666666667,135.42,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61242,園部,,南丹市園部町黒田,35.108333333333334,135.455,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61251,京北,,京都市右京区京北比賀江町院谷,35.181666666666665,135.66166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61286,京都,,京都市中京区西ノ京笠殿町　京都地方気象台,35.013333333333335,135.73166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61286,京都,,京都市中京区西ノ京船塚町,35.01166666666666,135.735,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61306,長岡京,,長岡京市光風台,34.93,135.67833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,61326,京田辺,,京田辺市薪西浜,34.83,135.76,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62016,能勢,,豊能郡能勢町地黄,34.94833333333333,135.455,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62037,茨木,,茨木市大字桑原,34.86,135.56,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62046,枚方,,枚方市星丘,34.80833333333333,135.67166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62051,豊中,,豊中市蛍池西町　大阪航空気象観測所,34.78333333333333,135.43833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62078,大阪,,大阪市中央区大手前　大阪管区気象台,34.681666666666665,135.51833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62078,大阪,,大阪市東成区東中本,34.675,135.54666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62081,生駒山,,東大阪市山手町,34.675,135.67666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62091,堺,,堺市堺区百舌鳥夕雲町,34.555,135.485,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62096,八尾,,八尾市空港　八尾航空気象観測所,34.596666666666664,135.6,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62101,関空島,,泉南郡田尻町泉州空港中　関西航空地方気象台,34.43333333333333,135.23166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62111,河内長野,,河内長野市日野,34.42333333333333,135.54333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,62131,熊取,,泉南郡熊取町朝代西,34.385,135.35,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63016,香住,,美方郡香美町香住区森,35.625,134.62666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63032,温泉,,美方郡新温泉町桐岡字穴町,35.528333333333336,134.48,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63051,豊岡,,豊岡市桜町　豊岡特別地域気象観測所,35.535,134.82166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63071,兎和野高原,,美方郡香美町村岡区宿字菟臥野,35.431666666666665,134.58333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63111,大屋,,養父市大屋町山路,35.33166666666666,134.665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63116,八鹿,,養父市八鹿町高柳字篠尾,35.39833333333333,134.74,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63121,和田山,,朝来市和田山町枚田,35.32333333333333,134.84833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63201,生野,,朝来市生野町口銀谷,35.166666666666664,134.79166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63216,柏原,,丹波市柏原町柏原,35.13666666666666,135.065,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63241,佐用,,佐用郡佐用町円応寺,35.016666666666666,134.36833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63251,一宮,,宍粟市一宮町東市場,35.096666666666664,134.585,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63321,福崎,,神崎郡福崎町福崎新,34.95,134.74833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63331,西脇,,西脇市上比延町,34.998333333333335,134.99666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63346,後川,,丹波篠山市後川上,35.025,135.29333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63366,上郡,,赤穂郡上郡町与井,34.858333333333334,134.37333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63383,姫路,,姫路市神子岡前　姫路特別地域気象観測所,34.83833333333333,134.67,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63411,三田,,三田市下深田,34.895,135.21166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63461,三木,,三木市志染町広野,34.776666666666664,135.01333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63477,西宮,,西宮市奥畑,34.75,135.335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63491,家島,,姫路市家島町真浦字御室寺,34.67166666666667,134.52666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63496,明石,,明石市二見町南二見,34.68666666666667,134.87666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63517,神戸空港,,神戸市中央区神戸空港　神戸航空気象観測所,34.63166666666667,135.22333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63518,神戸,,神戸市中央区脇浜海岸通　神戸地方気象台,34.696666666666665,135.21166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63518,神戸,,神戸市中央区港島,34.681666666666665,135.22,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63551,郡家,,淡路市多賀,34.46666666666667,134.84833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63571,洲本,,洲本市木戸　洲本特別地域気象観測所,34.31,134.84833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,63588,南淡,,南あわじ市阿万塩屋町,34.218333333333334,134.72,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64036,奈良,,奈良市東紀寺町　奈良地方気象台,34.67333333333333,135.83666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64036,奈良,,奈良市西紀寺町,34.67333333333333,135.83166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64041,針,,奈良市都祁友田町,34.605,135.95166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64056,田原本,,磯城郡田原本町,34.555,135.785,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64076,曽爾,,宇陀郡曽爾村太良路,34.52166666666667,136.15833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64091,葛城,,葛城市寺口,34.48833333333334,135.70333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64101,大宇陀,,宇陀市大宇陀下竹,34.48833333333334,135.93166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64127,五條,,五條市三在町,34.38,135.73,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64136,吉野,,吉野郡吉野町宮滝,34.37833333333333,135.9,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64161,天川,,吉野郡天川村大字洞川,34.27,135.88333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64206,上北山,,吉野郡上北山村小橡,34.13666666666666,136.005,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64227,風屋,,吉野郡十津川村風屋,34.045,135.78666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64236,下北山,,吉野郡下北山村佐田,34.00333333333333,135.96666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,64262,葛川,,吉野郡十津川村大字東中,33.95333333333333,135.85666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65021,葛城山,,紀の川市切畑,34.346666666666664,135.43666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65026,かつらぎ,,伊都郡かつらぎ町妙寺,34.31,135.52833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65036,友ケ島,,和歌山市加太苫ケ沖島,34.28,134.99833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65042,和歌山,,和歌山市男野芝丁　和歌山地方気象台,34.22833333333333,135.16333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65042,和歌山,,和歌山市男野芝丁,34.22833333333333,135.16333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65061,高野山,,伊都郡高野町高野山,34.221666666666664,135.59,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65106,湯浅,,有田郡湯浅町湯浅,34.035,135.18166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65121,清水,,有田郡有田川町清水,34.086666666666666,135.425,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65127,護摩壇山,,田辺市龍神村龍神,34.04,135.56666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65162,龍神,,田辺市龍神村湯ノ又,33.945,135.55666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65201,川辺,,日高郡日高川町和佐,33.89333333333333,135.21666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65226,本宮,,田辺市本宮町本宮,33.836666666666666,135.77333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65256,栗栖川,,田辺市中辺路町栗栖川,33.791666666666664,135.51333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65276,新宮,,新宮市佐野,33.68666666666667,135.97,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65288,南紀白浜,,西牟婁郡白浜町　南紀白浜航空気象観測所,33.66166666666667,135.36333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65306,西川,,東牟婁郡古座川町西川,33.638333333333335,135.71,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65311,色川,,東牟婁郡那智勝浦町大野,33.675,135.84833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65321,日置川,,西牟婁郡白浜町安居,33.605,135.48,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,65356,潮岬,,東牟婁郡串本町潮岬　潮岬特別地域気象観測所,33.45,135.75666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66046,上長田,,真庭市蒜山上長田,35.29666666666667,133.725,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66056,恩原,,苫田郡鏡野町上斎原,35.3,133.98666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66091,千屋,,新見市千屋,35.10333333333333,133.435,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66112,富,,苫田郡鏡野町富西谷,35.178333333333335,133.805,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66127,奈義,,勝田郡奈義町荒内西字大池,35.111666666666665,134.17,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66136,今岡,,美作市今岡,35.098333333333336,134.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66171,久世,,真庭市中島,35.068333333333335,133.75333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66186,津山,,津山市林田　津山特別地域気象観測所,35.06333333333333,134.00833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66221,新見,,新見市足見堂の下,34.943333333333335,133.51833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66226,下呰部,,真庭市下呰部,34.965,133.62833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66237,旭西,,久米郡美咲町西,34.961666666666666,133.81166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66251,赤磐,,赤磐市黒本,34.91833333333334,134.08166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66276,陣山,,高梁市松原町字松岡陣山,34.82833333333333,133.52333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66287,吉備中央,,加賀郡吉備中央町北,34.81666666666667,133.705,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66296,福渡,,岡山市北区建部町福渡,34.86666666666667,133.90333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66306,和気,,和気郡和気町吉田,34.815,134.18333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66336,高梁,,高梁市落合町近似,34.791666666666664,133.61,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66346,日応寺,,岡山市北区日応寺　岡山航空気象観測所,34.75666666666667,133.855,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66381,佐屋,,井原市芳井町佐屋,34.685,133.445,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66391,矢掛,,小田郡矢掛町東三成,34.61666666666667,133.61833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66408,岡山,,岡山市北区津島中　岡山地方気象台,34.685,133.925,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66408,岡山,,岡山市北区下石井,34.66,133.915,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66421,虫明,,瀬戸内市邑久町虫明,34.681666666666665,134.20666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66446,倉敷,,倉敷市中央,34.59,133.76833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66481,笠岡,,笠岡市カブト東町,34.501666666666665,133.495,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,66501,玉野,,玉野市宇野,34.486666666666665,133.95,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67016,高野,,庄原市高野町新市,35.03333333333333,132.90166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67026,道後山,,庄原市西城町三坂,35.056666666666665,133.18833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67052,君田,,三次市君田町櫃田字市井谷,34.928333333333335,132.83,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67106,三次,,三次市三次町,34.81166666666667,132.85,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67116,庄原,,庄原市東本町,34.86,133.02333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67126,東城,,庄原市東城町川東,34.895,133.27666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67136,八幡,,山県郡北広島町東八幡原,34.708333333333336,132.17333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67151,大朝,,山県郡北広島町大朝字大坪,34.76833333333333,132.46333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67161,美土里,,安芸高田市美土里町横田,34.721666666666664,132.655,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67191,油木,,神石郡神石高原町安田伊ノ平谷,34.763333333333335,133.27833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67211,王泊,,山県郡北広島町細見,34.69833333333333,132.31166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67212,加計,,山県郡安芸太田町加計字神田,34.61,132.32,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67217,都志見,,山県郡北広島町都志見,34.64666666666667,132.44333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67231,甲田,,安芸高田市甲田町高田原,34.695,132.76,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67251,上下,,府中市上下町上下,34.693333333333335,133.11666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67271,内黒山,,山県郡安芸太田町大字横川字横川東平,34.596666666666664,132.17666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67292,三入,,広島市安佐北区三入,34.545,132.53,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67306,安宿,,東広島市豊栄町安宿,34.56666666666667,132.83833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67316,世羅,,世羅郡世羅町大字東神崎字大田,34.583333333333336,133.05,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67326,府中,,府中市土生町,34.56166666666667,133.23166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67351,佐伯湯来,,広島市佐伯区湯来町大字和田字中須賀,34.498333333333335,132.29,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67371,志和,,東広島市志和町志和堀,34.498333333333335,132.66,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67376,東広島,,東広島市八本松町原,34.416666666666664,132.7,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67386,本郷,,三原市本郷町善入寺平岩　広島航空気象観測所,34.435,132.91833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67401,福山,,福山市松永町　福山特別地域気象観測所,34.446666666666665,133.24666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67421,廿日市津田,,廿日市市津田,34.365,132.19,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67437,広島,,広島市中区上八丁堀　広島地方気象台,34.39833333333333,132.46166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67437,広島,,広島市中区上八丁堀,34.39833333333333,132.46333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67461,竹原,,竹原市忠海床浦,34.33,132.98166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67471,生口島,,尾道市瀬戸田町御寺,34.278333333333336,133.12333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67496,大竹,,大竹市立戸,34.221666666666664,132.22,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67511,呉,,呉市宝町　呉特別地域気象観測所,34.24,132.55,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67566,倉橋,,呉市倉橋町須川,34.09166666666667,132.48833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,67576,呉市蒲刈,,呉市蒲刈町大浦字前沖浦,34.165,132.74833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68022,西郷,,隠岐郡隠岐の島町西町大城ノ一　西郷特別地域気象観測所,36.20333333333333,133.33333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68046,西郷岬,,隠岐郡隠岐の島町岬町　隠岐航空気象観測所,36.178333333333335,133.32333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68056,海士,,隠岐郡海士町海士,36.096666666666664,133.09666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68091,鹿島,,松江市鹿島町佐陀本郷,35.52,132.98333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68121,斐川,,出雲市斐川町沖洲　出雲航空気象観測所,35.413333333333334,132.89,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68132,松江,,松江市西津田　松江地方気象台,35.45666666666666,133.065,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68156,出雲,,出雲市芦渡町,35.33166666666666,132.73,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68166,大東,,雲南市大東町下阿用,35.318333333333335,132.965,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68181,伯太,,安来市伯太町西母里,35.35,133.27333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68206,佐田,,出雲市佐田町大呂,35.221666666666664,132.72333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68246,大田,,大田市大田町大田,35.19,132.49666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68261,掛合,,雲南市掛合町掛合,35.196666666666665,132.815,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68276,横田,,仁多郡奥出雲町稲原,35.17333333333333,133.10333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68286,福光,,大田市温泉津町福光,35.07,132.33333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68306,赤名,,飯石郡飯南町下赤名,35.001666666666665,132.71166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68346,桜江,,江津市桜江町川戸,34.95333333333333,132.33333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68351,川本,,邑智郡川本町川本,34.97666666666667,132.49166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68376,浜田,,浜田市大辻町　浜田特別地域気象観測所,34.89666666666667,132.07,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68401,瑞穂,,邑智郡邑南町淀原,34.85333333333333,132.53,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68421,三隅,,浜田市三隅町西河内,34.795,131.94833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68431,弥栄,,浜田市弥栄町長安本郷,34.776666666666664,132.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68436,波佐,,浜田市金城町波佐,34.78,132.19666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68456,高津,,益田市内田町　石見航空気象観測所,34.675,131.79,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68462,益田,,益田市乙吉町,34.68666666666667,131.85,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68501,匹見,,益田市匹見町匹見,34.571666666666665,132.01666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68516,津和野,,鹿足郡津和野町森村ロ,34.461666666666666,131.77,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,68541,吉賀,,鹿足郡吉賀町七日市,34.391666666666666,131.89333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69006,境,,境港市東本町　境特別地域気象観測所,35.54333333333334,133.235,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69021,塩津,,西伯郡大山町塩津,35.52333333333333,133.56666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69041,青谷,,鳥取市青谷町青谷,35.52,133.99666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69052,湖山,,鳥取市湖山町西　鳥取航空気象観測所,35.53,134.165,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69061,岩井,,岩美郡岩美町宇治字前田,35.55833333333333,134.36,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69076,米子,,米子市博労町　米子特別地域気象観測所,35.43333333333333,133.33833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69101,倉吉,,倉吉市大塚字隈ヶ坪,35.473333333333336,133.83833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69111,鹿野,,鳥取市鹿野町河内,35.413333333333334,134.01666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69122,鳥取,,鳥取市吉方　鳥取地方気象台,35.486666666666665,134.23833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69152,大山,,西伯郡大山町大山字立の坂上,35.39333333333333,133.53666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69161,関金,,倉吉市関金町安歩,35.37833333333333,133.75666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69181,佐治,,鳥取市佐治町加瀬木,35.32833333333333,134.11333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69196,若桜,,八頭郡若桜町大字大炊,35.333333333333336,134.405,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69222,江尾,,日野郡江府町小江尾,35.288333333333334,133.48333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69246,智頭,,八頭郡智頭町智頭沖代,35.263333333333335,134.24,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,69271,茶屋,,日野郡日南町茶屋大ジャフ田,35.18666666666667,133.23,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71066,池田,,三好市池田町シンヤマ,34.02333333333333,133.795,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71087,穴吹,,美馬市穴吹町口山初草,34.04,134.15666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71106,徳島,,徳島市大和町　徳島地方気象台,34.06666666666667,134.57333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71106,徳島,,徳島市大和町,34.06666666666667,134.57166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71136,半田,,美馬郡つるぎ町半田字下尾尻,33.99,134.03666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71192,東祖谷,,三好市東祖谷菅生,33.87,133.97833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71211,福原旭,,勝浦郡上勝町大字旭字蔭,33.87833333333333,134.38833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71231,蒲生田,,阿南市椿町蒲生田,33.836666666666666,134.74166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71251,木頭,,那賀郡那賀町木頭和無田ヨシノ,33.77166666666667,134.19833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71266,日和佐,,海部郡美波町日和佐浦,33.73166666666667,134.53833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,71291,海陽,,海部郡海陽町四方原字杉谷,33.611666666666665,134.355,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72061,内海,,小豆郡小豆島町西村甲,34.471666666666664,134.27333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72086,高松,,高松市伏石町　高松地方気象台,34.318333333333335,134.05333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72111,多度津,,仲多度郡多度津町家中　多度津特別地域気象観測所,34.275,133.75166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72121,滝宮,,綾歌郡綾川町滝宮字山田,34.236666666666665,133.92333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72126,香南,,高松市香南町由佐　高松航空気象観測所,34.21333333333333,134.015,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72146,引田,,東かがわ市南野,34.21333333333333,134.40666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72161,財田,,三豊市財田町財田上,34.12,133.77166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,72176,竜王山,,徳島県美馬市美馬町字入倉,34.11333333333334,134.05,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73001,大三島,,今治市大三島町宮浦地先,34.25,133.00666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73071,玉川,,今治市玉川町三反地甲,34.01833333333333,132.94,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73076,今治,,今治市山路,34.053333333333335,132.975,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73126,西条,,西条市周布,33.915,133.08,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73141,新居浜,,新居浜市船木甲,33.93666666666667,133.33833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73151,四国中央,,四国中央市妻鳥町乙,33.98166666666667,133.58166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73152,富郷,,四国中央市富郷町寒川山,33.915,133.51,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73166,松山,,松山市北持田町　松山地方気象台,33.843333333333334,132.77666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73166,松山,,松山市桑原,33.835,132.79333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73168,松山南吉田,,松山市南吉田町　松山航空気象観測所,33.82666666666667,132.69833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73231,上林,,東温市上林甲,33.73833333333333,132.89,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73247,成就社,,西条市西之川野地国有林,33.795,133.13166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73256,長浜,,大洲市長浜甲,33.61666666666667,132.48,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73271,中山,,伊予市中山町中山丑,33.638333333333335,132.70833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73276,久万,,上浮穴郡久万高原町入野,33.663333333333334,132.895,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73306,大洲,,大洲市阿蔵字フルカワ甲,33.50833333333333,132.535,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73321,獅子越峠,,喜多郡内子町本川,33.54333333333334,132.83166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73341,瀬戸,,西宇和郡伊方町塩成,33.446666666666665,132.25666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73351,八幡浜,,八幡浜市五反田,33.44833333333333,132.43333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73406,宇和,,西予市宇和町神領,33.36666666666667,132.50333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73442,宇和島,,宇和島市住吉町　宇和島特別地域気象観測所,33.22666666666667,132.55166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73446,近永,,北宇和郡鬼北町近永,33.25333333333333,132.675,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,73516,御荘,,南宇和郡愛南町御荘平城,32.96333333333333,132.57,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74056,本川,,吾川郡いの町脇ノ山字根藤,33.765,133.33833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74071,本山,,長岡郡本山町本山,33.75333333333333,133.575,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74101,池川,,吾川郡仁淀川町土居甲,33.60666666666667,133.17,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74126,繁藤,,香美市土佐山田町繁藤,33.678333333333335,133.685,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74136,大栃,,香美市物部町大栃上西の川,33.69833333333333,133.875,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74151,魚梁瀬,,安芸郡馬路村魚梁瀬,33.615,134.10833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74166,佐川,,高岡郡佐川町丙,33.51166666666666,133.27166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74182,高知,,高知市比島町　高知地方気象台,33.56666666666667,133.54833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74182,高知,,高知市江陽町,33.56666666666667,133.55166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74187,後免,,南国市廿枝,33.59,133.64333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74188,南国日章,,南国市物部国有　高知航空気象観測所,33.545,133.66833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74237,船戸,,高岡郡津野町船戸,33.416666666666664,133.08833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74238,鳥形山,,吾川郡仁淀川町大植,33.48,133.08333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74271,安芸,,安芸市伊尾木,33.48833333333334,133.93333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74276,田野,,安芸郡田野町,33.42666666666667,134.00666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74296,梼原,,高岡郡梼原町川西路,33.39,132.92166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74311,須崎,,須崎市西町,33.385,133.27666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74336,佐喜浜,,室戸市佐喜浜町,33.41166666666667,134.19833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74361,窪川,,高岡郡四万十町新開町,33.20666666666666,133.12833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74372,室戸岬,,室戸市室戸岬町　室戸岬特別地域気象観測所,33.251666666666665,134.17666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74372,室戸岬,,室戸市室戸岬町,33.24666666666667,134.175,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74381,江川崎,,四万十市西土佐用井,33.17,132.79166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74391,大正,,高岡郡四万十町大正,33.193333333333335,132.97166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74436,佐賀,,幡多郡黒潮町佐賀,33.07833333333333,133.10166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74447,宿毛,,宿毛市小筑紫町田ノ浦　宿毛特別地域気象観測所,32.905,132.71666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74456,中村,,四万十市入田字長善寺前,32.99,132.92,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74506,三崎,,土佐清水市三崎,32.795,132.87166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,74516,清水,,土佐清水市足摺岬　清水特別地域気象観測所,32.721666666666664,133.01,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81011,須佐,,萩市須佐字野中,34.615,131.62333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81071,萩,,萩市大字土原字川島沖田　萩特別地域気象観測所,34.41,131.405,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81116,油谷,,長門市油谷新別名,34.37,131.055,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81146,篠生,,山口市阿東地福下,34.33833333333333,131.62666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81151,徳佐,,山口市阿東徳佐中,34.39833333333333,131.725,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81167,羅漢山,,岩国市美和町秋掛字羅漢山,34.35,132.06333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81196,秋吉台,,美祢市秋芳町秋吉,34.235,131.30666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81228,鹿野,,周南市大字鹿野下字サヤ段,34.225,131.815,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81231,広瀬,,岩国市錦町広瀬,34.26166666666666,131.95166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81266,豊田,,下関市豊田町大字稲光字土橋,34.18666666666667,131.07666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81271,東厚保,,美祢市東厚保町山中,34.11833333333333,131.18166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81286,山口,,山口市前町　山口特別地域気象観測所,34.16166666666667,131.46166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81301,和田,,周南市大字高瀬,34.17,131.75333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81321,岩国,,岩国市川西,34.155,132.17833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81371,防府,,防府市大字植松,34.04,131.53333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81386,下松,,下松市西豊井,34.01,131.87166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81397,玖珂,,岩国市玖珂町,34.095,132.075,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81428,下関,,下関市竹崎町　下関地方気象台,33.94833333333333,130.925,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81428,下関,,下関市名池町,33.95666666666666,130.93833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81436,宇部,,宇部市沖宇部地先　山口宇部航空気象観測所,33.93,131.27833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81481,柳井,,柳井市南浜,33.958333333333336,132.11333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,81486,安下庄,,大島郡周防大島町東安下庄,33.903333333333336,132.29333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82036,小呂島,,福岡市西区大字小呂島,33.86333333333333,130.035,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82046,宗像,,宗像市田熊,33.80833333333333,130.53833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82056,八幡,,北九州市八幡西区鷹の巣,33.85166666666667,130.74333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82068,空港北町,,北九州市小倉南区空港北町　北九州航空気象観測所,33.845,131.035,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82097,東谷,,北九州市小倉南区大字木下,33.778333333333336,130.865,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82101,行橋,,行橋市西泉,33.71333333333333,130.975,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82136,飯塚,,飯塚市川島字甘木　飯塚特別地域気象観測所,33.651666666666664,130.69333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82171,前原,,糸島市前原西,33.56,130.19,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82182,福岡,,福岡市中央区大濠　福岡管区気象台,33.58166666666666,130.375,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82182,福岡,,福岡市中央区六本松,33.58166666666666,130.37666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82186,博多,,福岡市博多区大字雀居　福岡航空地方気象台,33.583333333333336,130.45166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82191,太宰府,,太宰府市大佐野,33.49666666666667,130.49,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82206,添田,,田川郡添田町大字野田字大野ノ原,33.55833333333333,130.855,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82241,早良脇山,,福岡市早良区脇山,33.48833333333334,130.35333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82261,朝倉,,朝倉市三奈木,33.406666666666666,130.695,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82272,英彦山,,田川郡添田町大字英彦山,33.48833333333334,130.92333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82306,久留米,,久留米市津福本町,33.303333333333335,130.49333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82316,耳納山,,久留米市草野町字吉木,33.291666666666664,130.625,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82317,黒木,,八女市黒木町本分,33.225,130.645,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82331,柳川,,柳川市本城町,33.16,130.40333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,82361,大牟田,,大牟田市笹原町,33.00666666666667,130.46666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83021,国見,,国東市国見町中字浜手,33.678333333333335,131.575,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83051,中津,,中津市大字定留,33.586666666666666,131.245,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83061,豊後高田,,豊後高田市呉崎,33.57,131.43333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83096,耶馬渓,,中津市耶馬渓町大島,33.445,131.115,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83106,院内,,宇佐市院内町山城,33.42,131.31666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83121,杵築,,杵築市大字本庄,33.416666666666664,131.59666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83126,武蔵,,国東市武蔵町大字糸原字大海田　大分航空気象観測所,33.47833333333333,131.73666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83137,日田,,日田市三本松　日田特別地域気象観測所,33.321666666666665,130.92833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83191,玖珠,,玖珠郡玖珠町大字帆足,33.291666666666664,131.155,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83201,湯布院,,由布市湯布院町川南,33.25333333333333,131.34666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83216,大分,,大分市長浜町　大分地方気象台,33.235,131.61833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83226,佐賀関,,大分市大字佐賀関字太田,33.248333333333335,131.865,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83242,椿ヶ鼻,,日田市前津江町大野字ウスギ,33.19,130.915,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83286,臼杵,,臼杵市大字諏訪字北ヶ迫,33.13166666666667,131.79666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83341,犬飼,,豊後大野市犬飼町田原,33.065,131.63166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83371,竹田,,竹田市大字会々,32.973333333333336,131.39833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83401,佐伯,,佐伯市字剣崎,32.95,131.90166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83431,宇目,,佐伯市宇目大字重岡,32.845,131.675,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,83476,蒲江,,佐伯市蒲江大字蒲江浦,32.795,131.92333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84012,鰐浦,,対馬市上対馬町鰐浦字カキセ,34.69833333333333,129.445,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84072,厳原,,対馬市厳原町東里　厳原特別地域気象観測所,34.196666666666665,129.29166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84076,美津島,,対馬市美津島町鶏知乙　対馬航空気象観測所,34.285,129.33,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84121,芦辺,,壱岐市芦辺町国分東触,33.8,129.72166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84122,石田,,壱岐市石田町筒城東触　壱岐航空気象観測所,33.748333333333335,129.785,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84171,平戸,,平戸市岩の上町　平戸特別地域気象観測所,33.36,129.55,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84183,松浦,,松浦市志佐町里免字辻ノ尾台,33.34166666666667,129.71166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84266,佐世保,,佐世保市干尽町　佐世保特別地域気象観測所,33.15833333333333,129.72666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84306,西海,,西海市西海町中浦南郷,33.013333333333335,129.65166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84341,有川,,南松浦郡新上五島町有川郷字上原,32.98166666666667,129.11833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84361,長浦岳,,長崎市神浦北大中尾町上アマサキ,32.90833333333333,129.73833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84371,大村,,大村市箕島町　長崎航空気象観測所,32.916666666666664,129.91333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84441,諫早,,諫早市馬渡町,32.843333333333334,130.025,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84496,長崎,,長崎市南山手町　長崎地方気象台,32.733333333333334,129.86666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84519,雲仙岳,,雲仙市小浜町雲仙　雲仙岳特別地域気象観測所,32.736666666666665,130.26166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84519,雲仙岳,,雲仙市小浜町雲仙絹笠山,32.736666666666665,130.25,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84523,島原,,島原市新湊,32.76,130.36166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84536,福江,,五島市木場町　福江特別地域気象観測所,32.693333333333335,128.82666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84537,上大津,,五島市上大津町　福江航空気象観測所,32.665,128.83166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84561,口之津,,南島原市口之津町丁,32.611666666666665,130.19333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,84597,脇岬,,長崎市脇岬町,32.58166666666666,129.77666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85033,唐津,,唐津市二夕子,33.458333333333336,129.955,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85046,北山,,佐賀市富士町大字関屋字中島,33.413333333333334,130.22,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85106,鳥栖,,鳥栖市田代外町,33.385,130.51666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85116,伊万里,,伊万里市立花町,33.266666666666666,129.87833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85142,佐賀,,佐賀市駅前中央　佐賀地方気象台,33.265,130.305,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85161,嬉野,,嬉野市嬉野町大字下野丙,33.11666666666667,129.995,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85166,白石,,杵島郡白石町大字福田,33.18333333333333,130.14833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,85176,川副,,佐賀市川副町大字犬井道字国造搦　佐賀航空気象観測所,33.14833333333333,130.30166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86006,鹿北,,山鹿市鹿北町岩野,33.115,130.69166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86066,南小国,,阿蘇郡南小国町赤馬場,33.10333333333333,131.06666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86086,岱明,,玉名市岱明町中土,32.915,130.51166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86101,菊池,,菊池市木柑子字上辻,32.945,130.78166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86111,阿蘇乙姫,,阿蘇市乙姫,32.946666666666665,131.04,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86141,熊本,,熊本市中央区京町　熊本地方気象台,32.81333333333333,130.70666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86141,熊本,,熊本市北区清水町打越,32.821666666666665,130.715,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86146,益城,,上益城郡益城町大字小谷字上大道　熊本航空気象観測所,32.836666666666666,130.855,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86157,南阿蘇,,阿蘇郡南阿蘇村河陰,32.83166666666666,131.01333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86161,高森,,阿蘇郡高森町大字高森,32.821666666666665,131.125,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86181,宇土,,宇土市馬之瀬町,32.7,130.65666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86197,山都,,上益城郡山都町原突角,32.711666666666666,130.95833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86216,三角,,宇城市三角町波多,32.611666666666665,130.47833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86236,甲佐,,上益城郡甲佐町大字上早川字尾ノ上,32.67166666666667,130.81666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86271,松島,,上天草市松島町阿村,32.515,130.44666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86316,本渡,,天草市本渡町本戸馬場,32.468333333333334,130.18,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86336,八代,,八代市平山新町,32.473333333333336,130.60666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86396,田浦,,葦北郡芦北町大字田浦町字八幡の元,32.36333333333334,130.50833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86407,山江,,球磨郡山江村大字万江字屋形,32.30166666666667,130.74666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86411,五木,,球磨郡五木村甲字下手,32.395,130.82666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86451,水俣,,水俣市南福寺,32.205,130.40666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86461,一勝地,,球磨郡球磨村大字一勝地丙字永崎,32.245,130.645,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86467,人吉,,人吉市城本町　人吉特別地域気象観測所,32.21666666666667,130.755,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86477,上,,球磨郡あさぎり町上北,32.225,130.905,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86478,多良木,,球磨郡多良木町大字黒肥地字祓川,32.295,130.95,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86481,湯前横谷,,球磨郡湯前町猪鹿倉山,32.263333333333335,131.04333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,86491,牛深,,天草市牛深町　牛深特別地域気象観測所,32.196666666666665,130.02666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87041,高千穂,,西臼杵郡高千穂町大字押方字宮野原,32.711666666666666,131.29,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87066,古江,,延岡市北浦町古江,32.711666666666666,131.82,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87071,鞍岡,,西臼杵郡五ヶ瀬町大字鞍岡,32.64333333333333,131.15666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87086,日之影,,西臼杵郡日之影町大字七折字滝上下,32.681666666666665,131.40666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87127,諸塚,,東臼杵郡諸塚村大字家代,32.516666666666666,131.335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87136,北方,,延岡市北方町川水流卯,32.56166666666667,131.525,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87141,延岡,,延岡市天神小路　延岡特別地域気象観測所,32.58166666666666,131.65666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87141,延岡,,延岡市野田町,32.57833333333333,131.63333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87157,椎葉,,東臼杵郡椎葉村大字下福良,32.475,131.10333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87181,日向,,日向市大字塩見,32.40833333333333,131.6,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87206,神門,,東臼杵郡美郷町南郷区神門,32.385,131.33166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87231,西米良,,児湯郡西米良村大字竹原,32.24,131.15166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87251,都農,,児湯郡都農町大字川北,32.28333333333333,131.54166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87293,高鍋,,児湯郡高鍋町上江,32.123333333333335,131.475,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87301,加久藤,,えびの市大字永山,32.04666666666667,130.81,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87331,西都,,西都市大字黒生野,32.06333333333333,131.41333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87346,えびの高原,,えびの市大字末永,31.945,130.84,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87352,小林,,小林市南西方,32.0,130.95333333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87361,野尻,,小林市野尻町大字紙屋,31.956666666666667,131.15666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87371,国富,,東諸県郡国富町大字須志田,32.00666666666667,131.29666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87376,宮崎,,宮崎市霧島　宮崎地方気象台,31.938333333333333,131.41333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87406,田野,,宮崎市田野町甲,31.843333333333334,131.30833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87412,赤江,,宮崎市大字赤江　宮崎航空気象観測所,31.876666666666665,131.44833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87426,都城,,都城市菖蒲原町　都城特別地域気象観測所,31.73,131.08166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87461,酒谷,,日南市大字酒谷,31.641666666666666,131.26666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87492,油津,,日南市油津　油津特別地域気象観測所,31.578333333333333,131.40666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87492,油津,,日南市大字平山字仮屋下,31.596666666666668,131.40833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,87501,串間,,串間市大字西方字平山,31.465,131.22,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88061,阿久根,,阿久根市赤瀬川　阿久根特別地域気象観測所,32.026666666666664,130.2,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88066,出水,,出水市緑町,32.093333333333334,130.35166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88081,大口,,伊佐市大口原田,32.04666666666667,130.62666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88101,紫尾山,,薩摩郡さつま町平川大洞国有林,31.98,130.36666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88107,さつま柏原,,薩摩郡さつま町柏原,31.916666666666668,130.455,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88131,中甑,,薩摩川内市上甑町中甑,31.835,129.86666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88151,川内,,薩摩川内市中郷,31.833333333333332,130.315,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88166,溝辺,,霧島市溝辺町麓　鹿児島航空気象観測所,31.803333333333335,130.71833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88211,八重山,,薩摩川内市入来町浦之名字大谷,31.746666666666666,130.43833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88261,東市来,,日置市東市来町湯田,31.668333333333333,130.32833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88286,牧之原,,霧島市福山町福山,31.661666666666665,130.84333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88317,鹿児島,,鹿児島市東郡元町　鹿児島地方気象台,31.555,130.54666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88331,輝北,,鹿屋市輝北町市成,31.588333333333335,130.855,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88341,大隅,,曽於市大隅町境木町,31.58,131.005,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88371,加世田,,南さつま市加世田東本町,31.415,130.325,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88392,吉ケ別府,,鹿屋市下高隈町,31.458333333333332,130.86166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88406,志布志,,志布志市志布志町志布志字杉の下,31.47833333333333,131.095,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88432,喜入,,鹿児島市喜入中名町,31.386666666666667,130.54,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88442,鹿屋,,鹿屋市寿,31.391666666666666,130.86333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88447,肝付前田,,肝属郡肝付町前田,31.34,130.93833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88466,枕崎,,枕崎市高見町　枕崎特別地域気象観測所,31.27166666666667,130.29166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88486,指宿,,指宿市十町,31.25,130.63666666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88506,内之浦,,肝属郡肝付町北方,31.276666666666667,131.055,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88536,田代,,肝属郡錦江町田代麓,31.198333333333334,130.84333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88551,佐多,,肝属郡南大隅町佐多伊座敷,31.093333333333334,130.69,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88612,種子島,,西之表市西之表　種子島特別地域気象観測所,30.72,130.98166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88621,中種子,,熊毛郡中種子町砂中　種子島航空気象観測所,30.605,130.99166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88666,上中,,熊毛郡南種子町中之下,30.406666666666666,130.90166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88686,屋久島,,熊毛郡屋久島町小瀬田　屋久島特別地域気象観測所,30.385,130.65833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88706,尾之間,,熊毛郡屋久島町尾之間字井出ノ尻,30.235,130.555,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88736,中之島,,鹿児島郡十島村中之島,29.84,129.86666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88746,平島,,鹿児島郡十島村平島,29.683333333333334,129.52833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88756,諏訪之瀬島,,鹿児島郡十島村諏訪之瀬島,29.61,129.705,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88776,小宝島,,鹿児島郡十島村小宝島,29.225,129.32833333333335,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88781,宝島,,鹿児島郡十島村宝島,29.151666666666667,129.20166666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88821,笠利,,奄美市笠利町大字和野字長浜金久　奄美航空気象観測所,28.43,129.71166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88837,名瀬,,奄美市名瀬矢之脇町　名瀬測候所,28.385,129.49333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88851,喜界島,,大島郡喜界町大字中里西牧　喜界航空気象観測所,28.32,129.92666666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88901,古仁屋,,大島郡瀬戸内町古仁屋船津,28.143333333333334,129.315,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88931,天城,,大島郡天城町大字浅間字湾屋　徳之島航空気象観測所,27.835,128.88,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88956,伊仙,,大島郡伊仙町面縄,27.676666666666666,128.97333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88971,沖永良部,,大島郡和泊町国頭字手付　沖永良部特別地域気象観測所,27.431666666666665,128.705,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,88986,与論島,,大島郡与論町立長　与論航空気象観測所,27.043333333333333,128.40166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91011,伊是名,,島尻郡伊是名村字内花,26.948333333333334,127.94,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91021,奥,,国頭郡国頭村奥,26.835,128.27166666666668,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91046,国頭,,国頭郡国頭村比地,26.72833333333333,128.17833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91066,本部,,国頭郡本部町謝花,26.685,127.89833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91081,東,,国頭郡東村字平良,26.631666666666668,128.15333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91096,粟国,,島尻郡粟国村字浜,26.591666666666665,127.23833333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91107,名護,,名護市宮里　名護特別地域気象観測所,26.593333333333334,127.965,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91121,読谷,,中頭郡読谷村字波平,26.406666666666666,127.73333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91141,北原,,島尻郡久米島町字北原　久米島航空気象観測所,26.363333333333333,126.71333333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91146,久米島,,島尻郡久米島町字謝名堂　久米島特別地域気象観測所,26.336666666666666,126.80333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91151,渡名喜,,島尻郡渡名喜村,26.373333333333335,127.14166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91161,胡屋,,沖縄市胡屋,26.326666666666668,127.80333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91166,宮城島,,うるま市与那城上原阪上,26.363333333333333,127.97166666666666,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91181,渡嘉敷,,島尻郡渡嘉敷村渡嘉敷,26.21,127.36333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91197,那覇,,那覇市樋川　沖縄気象台,26.206666666666667,127.68666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91236,安次嶺,,那覇市字安次嶺　那覇航空測候所,26.19333333333333,127.63833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,91241,糸数,,南城市玉城字糸数西赤津川原,26.153333333333332,127.765,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,92006,北大東,,島尻郡北大東村字南　北大東航空気象観測所,25.943333333333335,131.32666666666665,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,92011,南大東,,島尻郡南大東村在所　南大東島地方気象台,25.828333333333333,131.22833333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,92012,旧東,,島尻郡南大東村字旧東　南大東航空気象観測所,25.846666666666668,131.26333333333332,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,93012,下地島,,宮古島市伊良部字佐和田　下地島航空気象観測所,24.826666666666668,125.14333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,93041,宮古島,,宮古島市平良字下里　宮古島地方気象台,24.793333333333333,125.27833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,93042,鏡原,,宮古島市平良字下里　宮古航空気象観測所,24.781666666666666,125.295,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,93051,城辺,,宮古島市城辺字新城,24.743333333333332,125.41,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,93062,仲筋,,宮古郡多良間村仲筋　多良間航空気象観測所,24.653333333333332,124.675,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94001,伊原間,,石垣市伊原間,24.506666666666668,124.28,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94011,所野,,八重山郡与那国町字与那国　与那国航空気象観測所,24.466666666666665,122.97833333333334,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94017,与那国島,,八重山郡与那国町与那国　与那国島特別地域気象観測所,24.466666666666665,123.01,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94036,川平,,石垣市川平,24.466666666666665,124.14,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94062,西表島,,八重山郡竹富町字上原宇那利崎　西表島特別地域気象観測所,24.426666666666666,123.765,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94081,石垣島,,石垣市登野城　石垣島地方気象台,24.336666666666666,124.16333333333333,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94086,盛山,,石垣市字盛山東牛種子　石垣航空気象観測所,24.395,124.245,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94101,大原,,八重山郡竹富町南風見,24.265,123.87166666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv
+jma_amedas,94116,波照間,,八重山郡竹富町波照間,24.055,123.76666666666667,,,data\raw\jma_amedas_stations\ame_master_20260324.csv

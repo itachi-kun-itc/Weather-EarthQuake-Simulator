@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/weather_simulator/__init__.py
+src/weather_simulator.egg-info/PKG-INFO
+src/weather_simulator.egg-info/SOURCES.txt
+src/weather_simulator.egg-info/dependency_links.txt
+src/weather_simulator.egg-info/requires.txt
+src/weather_simulator.egg-info/top_level.txt
+src/weather_simulator/datasources/__init__.py
+src/weather_simulator/datasources/http.py
+src/weather_simulator/datasources/jma_amedas.py
+tests/test_jma_amedas.py

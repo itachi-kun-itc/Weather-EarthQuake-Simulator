@@ -1,0 +1,7 @@
+requests>=2.32
+pandas>=2.2
+python-dotenv>=1.0
+
+[dev]
+pytest>=8.0
+ruff>=0.6
