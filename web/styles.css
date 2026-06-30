@@ -173,6 +173,10 @@ h1 {
   line-height: 1.1;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .icon-button {
   display: grid;
   flex: 0 0 34px;
@@ -287,6 +291,112 @@ h1 {
   font-weight: 800;
 }
 
+.simulation-stop {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.simulation-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.max-shindo-card,
+.magnitude-card {
+  display: grid;
+  min-height: 92px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.max-shindo-card span,
+.magnitude-card span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.max-shindo-card strong {
+  color: #ffffff;
+  font-size: 3rem;
+  line-height: 0.95;
+}
+
+.magnitude-card strong {
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+
+.wave-readout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.wave-readout div {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.wave-readout dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.wave-readout dd {
+  margin: 0;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.max-stations-block {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 10px;
+}
+
+.max-stations-block h2 {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+#max-station-list {
+  display: grid;
+  max-height: 230px;
+  gap: 7px;
+  margin: 0;
+  padding-left: 20px;
+  overflow: auto;
+  color: #ffffff;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+#max-station-list li::marker {
+  color: var(--muted);
+}
+
 .intensity-legend {
   position: absolute;
   right: 14px;
@@ -310,7 +420,6 @@ h1 {
 
 .intensity-scale {
   display: grid;
-  grid-template-columns: repeat(2, 34px);
   gap: 0;
 }
 
@@ -319,7 +428,6 @@ h1 {
   width: 34px;
   height: 34px;
   place-items: center;
-  border-right: 1px solid rgba(17, 24, 39, 0.32);
   border-bottom: 1px solid rgba(17, 24, 39, 0.32);
   background: var(--color);
   color: var(--text-color, #ffffff);
@@ -328,11 +436,7 @@ h1 {
   line-height: 1;
 }
 
-.intensity-scale span:nth-child(2n) {
-  border-right: 0;
-}
-
-.intensity-scale span:nth-last-child(-n + 2) {
+.intensity-scale span:last-child {
   border-bottom: 0;
 }
 

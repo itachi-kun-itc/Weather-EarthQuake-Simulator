@@ -20,7 +20,8 @@
 
         <div class="map-wrap">
           <div id="map" aria-label="地震地域区分の日本地図"></div>
-          <section class="sim-panel" aria-label="震源設定">
+
+          <section class="sim-panel" id="setup-panel" aria-label="震源設定">
             <div class="sim-panel-head">
               <div>
                 <p class="eyebrow">Epicenter</p>
@@ -85,7 +86,44 @@
               </div>
             </dl>
 
-            <button class="simulation-start" type="button">シミュレーション開始</button>
+            <button class="simulation-start" id="simulation-start" type="button">
+              シミュレーション開始
+            </button>
+          </section>
+
+          <section class="sim-panel simulation-panel hidden" id="simulation-panel" aria-label="シミュレーション結果">
+            <div class="simulation-summary">
+              <div class="max-shindo-card">
+                <span>最大震度</span>
+                <strong id="simulation-max-intensity">-</strong>
+              </div>
+              <div class="magnitude-card">
+                <span>マグニチュード</span>
+                <strong id="simulation-magnitude">M -</strong>
+              </div>
+            </div>
+
+            <div class="wave-readout">
+              <div>
+                <dt>経過</dt>
+                <dd id="simulation-time">0.0 秒</dd>
+              </div>
+              <div>
+                <dt>P波</dt>
+                <dd id="p-wave-radius">0 km</dd>
+              </div>
+              <div>
+                <dt>S波</dt>
+                <dd id="s-wave-radius">0 km</dd>
+              </div>
+            </div>
+
+            <section class="max-stations-block">
+              <h2>最大震度を観測した観測点</h2>
+              <ol id="max-station-list"></ol>
+            </section>
+
+            <button class="simulation-stop" id="simulation-stop" type="button">設定に戻る</button>
           </section>
 
           <section class="intensity-legend" aria-label="震度凡例">
