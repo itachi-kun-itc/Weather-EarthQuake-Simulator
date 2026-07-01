@@ -36,6 +36,7 @@
               <input id="epicenter-edit-toggle" type="checkbox" />
               <span>震源地を設定</span>
             </label>
+            <div class="control-separator" aria-hidden="true"></div>
 
             <div class="toggle-grid" aria-label="震度表示切り替え">
               <label class="toggle-row">
@@ -48,9 +49,16 @@
               </label>
               <label class="toggle-row">
                 <input id="eew-warning-toggle" type="checkbox" />
-                <span>緊急地震速報発表地域</span>
+                <span>緊急地震速報発令地域</span>
               </label>
             </div>
+
+            <label class="field">
+              <span>過去地震</span>
+              <select id="historical-earthquake-select">
+                <option value="">過去地震を選択</option>
+              </select>
+            </label>
 
             <label class="field">
               <span>震央名</span>
@@ -120,6 +128,10 @@
                 <dt>S波</dt>
                 <dd id="s-wave-radius">0 km</dd>
               </div>
+              <div>
+                <dt>深さ</dt>
+                <dd id="simulation-depth">-</dd>
+              </div>
             </div>
 
             <section class="max-stations-block">
@@ -144,6 +156,11 @@
               <span style="--color: #2f3e9e">1</span>
               <span style="--color: #f6f7f8; --text-color: #111827">0</span>
             </div>
+          </section>
+
+          <section class="eew-forecast-panel hidden" id="eew-forecast-panel" aria-label="緊急地震速報発令地域">
+            <h2>緊急地震速報発令地域</h2>
+            <ul id="eew-forecast-list"></ul>
           </section>
         </div>
       </section>

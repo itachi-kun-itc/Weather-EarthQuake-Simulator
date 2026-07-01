@@ -240,6 +240,12 @@ h1 {
   accent-color: var(--accent);
 }
 
+.control-separator {
+  height: 1px;
+  margin: 2px 0 12px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
 .toggle-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -342,7 +348,7 @@ h1 {
 
 .wave-readout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   margin-bottom: 12px;
 }
@@ -438,6 +444,52 @@ h1 {
 
 .intensity-scale span:last-child {
   border-bottom: 0;
+}
+
+.eew-forecast-panel {
+  position: absolute;
+  right: 56px;
+  bottom: 52px;
+  z-index: 421;
+  width: min(300px, calc(100vw - 340px));
+  min-width: 252px;
+  max-height: min(320px, 48vh);
+  overflow: auto;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: rgba(18, 8, 10, 0.86);
+  color: #ffffff;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.26);
+}
+
+.eew-forecast-panel h2 {
+  margin: 0 0 8px;
+  color: #ffccd4;
+  font-size: 0.86rem;
+  line-height: 1.2;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.eew-forecast-panel ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.eew-forecast-panel li {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 4px;
+  padding: 4px 6px;
+  background: #e60012;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1.1;
 }
 
 .epicenter-marker-shell {
@@ -577,16 +629,48 @@ h1 {
   }
 
   .sim-panel {
-    left: 10px;
-    top: 10px;
-    max-height: calc(100% - 110px);
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    max-height: min(72svh, 560px);
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 18px 18px 0 0;
+    padding: 24px 14px 14px;
     overflow: auto;
+  }
+
+  .sim-panel::before {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 46px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+    content: "";
+    transform: translateX(-50%);
+  }
+
+  .wave-readout {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .intensity-legend {
     right: 10px;
     bottom: 46px;
     width: 30px;
+  }
+
+  .eew-forecast-panel {
+    right: 46px;
+    bottom: 46px;
+    width: min(252px, calc(100vw - 70px));
+    min-width: 0;
+    max-height: 240px;
   }
 
   .intensity-scale span {
