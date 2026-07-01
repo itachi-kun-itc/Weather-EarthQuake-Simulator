@@ -8,6 +8,8 @@ on:
 # Allow the workflow to push to the repository (required for gh-pages publish)
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -29,5 +31,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./web
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
