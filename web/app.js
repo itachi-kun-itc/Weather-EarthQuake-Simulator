@@ -58,6 +58,8 @@ const els = {
   stationLayerToggle: document.querySelector("#station-layer-toggle"),
   regionLayerToggle: document.querySelector("#region-layer-toggle"),
   eewWarningToggle: document.querySelector("#eew-warning-toggle"),
+  simulationStationLayerToggle: document.querySelector("#simulation-station-layer-toggle"),
+  simulationRegionLayerToggle: document.querySelector("#simulation-region-layer-toggle"),
   resetEpicenter: document.querySelector("#reset-epicenter"),
   setupPanel: document.querySelector("#setup-panel"),
   simulationPanel: document.querySelector("#simulation-panel"),
@@ -65,10 +67,10 @@ const els = {
   simulationStop: document.querySelector("#simulation-stop"),
   simulationMaxIntensity: document.querySelector("#simulation-max-intensity"),
   simulationMagnitude: document.querySelector("#simulation-magnitude"),
+  simulationEpicenter: document.querySelector("#simulation-epicenter"),
   simulationTime: document.querySelector("#simulation-time"),
   pWaveRadius: document.querySelector("#p-wave-radius"),
   sWaveRadius: document.querySelector("#s-wave-radius"),
-  simulationDepth: document.querySelector("#simulation-depth"),
   maxStationList: document.querySelector("#max-station-list"),
   eewForecastPanel: document.querySelector("#eew-forecast-panel"),
   eewForecastList: document.querySelector("#eew-forecast-list"),
@@ -98,6 +100,7 @@ let locationResolveTimer;
 let simulationFrame;
 let simulationStartedAt;
 let simulationPreviousEpicenterEditEnabled = false;
+let simulationEpicenter = [state.longitude, state.latitude];
 let lastManagedEpicenter = {
   latitude: state.latitude,
   longitude: state.longitude,
@@ -106,6 +109,7 @@ let lastManagedEpicenter = {
 setupTabs();
 renderDepthOptions();
 bindSimulationControls();
+setupMobileSheets();
 
 if (window.maplibregl) {
   initEarthquakeMap();
@@ -154,6 +158,8 @@ function bindSimulationControls() {
   els.stationLayerToggle.addEventListener("change", () => updateDisplayMode());
   els.regionLayerToggle.addEventListener("change", () => updateDisplayMode());
   els.eewWarningToggle.addEventListener("change", () => updateDisplayMode());
+  els.simulationStationLayerToggle.addEventListener("change", () => syncSimulationLayerToggles());
+  els.simulationRegionLayerToggle.addEventListener("change", () => syncSimulationLayerToggles());
   els.simulationStart.addEventListener("click", () => startSimulation());
   els.simulationStop.addEventListener("click", () => stopSimulation());
 
@@ -172,6 +178,45 @@ function bindSimulationControls() {
 
   syncInputs();
   updateDisplayMode();
+}
+
+function setupMobileSheets() {
+  document.querySelectorAll(".sim-panel").forEach((panel) => {
+    setSheetState(panel, "open");
+    const handle = panel.querySelector(".sheet-handle");
+    if (!handle) {
+      return;
+    }
+
+    let startY = 0;
+
+    handle.addEventListener("click", () => {
+      const current = panel.dataset.sheetState ?? "open";
+      setSheetState(panel, current === "collapsed" ? "open" : "collapsed");
+    });
+
+    handle.addEventListener("pointerdown", (event) => {
+      startY = event.clientY;
+      handle.setPointerCapture(event.pointerId);
+    });
+
+    handle.addEventListener("pointerup", (event) => {
+      const deltaY = event.clientY - startY;
+      if (Math.abs(deltaY) < 18) {
+        return;
+      }
+
+      setSheetState(panel, deltaY > 0 ? "collapsed" : "open");
+    });
+  });
+}
+
+function setSheetState(panel, stateName) {
+  if (!panel) {
+    return;
+  }
+
+  panel.dataset.sheetState = stateName;
 }
 
 async function initEarthquakeMap() {
@@ -197,7 +242,7 @@ async function initEarthquakeMap() {
     attributionControl: false,
   });
 
-  map.addControl(new maplibregl.NavigationControl({ visualizePitch: false }), "top-right");
+  addZoomOnlyControl();
   map.addControl(
     new maplibregl.AttributionControl({
       compact: true,
@@ -254,6 +299,35 @@ function onceMapLoaded() {
   }
 
   return new Promise((resolve) => map.once("load", resolve));
+}
+
+function addZoomOnlyControl() {
+  const zoomControl = {
+    onAdd(targetMap) {
+      const container = document.createElement("div");
+      container.className = "maplibregl-ctrl maplibregl-ctrl-group zoom-only-control";
+
+      const zoomIn = document.createElement("button");
+      zoomIn.type = "button";
+      zoomIn.title = "拡大";
+      zoomIn.setAttribute("aria-label", "拡大");
+      zoomIn.textContent = "+";
+      zoomIn.addEventListener("click", () => targetMap.zoomIn({ duration: 240 }));
+
+      const zoomOut = document.createElement("button");
+      zoomOut.type = "button";
+      zoomOut.title = "縮小";
+      zoomOut.setAttribute("aria-label", "縮小");
+      zoomOut.textContent = "−";
+      zoomOut.addEventListener("click", () => targetMap.zoomOut({ duration: 240 }));
+
+      container.append(zoomIn, zoomOut);
+      return container;
+    },
+    onRemove() {},
+  };
+
+  map.addControl(zoomControl, "top-right");
 }
 
 async function showMapLayers() {
@@ -410,12 +484,7 @@ function addMapLayers() {
     paint: {
       "circle-color": ["case", ["==", ["get", "waveState"], "p"], "#7de7ff", ["get", "intensityColor"]],
       "circle-opacity": ["case", ["==", ["get", "waveState"], "p"], 0.56, 0.94],
-      "circle-radius": [
-        "case",
-        ["==", ["get", "waveState"], "p"],
-        3.2,
-        ["interpolate", ["linear"], ["get", "intensityRank"], 1, 4, 5, 6.5, 9, 9],
-      ],
+      "circle-radius": 5.5,
       "circle-stroke-color": ["case", ["==", ["get", "waveState"], "p"], "#e9fbff", "#ffffff"],
       "circle-stroke-opacity": 0.9,
       "circle-stroke-width": ["case", ["==", ["get", "waveState"], "p"], 0.8, 1.1],
@@ -503,11 +572,21 @@ function updateDisplayMode() {
   state.showStationLayer = els.stationLayerToggle.checked;
   state.showRegionLayer = els.regionLayerToggle.checked;
   state.showEewWarningLayer = els.eewWarningToggle.checked;
+  els.simulationStationLayerToggle.checked = state.showStationLayer;
+  els.simulationRegionLayerToggle.checked = state.showRegionLayer;
   updateLayerVisibility("shindo-station-points", state.showStationLayer);
   updateLayerVisibility("jma-intensity-fill", state.showRegionLayer);
   updateLayerVisibility("eew-warning-fill", state.showRegionLayer && state.showEewWarningLayer);
   updateEewReplacementMode();
   updateEewForecastPanel();
+}
+
+function syncSimulationLayerToggles() {
+  state.showStationLayer = els.simulationStationLayerToggle.checked;
+  state.showRegionLayer = els.simulationRegionLayerToggle.checked;
+  els.stationLayerToggle.checked = state.showStationLayer;
+  els.regionLayerToggle.checked = state.showRegionLayer;
+  updateDisplayMode();
 }
 
 function updateEewReplacementMode() {
@@ -574,6 +653,7 @@ function setupStationHoverPopup() {
 
 function startSimulation() {
   simulationPreviousEpicenterEditEnabled = state.epicenterEditEnabled;
+  simulationEpicenter = [state.longitude, state.latitude];
   state.simulationRunning = true;
   state.epicenterEditEnabled = false;
   els.epicenterEditToggle.checked = false;
@@ -583,6 +663,7 @@ function startSimulation() {
   updateDisplayMode();
   els.setupPanel.classList.add("hidden");
   els.simulationPanel.classList.remove("hidden");
+  setSheetState(els.simulationPanel, "collapsed");
   updateSimulationSummary();
   simulationStartedAt = performance.now();
   cancelAnimationFrame(simulationFrame);
@@ -599,6 +680,7 @@ function stopSimulation() {
   updateEpicenterEditMode();
   els.setupPanel.classList.remove("hidden");
   els.simulationPanel.classList.add("hidden");
+  setSheetState(els.setupPanel, "open");
   setWaveRadiusData(0, 0);
   updateIntensityLayer();
 }
@@ -659,7 +741,7 @@ function updateSimulationSummary(elapsedSec = getSimulationStationElapsedSec()) 
 
   els.simulationMaxIntensity.textContent = maxClass.label;
   els.simulationMagnitude.textContent = `M ${state.magnitude.toFixed(1)}`;
-  els.simulationDepth.textContent = formatDepth(state.depthKm);
+  els.simulationEpicenter.textContent = `${state.epicenterName} / ${formatDepth(state.depthKm)}`;
   els.maxStationList.replaceChildren(
     ...(maxStations.length > 0
       ? maxStations.map((feature) => {
@@ -722,7 +804,7 @@ function waveRadiusFeatureCollection(radiusKm) {
         },
         geometry: {
           type: "Point",
-          coordinates: [state.longitude, state.latitude],
+          coordinates: simulationEpicenter,
         },
       },
     ],
@@ -735,7 +817,7 @@ function kilometersToScreenPixels(radiusKm) {
   }
 
   const metersPerPixel =
-    (156543.03392 * Math.cos(toRadians(state.latitude))) / 2 ** map.getZoom();
+    (156543.03392 * Math.cos(toRadians(simulationEpicenter[1]))) / 2 ** map.getZoom();
   const canvas = map.getCanvas();
   const maxVisibleRadius = Math.hypot(canvas.width, canvas.height) * 1.2;
   return Math.min(Math.max((radiusKm * 1000) / metersPerPixel, 0), maxVisibleRadius);

@@ -22,6 +22,7 @@
           <div id="map" aria-label="地震地域区分の日本地図"></div>
 
           <section class="sim-panel" id="setup-panel" aria-label="震源設定">
+            <button class="sheet-handle" type="button" aria-label="メニューを開閉"></button>
             <div class="sim-panel-head">
               <div>
                 <p class="eyebrow">Epicenter</p>
@@ -104,6 +105,7 @@
           </section>
 
           <section class="sim-panel simulation-panel hidden" id="simulation-panel" aria-label="シミュレーション結果">
+            <button class="sheet-handle" type="button" aria-label="メニューを開閉"></button>
             <div class="simulation-summary">
               <div class="max-shindo-card">
                 <span>最大震度</span>
@@ -117,29 +119,40 @@
 
             <div class="wave-readout">
               <div>
-                <dt>経過</dt>
+                <dt>震源地</dt>
+                <dd id="simulation-epicenter">-</dd>
+              </div>
+              <div>
+                <dt>経過時間</dt>
                 <dd id="simulation-time">0.0 秒</dd>
               </div>
               <div>
-                <dt>P波</dt>
+                <dt>P波半径</dt>
                 <dd id="p-wave-radius">0 km</dd>
               </div>
               <div>
-                <dt>S波</dt>
+                <dt>S波半径</dt>
                 <dd id="s-wave-radius">0 km</dd>
-              </div>
-              <div>
-                <dt>深さ</dt>
-                <dd id="simulation-depth">-</dd>
               </div>
             </div>
 
+            <div class="simulation-layer-toggles" aria-label="シミュレーション表示切り替え">
+              <label class="toggle-row">
+                <input id="simulation-region-layer-toggle" type="checkbox" checked />
+                <span>地震区分</span>
+              </label>
+              <label class="toggle-row">
+                <input id="simulation-station-layer-toggle" type="checkbox" />
+                <span>観測点</span>
+              </label>
+            </div>
+
             <section class="max-stations-block">
-              <h2>最大震度を観測した観測点</h2>
+              <h2>地震観測点一覧</h2>
               <ol id="max-station-list"></ol>
             </section>
 
-            <button class="simulation-stop" id="simulation-stop" type="button">設定に戻る</button>
+            <button class="simulation-stop" id="simulation-stop" type="button">シミュレーション中止</button>
           </section>
 
           <section class="intensity-legend" aria-label="震度凡例">
