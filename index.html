@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Weather EarthQuake Simulator</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=0.1.0" />
   </head>
   <body>
     <main class="app-shell">
@@ -199,7 +199,52 @@
       <button class="tab" id="weather-tab" type="button" data-panel="weather-panel">気象</button>
     </nav>
 
+    <script>
+      (function () {
+        try {
+          if (sessionStorage.getItem('ws_cache_cleared')) {
+            return;
+          }
+
+          const clearAll = async () => {
+            try {
+              if ('serviceWorker' in navigator) {
+                const regs = await navigator.serviceWorker.getRegistrations();
+                for (const r of regs) {
+                  try {
+                    await r.unregister();
+                  } catch (e) {
+                    console.warn('serviceWorker unregister failed', e);
+                  }
+                }
+              }
+
+              if ('caches' in window) {
+                const keys = await caches.keys();
+                await Promise.all(keys.map((k) => caches.delete(k)));
+              }
+            } catch (e) {
+              console.warn('cache clear error', e);
+            }
+
+            sessionStorage.setItem('ws_cache_cleared', '1');
+            try {
+              const url = new URL(location.href);
+              url.searchParams.set('_', Date.now());
+              location.replace(url.toString());
+            } catch (e) {
+              location.reload();
+            }
+          };
+
+          // 実行（ページ読み込みごとに一度だけリロード）
+          clearAll();
+        } catch (e) {
+          console.warn('cache clear bootstrap failed', e);
+        }
+      })();
+    </script>
     <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
-    <script src="./app.js"></script>
+    <script src="./app.js?v=0.1.0"></script>
   </body>
 </html>
