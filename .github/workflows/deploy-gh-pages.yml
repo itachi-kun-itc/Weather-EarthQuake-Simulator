@@ -26,6 +26,8 @@ jobs:
         run: npm install
 
       - name: Deploy to GitHub Pages
-        run: node ./node_modules/gh-pages/bin/gh-pages.js -d web
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./web
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
