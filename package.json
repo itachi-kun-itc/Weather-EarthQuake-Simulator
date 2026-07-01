@@ -10,6 +10,7 @@
     "build:surrounding-land": "node scripts/convert_surrounding_land.js",
     "build:ground": "node --max-old-space-size=8192 scripts/build_ground_model.js",
     "build:boundaries": "node --max-old-space-size=8192 scripts/build_boundary_layers.js",
-    "web": "node web/dev-server.js"
+    "web": "node web/dev-server.js",
+    "open-site": "node scripts/open_site.js"
   }
 }
