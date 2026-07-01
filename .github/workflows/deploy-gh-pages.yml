@@ -26,6 +26,6 @@ jobs:
         run: npm install
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d web
+        run: node ./node_modules/gh-pages/bin/gh-pages.js -d web
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
