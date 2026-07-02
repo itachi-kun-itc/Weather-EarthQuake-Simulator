@@ -6,6 +6,7 @@ const PLATE_BOUNDARIES_URL = "./data/plate_boundaries.geojson";
 const SURROUNDING_LAND_URL = "./data/surrounding_land.geojson";
 const GROUND_MODEL_URL = "./data/ground_model.json";
 const SHINDO_STATIONS_URL = "./data/jma_shindo_stations.json";
+const EARTHQUAKE_PRESETS_URL = "./data/earthquake_presets.json";
 
 const INITIAL_CENTER = [139.767, 35.681];
 const INITIAL_ZOOM = 5.25;
@@ -17,6 +18,8 @@ const EARTHQUAKE_MODEL = {
   eewProcessingDelaySec: 2.0,
   defaultSiteAmplification: 0,
 };
+const EEW_BLINK_INTERVAL_SEC = 0.7;
+const EEW_BLINK_PHASES = 6;
 const EARTHQUAKE_PRESETS = [
   {
     id: "tohoku-2011",
@@ -431,9 +434,13 @@ const state = {
   selectedPresetId: "",
   intensityColorScheme: "normal",
   eewWarningForecastAreas: [],
+  eewWarningBlinkStartedAt: {},
+  eewInitialWarningKeys: new Set(),
+  eewPreviousWarningKeys: new Set(),
   maxIntensityHistory: [],
   simulationRunning: false,
   simulationPaused: false,
+  mapInteracting: false,
 };
 
 const els = {
@@ -455,6 +462,8 @@ const els = {
   simulationRegionLayerToggle: document.querySelector("#simulation-region-layer-toggle"),
   simulationEewWarningToggle: document.querySelector("#simulation-eew-warning-toggle"),
   resetEpicenter: document.querySelector("#reset-epicenter"),
+  setupSheetToggle: document.querySelector("#setup-sheet-toggle"),
+  simulationSheetToggle: document.querySelector("#simulation-sheet-toggle"),
   setupPanel: document.querySelector("#setup-panel"),
   simulationPanel: document.querySelector("#simulation-panel"),
   simulationStart: document.querySelector("#simulation-start"),
@@ -491,6 +500,7 @@ let groundModelLoadPromise;
 let shindoStationData;
 let shindoStationLoadPromise;
 let stationIntensityFeatureCache;
+let presetObservationLookupCache;
 let stationPopup;
 let stationClickPopup;
 let stationHoverEventsBound = false;
@@ -513,6 +523,45 @@ const SOURCE_LINKS = [
   { label: "Natural Earth", href: "https://www.naturalearthdata.com/" },
   { label: "気象研究所 プレート形状データ / Hirose Fuyuki", href: "https://www.mri-jma.go.jp/Dep/sei/fhirose/plate/PlateData.html" },
 ];
+const SOURCE_UPDATED_AT = "2026 07 03";
+const SOURCE_SECTIONS = [
+  {
+    title: "気象庁",
+    description: "震央区分、震度観測点、緊急地震速報（警報）の府県予報区、震度階級、長周期地震動、過去地震資料の参照に使用。このサイトでは緊急地震速報の特別警報相当も警報として扱い、表示上は区別しません。",
+    links: [
+      { label: "気象庁", href: "https://www.jma.go.jp/" },
+      { label: "震度情報で用いる区域名", href: "https://www.jma.go.jp/jma/kishou/know/jishin/joho/shindo-name.html" },
+      { label: "震度観測点", href: "https://www.data.jma.go.jp/eqev/data/kyoshin/jma-shindo.html" },
+      { label: "緊急地震速報のしくみ", href: "https://www.jma.go.jp/jma/kishou/know/jishin/eew/shikumi/shikumi.html" },
+      { label: "長周期地震動に関する情報の運用開始について", href: "https://www.jma.go.jp/jma/kishou/know/jishin/eew/shiryo/lpgm_start202302/202302_setsumei.pdf" },
+      { label: "震度について", href: "https://www.jma.go.jp/jma/kishou/know/shindo/index.html" },
+      { label: "東北地方太平洋沖地震（2011）", href: "https://www.data.jma.go.jp/eqev/data/2011_03_11_tohoku/" },
+      { label: "大阪府北部の地震（2018）", href: "https://www.data.jma.go.jp/eqev/data/higai/20180618_oosaka_jishin_menu.html" },
+      { label: "熊本地震（2016）", href: "https://www.data.jma.go.jp/eqev/data/2016_04_14_kumamoto/index.html" },
+    ],
+  },
+  {
+    title: "気象研究所 プレート形状データ",
+    description: "日本周辺の海域プレート境界・海溝・トラフ線の描画に使用。",
+    links: [
+      { label: "プレート形状 数値データ", href: "https://www.mri-jma.go.jp/Dep/sei/fhirose/plate/PlateData.html" },
+      { label: "plate_data.tar.gz", href: "https://www.mri-jma.go.jp/Dep/sei/fhirose/data/plate_data.tar.gz" },
+    ],
+    note: "データを使用した際の引用について\n※データを使用した場合には，使用地域に対応した出典論文を正確に明記するようにお願いします．以下に例を示します．\n北海道～東北地方の場合\nKita et al. (2010, EPSL)およびNakajima and Hasegawa (2006, GRL)\n\n東北地方南部～関東地方の場合\nNakajima and Hasegawa (2006, GRL)，弘瀬・他 (2008, 地震)，Nakajima et al. (2009, JGR)\n\n西南日本の場合\nBaba et al. (2002, PEPI)，Nakajima and Hasegawa (2007, JGR)，Hirose et al. (2008, JGR)",
+  },
+  {
+    title: "地図・地盤・境界データ",
+    description: "市区町村、周辺陸域、地盤増幅、シミュレーション補正、背景地図の作成に使用。",
+    links: [
+      { label: "国土数値情報", href: "https://nlftp.mlit.go.jp/ksj/" },
+      { label: "気象庁 GISデータ", href: "https://www.data.jma.go.jp/developer/gis.html" },
+      { label: "J-SHIS 地震ハザードステーション", href: "https://www.j-shis.bosai.go.jp/" },
+      { label: "地震本部", href: "https://www.jishin.go.jp/" },
+      { label: "Natural Earth", href: "https://www.naturalearthdata.com/" },
+      { label: "MapLibre GL JS", href: "https://maplibre.org/maplibre-gl-js/docs/" },
+    ],
+  },
+];
 let stationDataCache = {
   bucket: null,
   data: null,
@@ -530,6 +579,7 @@ setupTabs();
 renderDepthOptions();
 renderMagnitudeOptions();
 renderEarthquakePresetOptions();
+loadEarthquakePresets();
 bindSimulationControls();
 applyIntensityColorScheme(state.intensityColorScheme, { refreshLayers: false });
 setupMobileSheets();
@@ -612,18 +662,42 @@ function renderEarthquakePresetOptions() {
   els.historicalEarthquake.value = state.selectedPresetId;
 }
 
+async function loadEarthquakePresets() {
+  try {
+    const response = await fetch(`${EARTHQUAKE_PRESETS_URL}?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`Failed to load earthquake presets: ${response.status}`);
+    }
+
+    const data = await response.json();
+    if (!Array.isArray(data.presets)) {
+      throw new Error("earthquake_presets.json does not contain presets");
+    }
+
+    EARTHQUAKE_PRESETS.splice(0, EARTHQUAKE_PRESETS.length, ...data.presets);
+    renderEarthquakePresetOptions();
+    invalidateIntensityEstimateCache();
+    updateIntensityLayer();
+  } catch (error) {
+    console.warn(error);
+  }
+}
+
 function bindSimulationControls() {
   [els.latitude, els.longitude].forEach((input) => {
     input.addEventListener("input", () => {
       validateCoordinateInput(input, { report: true });
     });
     input.addEventListener("blur", () => {
-      updateStateFromInputs();
+      updateStateFromInputs({ resolveLocation: true, enforceManagedArea: true });
       syncInputs();
     });
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        input.blur();
+      }
+    });
   });
-  els.latitude.addEventListener("input", () => updateStateFromInputs({ resolveLocation: true }));
-  els.longitude.addEventListener("input", () => updateStateFromInputs({ resolveLocation: true }));
   els.depth.addEventListener("input", () => updateStateFromInputs());
   els.magnitude.addEventListener("input", () => updateStateFromInputs());
   els.historicalEarthquake?.addEventListener("change", () => applyEarthquakePreset(els.historicalEarthquake.value));
@@ -743,130 +817,113 @@ function getSelectedPreset() {
   return EARTHQUAKE_PRESETS.find((preset) => preset.id === state.selectedPresetId) ?? null;
 }
 
+function clearSelectedPreset() {
+  if (!state.selectedPresetId) {
+    return;
+  }
+
+  state.selectedPresetId = "";
+  if (els.historicalEarthquake) {
+    els.historicalEarthquake.value = "";
+  }
+}
+
 function getPresetStationObservation(station) {
   const preset = getSelectedPreset();
   if (!preset?.observedStations) {
     return null;
   }
 
+  const lookup = getPresetObservationLookup(preset);
+  const normalizedStationName = normalizeStationNameForMatch(station.name);
+  const exactMatch = lookup.byStationId.get(station.id) ?? lookup.byName.get(normalizedStationName);
+  if (exactMatch) {
+    return exactMatch;
+  }
+
   return (
-    preset.observedStations.find((observation) => observation.stationId === station.id) ??
-    preset.observedStations.find(
-      (observation) => observation.stationName && station.name.includes(observation.stationName),
+    lookup.fuzzyCandidates.find(
+      (observation) => {
+        const normalizedObservationName = observation.normalizedStationName;
+        return (
+          normalizedObservationName &&
+          (normalizedStationName.includes(normalizedObservationName) ||
+            normalizedObservationName.includes(normalizedStationName))
+        );
+      },
     ) ??
     null
   );
 }
 
+function getPresetObservationLookup(preset) {
+  if (presetObservationLookupCache?.presetId === preset.id) {
+    return presetObservationLookupCache;
+  }
+
+  const byStationId = new Map();
+  const byName = new Map();
+  const fuzzyCandidates = [];
+  (preset.observedStations ?? []).forEach((observation) => {
+    const normalizedStationName = normalizeStationNameForMatch(observation.stationName);
+    const normalizedObservation = {
+      ...observation,
+      normalizedStationName,
+    };
+
+    if (observation.stationId) {
+      byStationId.set(observation.stationId, normalizedObservation);
+    }
+    if (normalizedStationName && !byName.has(normalizedStationName)) {
+      byName.set(normalizedStationName, normalizedObservation);
+    }
+    if (normalizedStationName.length >= 3) {
+      fuzzyCandidates.push(normalizedObservation);
+    }
+  });
+
+  presetObservationLookupCache = {
+    presetId: preset.id,
+    byStationId,
+    byName,
+    fuzzyCandidates,
+  };
+  return presetObservationLookupCache;
+}
+
+function normalizeStationNameForMatch(name) {
+  return String(name ?? "")
+    .normalize("NFKC")
+    .replace(/[＊*]/g, "")
+    .replace(/（旧[^）]*）/g, "")
+    .replace(/\(旧[^)]*\)/g, "")
+    .replace(/[()\[\]（）「」『』\s]/g, "")
+    .trim();
+}
+
 function setupMobileSheets() {
   document.querySelectorAll(".sim-panel").forEach((panel) => {
-    setSheetState(panel, isCompactViewport() ? "collapsed" : "open");
+    setSheetState(panel, isCompactViewport() && panel.id === "simulation-panel" ? "collapsed" : "open");
     const handle = panel.querySelector(".sheet-handle");
+    const toggleButton =
+      panel.id === "simulation-panel" ? els.simulationSheetToggle : els.setupSheetToggle;
 
-    let startY = 0;
-    let isDraggingSheet = false;
-    const toggleSheet = () => {
-      const current = panel.dataset.sheetState ?? "open";
-      setSheetState(panel, current === "collapsed" ? "open" : "collapsed");
+    const toggleSheet = (event) => {
+      event?.preventDefault();
+      event?.stopPropagation();
+      setSheetState(panel, panel.dataset.sheetState === "collapsed" ? "open" : "collapsed");
     };
-    const openCollapsedSheet = (event) => {
-      if (!isCompactViewport() || panel.dataset.sheetState !== "collapsed") {
-        return false;
-      }
 
-      event.preventDefault();
-      event.stopPropagation();
-      setSheetState(panel, "open");
-      return true;
-    };
+    toggleButton?.addEventListener("click", toggleSheet);
 
     if (handle) {
       handle.addEventListener("click", toggleSheet);
-
-      handle.addEventListener("pointerdown", (event) => {
-        startY = event.clientY;
-        handle.setPointerCapture(event.pointerId);
-      });
-
-      handle.addEventListener("pointerup", (event) => {
-        const deltaY = event.clientY - startY;
-        if (Math.abs(deltaY) < 10) {
-          return;
-        }
-
-        setSheetState(panel, deltaY > 0 ? "collapsed" : "open");
-      });
     }
-
-    panel.addEventListener("click", (event) => {
-      openCollapsedSheet(event);
-    });
-
-    panel.addEventListener("pointerdown", (event) => {
-      if (!isCompactViewport()) {
-        return;
-      }
-
-      startY = event.clientY;
-      isDraggingSheet = false;
-      panel.setPointerCapture?.(event.pointerId);
-    });
-
-    panel.addEventListener("pointermove", (event) => {
-      if (!isCompactViewport()) {
-        return;
-      }
-
-      const deltaY = event.clientY - startY;
-      if (Math.abs(deltaY) < 6) {
-        return;
-      }
-
-      isDraggingSheet = true;
-      const baseOffset = panel.dataset.sheetState === "collapsed" ? getCollapsedSheetOffset(panel) : 0;
-      const nextOffset = clamp(baseOffset + deltaY, 0, getCollapsedSheetOffset(panel));
-      panel.style.transform = `translateY(${nextOffset}px)`;
-    });
-
-    panel.addEventListener("pointerup", (event) => {
-      if (!isCompactViewport()) {
-        return;
-      }
-
-      const deltaY = event.clientY - startY;
-      panel.style.transform = "";
-      if (!isDraggingSheet && openCollapsedSheet(event)) {
-        return;
-      }
-
-      if (Math.abs(deltaY) < 12) {
-        return;
-      }
-
-      setSheetState(panel, deltaY > 0 ? "collapsed" : "open");
-    });
   });
-
-  const mapElement = document.querySelector("#map");
-  mapElement?.addEventListener(
-    "pointerdown",
-    () => {
-      if (!isCompactViewport()) {
-        return;
-      }
-
-      document.querySelectorAll(".sim-panel:not(.hidden)").forEach((panel) => {
-        if (panel.dataset.sheetState === "open") {
-          setSheetState(panel, "collapsed");
-        }
-      });
-    },
-    { passive: true },
-  );
 }
 
 function getCollapsedSheetOffset(panel) {
-  return Math.max(panel.getBoundingClientRect().height - 230, 0);
+  return Math.max(panel.getBoundingClientRect().height - 66, 0);
 }
 
 function isCompactViewport() {
@@ -887,6 +944,21 @@ function setSheetState(panel, stateName) {
   if (handle) {
     handle.textContent = getSheetHandleLabel(stateName);
     handle.setAttribute("aria-expanded", String(stateName === "open"));
+  }
+  updateMobileSheetToggleLabels();
+}
+
+function updateMobileSheetToggleLabels() {
+  const setupCollapsed = els.setupPanel?.dataset.sheetState === "collapsed";
+  const simulationCollapsed = els.simulationPanel?.dataset.sheetState === "collapsed";
+
+  if (els.setupSheetToggle) {
+    els.setupSheetToggle.textContent = setupCollapsed ? "設定画面を表示" : "マップを表示";
+    els.setupSheetToggle.setAttribute("aria-expanded", String(!setupCollapsed));
+  }
+  if (els.simulationSheetToggle) {
+    els.simulationSheetToggle.textContent = simulationCollapsed ? "メニューを表示" : "メニューを非表示";
+    els.simulationSheetToggle.setAttribute("aria-expanded", String(!simulationCollapsed));
   }
 }
 
@@ -989,6 +1061,13 @@ async function initEarthquakeMap() {
   addZoomOnlyControl();
   addSourceInfoControl();
   updateEpicenterEditMode();
+  map.on("movestart", () => {
+    state.mapInteracting = true;
+  });
+  map.on("moveend", () => {
+    state.mapInteracting = false;
+    simulationRenderBucket = -1;
+  });
 
   map.on("click", (event) => {
     if (!state.epicenterEditEnabled) {
@@ -997,6 +1076,7 @@ async function initEarthquakeMap() {
 
     state.latitude = Number(event.lngLat.lat.toFixed(3));
     state.longitude = Number(event.lngLat.lng.toFixed(3));
+    clearSelectedPreset();
     invalidateIntensityEstimateCache();
     syncInputs();
     updateEpicenter({ resolveLocation: true, enforceManagedArea: true });
@@ -1052,6 +1132,9 @@ function addZoomOnlyControl() {
 }
 
 function addSourceInfoControl() {
+  const overlay = createSourceInfoOverlay();
+  document.body.append(overlay);
+
   const sourceInfoControl = {
     onAdd() {
       const container = document.createElement("div");
@@ -1064,32 +1147,86 @@ function addSourceInfoControl() {
       button.setAttribute("aria-label", "出典を表示");
       button.setAttribute("aria-expanded", "false");
 
-      const panel = document.createElement("div");
-      panel.className = "source-info-panel hidden";
-      panel.innerHTML = SOURCE_LINKS.map(
-        (source) =>
-          `<a href="${source.href}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a>`,
-      ).join("");
-
       button.addEventListener("click", () => {
-        const isHidden = panel.classList.toggle("hidden");
-        button.setAttribute("aria-expanded", String(!isHidden));
+        overlay.classList.remove("hidden");
+        document.body.classList.add("source-overlay-open");
+        button.setAttribute("aria-expanded", "true");
       });
 
-      document.addEventListener("pointerdown", (event) => {
-        if (!container.contains(event.target)) {
-          panel.classList.add("hidden");
-          button.setAttribute("aria-expanded", "false");
-        }
+      overlay.addEventListener("source-overlay-close", () => {
+        button.setAttribute("aria-expanded", "false");
       });
 
-      container.append(button, panel);
+      container.append(button);
       return container;
     },
     onRemove() {},
   };
 
   map.addControl(sourceInfoControl, "top-right");
+}
+
+function createSourceInfoOverlay() {
+  const overlay = document.createElement("section");
+  overlay.className = "source-info-overlay hidden";
+  overlay.setAttribute("aria-modal", "true");
+  overlay.setAttribute("role", "dialog");
+  overlay.setAttribute("aria-label", "出典");
+  overlay.innerHTML = buildSourceInfoOverlayHtml();
+
+  const closeButton = overlay.querySelector(".source-info-close");
+  const closeOverlay = () => {
+    overlay.classList.add("hidden");
+    document.body.classList.remove("source-overlay-open");
+    overlay.dispatchEvent(new CustomEvent("source-overlay-close"));
+  };
+
+  closeButton?.addEventListener("click", closeOverlay);
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      closeOverlay();
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !overlay.classList.contains("hidden")) {
+      closeOverlay();
+    }
+  });
+
+  return overlay;
+}
+
+function buildSourceInfoOverlayHtml() {
+  const sections = SOURCE_SECTIONS.map((section) => {
+    const links = section.links
+      .map(
+        (source) =>
+          `<li><a href="${source.href}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a></li>`,
+      )
+      .join("");
+    const note = section.note ? `<pre class="source-citation-note">${escapeHtml(section.note)}</pre>` : "";
+
+    return `
+      <section class="source-info-section">
+        <h3>${escapeHtml(section.title)}</h3>
+        <p>${escapeHtml(section.description)}</p>
+        <ul>${links}</ul>
+        ${note}
+      </section>
+    `;
+  }).join("");
+
+  return `
+    <button class="source-info-close" type="button" aria-label="出典を閉じる">×</button>
+    <div class="source-info-overlay-content">
+      <header class="source-info-header">
+        <p>DATA SOURCES</p>
+        <h2>このサイトで使用している出典</h2>
+      </header>
+      <div class="source-info-sections">${sections}</div>
+    </div>
+    <p class="source-info-updated">更新日 ${SOURCE_UPDATED_AT}</p>
+  `;
 }
 
 async function showMapLayers() {
@@ -1221,7 +1358,7 @@ function addMapLayers() {
     source: "jma-local-areas",
     filter: ["==", ["get", "eewWarning"], true],
     paint: {
-      "fill-color": "#e60012",
+      "fill-color": ["case", ["==", ["get", "eewBlinkOff"], true], "#8c9298", "#e60012"],
       "fill-opacity": 0.94,
     },
   });
@@ -1271,8 +1408,8 @@ function addMapLayers() {
       "circle-sort-key": ["get", "intensityRank"],
     },
     paint: {
-      "circle-color": ["case", ["==", ["get", "waveState"], "p"], "#7de7ff", ["get", "intensityColor"]],
-      "circle-opacity": ["case", ["==", ["get", "waveState"], "p"], 0.68, 0.98],
+      "circle-color": ["get", "intensityColor"],
+      "circle-opacity": 0.98,
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 7.5, 7, 9, 10, 10.5],
       "circle-stroke-color": "#111827",
       "circle-stroke-opacity": 1,
@@ -1518,17 +1655,28 @@ function stationPopupHtml(properties) {
       : `震度${properties.intensityLabel}`;
   const currentValue = Number(properties.currentIntensityValue ?? properties.intensityValue ?? 0);
   const predictedValue = Number(properties.predictedIntensityValue ?? 0);
+  const currentMeasured = formatMeasuredIntensity(properties, currentValue);
+  const predictedMeasured = formatMeasuredIntensity(properties, predictedValue);
 
   return [
     `<strong>${escapeHtml(properties.name)}</strong>`,
     `<span>${escapeHtml(properties.areaName ?? "")}</span>`,
     `<span>${escapeHtml(properties.observationStatus ?? "")}</span>`,
     `<span>${escapeHtml(waveLabel)}</span>`,
-    `<span>現在震度 ${escapeHtml(properties.intensityLabel ?? "0")}（計測震度 ${currentValue.toFixed(1)}）</span>`,
-    `<span>最大震度 ${escapeHtml(properties.predictedIntensityLabel ?? "0")}（計測震度 ${predictedValue.toFixed(1)}）</span>`,
+    `<span>現在震度 ${escapeHtml(properties.intensityLabel ?? "0")}（計測震度 ${currentMeasured}）</span>`,
+    `<span>最大震度 ${escapeHtml(properties.predictedIntensityLabel ?? "0")}（計測震度 ${predictedMeasured}）</span>`,
     `<span>震央距離 ${Number(properties.epicentralDistanceKm ?? 0).toFixed(0)} km</span>`,
     `<span>P波 ${Number(properties.pArrivalSec ?? 0).toFixed(1)}秒 / S波 ${Number(properties.sArrivalSec ?? 0).toFixed(1)}秒</span>`,
   ].join("");
+}
+
+function formatMeasuredIntensity(properties, fallbackValue) {
+  if (properties.actualObserved && properties.measuredIntensity == null) {
+    return "-";
+  }
+
+  const value = Number(properties.measuredIntensity ?? fallbackValue);
+  return Number.isFinite(value) ? value.toFixed(1) : "-";
 }
 
 function startSimulation() {
@@ -1539,6 +1687,9 @@ function startSimulation() {
   simulationPreviousEpicenterEditEnabled = state.epicenterEditEnabled;
   simulationEpicenter = [state.longitude, state.latitude];
   state.maxIntensityHistory = [];
+  state.eewWarningBlinkStartedAt = {};
+  state.eewInitialWarningKeys = new Set();
+  state.eewPreviousWarningKeys = new Set();
   simulationRenderBucket = -1;
   state.simulationRunning = true;
   state.simulationPaused = false;
@@ -1567,6 +1718,9 @@ function startSimulation() {
 function stopSimulation() {
   state.simulationRunning = false;
   state.simulationPaused = false;
+  state.eewWarningBlinkStartedAt = {};
+  state.eewInitialWarningKeys = new Set();
+  state.eewPreviousWarningKeys = new Set();
   cancelAnimationFrame(simulationFrame);
   simulationFrame = null;
   simulationStartedAt = null;
@@ -1582,7 +1736,7 @@ function stopSimulation() {
   }
   els.setupPanel.classList.remove("hidden");
   els.simulationPanel.classList.add("hidden");
-  setSheetState(els.setupPanel, isCompactViewport() ? "collapsed" : "open");
+  setSheetState(els.setupPanel, "open");
   setWaveRadiusData(0, 0);
   updateIntensityLayer();
   updateSimulationAvailability();
@@ -1625,7 +1779,7 @@ function tickSimulation(now) {
   setWaveRadiusData(pRadiusKm, sRadiusKm);
   els.simulationTime.textContent = `${elapsedSec.toFixed(1)} 秒`;
 
-  if (currentBucket !== simulationRenderBucket) {
+  if (currentBucket !== simulationRenderBucket && !state.mapInteracting) {
     simulationRenderBucket = currentBucket;
 
     if (map?.getSource("shindo-stations") && shindoStationData) {
@@ -1672,7 +1826,7 @@ function toSimulationBucket(elapsedSec) {
 function updateSimulationSummary(elapsedSec = getSimulationStationElapsedSec()) {
   const stationFeatures = shindoStationData
     ? getStationIntensityDataForElapsed(elapsedSec).features.filter(
-        (feature) => feature.properties.waveState === "s" && feature.properties.intensityRank > 0,
+        (feature) => feature.properties.observed && feature.properties.intensityRank > 0,
       )
     : [];
   const maxRank = stationFeatures.reduce(
@@ -1695,7 +1849,10 @@ function updateSimulationSummary(elapsedSec = getSimulationStationElapsedSec()) 
     ...(observedStations.length > 0
       ? observedStations.map((feature) => {
           const item = document.createElement("li");
-          item.textContent = `${feature.properties.name}　震度${feature.properties.intensityLabel}（${feature.properties.currentIntensityValue.toFixed(1)}）`;
+          item.textContent = `${feature.properties.name}　震度${feature.properties.intensityLabel}（${formatMeasuredIntensity(
+            feature.properties,
+            feature.properties.currentIntensityValue,
+          )}）`;
           return item;
         })
       : [document.createElement("li")]),
@@ -1965,15 +2122,24 @@ function updateStateFromInputs(options = {}) {
     return;
   }
 
-  state.latitude = parseClampedInput(els.latitude.value, state.latitude, 20, 47);
-  state.longitude = parseClampedInput(els.longitude.value, state.longitude, 117, 154);
+  const nextLatitude = parseClampedInput(els.latitude.value, state.latitude, 20, 47);
+  const nextLongitude = parseClampedInput(els.longitude.value, state.longitude, 117, 154);
+  const epicenterMoved =
+    Math.abs(nextLatitude - state.latitude) > 0.0001 ||
+    Math.abs(nextLongitude - state.longitude) > 0.0001;
+
+  state.latitude = nextLatitude;
+  state.longitude = nextLongitude;
   state.depthKm = clamp(Number(els.depth.value), 0, 500);
   state.magnitude = parseClampedInput(els.magnitude.value, state.magnitude, 0.1, 10);
-  if (!options.preservePreset) {
-    state.selectedPresetId = "";
+  if (!options.preservePreset && epicenterMoved) {
+    clearSelectedPreset();
   }
   invalidateIntensityEstimateCache();
-  updateEpicenter();
+  updateEpicenter({
+    resolveLocation: Boolean(options.resolveLocation),
+    enforceManagedArea: Boolean(options.enforceManagedArea),
+  });
 
   if (state.simulationRunning) {
     updateSimulationSummary();
@@ -2038,6 +2204,7 @@ function parseClampedInput(value, fallback, min, max) {
 
 function invalidateIntensityEstimateCache() {
   stationIntensityFeatureCache = null;
+  presetObservationLookupCache = null;
   stationDataCache = { bucket: null, data: null };
   areaDataCache = { bucket: null, data: null };
   localAreaStationMembershipCache = null;
@@ -2151,6 +2318,7 @@ async function updateEpicenter(options = {}) {
       const markerLngLat = epicenterMarker.getLngLat();
       state.latitude = Number(markerLngLat.lat.toFixed(3));
       state.longitude = Number(markerLngLat.lng.toFixed(3));
+      clearSelectedPreset();
       invalidateIntensityEstimateCache();
       syncInputs();
     updateEpicenter({ resolveLocation: true, enforceManagedArea: true });
@@ -2294,9 +2462,9 @@ function buildIntensityAreaData(geojson, elapsedSec = Infinity) {
   const selectedPreset = getSelectedPreset();
   const predictedStationFeatures = shindoStationData ? buildStationIntensityFeatures(shindoStationData) : [];
   const stationFeatures = shindoStationData
-    ? isSimulation
-      ? getStationIntensityDataForElapsed(elapsedSec).features.filter(
-          (feature) => feature.properties.waveState === "s",
+      ? isSimulation
+        ? getStationIntensityDataForElapsed(elapsedSec).features.filter(
+          (feature) => feature.properties.observed,
         )
       : predictedStationFeatures
     : [];
@@ -2357,20 +2525,26 @@ function buildIntensityAreaData(geojson, elapsedSec = Infinity) {
   });
 
   const shouldIssueEew = predictedMaxClass.rank >= 5;
-  const features = areaFeatures.map((feature) => ({
-    ...feature,
-    properties: {
-      ...feature.properties,
-      eewWarning: selectedPreset
-        ? isPresetEewWarningFeature(selectedPreset, feature)
-        : shouldIssueEew && feature.properties.predictedIntensityRank >= 4,
-      eewForecastArea: getEewForecastAreaName(feature.properties.name),
-    },
-  }));
+  const features = areaFeatures.map((feature) => {
+    const eewForecastArea = getEewForecastAreaName(feature.properties.name);
+    const eewWarning = selectedPreset
+      ? isPresetEewWarningFeature(selectedPreset, feature, eewForecastArea, elapsedSec)
+      : shouldIssueEew && feature.properties.predictedIntensityRank >= 4;
+
+    return {
+      ...feature,
+      properties: {
+        ...feature.properties,
+        eewWarning,
+        eewForecastArea,
+      },
+    };
+  });
 
   if (!selectedPreset) {
     applyAdaptiveEewExpansion(features, shouldIssueEew);
   }
+  applyEewBlinkState(features, elapsedSec);
   const warningForecastAreas = new Set(
     features
       .filter((feature) => feature.properties.eewWarning)
@@ -2380,7 +2554,7 @@ function buildIntensityAreaData(geojson, elapsedSec = Infinity) {
   state.eewWarningForecastAreas = compactForecastAreas([...warningForecastAreas]);
   updateEewForecastPanel();
 
-  state.maxIntensityLabel = `${maxClass.label}（計測震度 ${maxValue.toFixed(1)}）`;
+  state.maxIntensityLabel = `${maxClass.label}（計測震度 ${selectedPreset ? "-" : maxValue.toFixed(1)}）`;
 
   const data = {
     ...geojson,
@@ -2433,14 +2607,97 @@ function applyAdaptiveEewExpansion(features, shouldIssueEew) {
   });
 }
 
-function isPresetEewWarningFeature(preset, feature) {
-  const forecastArea = getEewForecastAreaName(feature.properties.name);
-  return (preset.eewForecastAreas ?? []).some(
-    (areaName) =>
-      areaName === forecastArea ||
-      areaName === feature.properties.name ||
-      (FORECAST_AREA_GROUP_MEMBERS[areaName] ?? []).includes(forecastArea),
-  );
+function isPresetEewWarningFeature(preset, feature, forecastArea, elapsedSec = Infinity) {
+  const reportAreas = getPresetEewAreasForElapsed(preset, elapsedSec);
+  if (reportAreas.length === 0) {
+    return false;
+  }
+
+  const featureArea = normalizeEewAreaName(feature.properties.name);
+  const forecast = normalizeEewAreaName(forecastArea);
+
+  return reportAreas.some((areaName) => {
+    const area = normalizeEewAreaName(areaName);
+    const groupedAreas = (FORECAST_AREA_GROUP_MEMBERS[areaName] ?? []).map(normalizeEewAreaName);
+    return (
+      area === featureArea ||
+      area === forecast ||
+      groupedAreas.includes(forecast) ||
+      groupedAreas.includes(featureArea) ||
+      (area.length >= 2 && featureArea.includes(area)) ||
+      (area.length >= 2 && forecast.includes(area))
+    );
+  });
+}
+
+function getPresetEewAreasForElapsed(preset, elapsedSec = Infinity) {
+  const reports = preset.eewReports ?? [];
+  if (reports.length === 0) {
+    return [];
+  }
+
+  if (!Number.isFinite(elapsedSec)) {
+    return reports[reports.length - 1]?.areas ?? [];
+  }
+
+  for (let index = reports.length - 1; index >= 0; index -= 1) {
+    if (Number(reports[index].elapsedSec) <= elapsedSec) {
+      return reports[index].areas ?? [];
+    }
+  }
+
+  return [];
+}
+
+function normalizeEewAreaName(value) {
+  return String(value ?? "")
+    .normalize("NFKC")
+    .replace(/\s+/g, "")
+    .trim();
+}
+
+function applyEewBlinkState(features, elapsedSec) {
+  const isSimulation = state.simulationRunning && Number.isFinite(elapsedSec);
+  if (!isSimulation) {
+    state.eewWarningBlinkStartedAt = {};
+    state.eewInitialWarningKeys = new Set();
+    features.forEach((feature) => {
+      feature.properties.eewBlinkOff = false;
+    });
+    return;
+  }
+
+  const activeWarningKeys = features
+    .filter((feature) => feature.properties.eewWarning)
+    .map(getEewFeatureKey);
+  if (state.eewInitialWarningKeys.size === 0 && activeWarningKeys.length > 0) {
+    activeWarningKeys.forEach((key) => state.eewInitialWarningKeys.add(key));
+  }
+
+  features.forEach((feature) => {
+    if (!feature.properties.eewWarning) {
+      feature.properties.eewBlinkOff = false;
+      return;
+    }
+
+    const key = getEewFeatureKey(feature);
+    if (state.eewInitialWarningKeys.has(key)) {
+      feature.properties.eewBlinkOff = false;
+      return;
+    }
+
+    if (!Object.prototype.hasOwnProperty.call(state.eewWarningBlinkStartedAt, key)) {
+      state.eewWarningBlinkStartedAt[key] = elapsedSec;
+    }
+
+    const elapsedSinceWarning = elapsedSec - state.eewWarningBlinkStartedAt[key];
+    const phase = Math.floor(elapsedSinceWarning / EEW_BLINK_INTERVAL_SEC);
+    feature.properties.eewBlinkOff = phase < EEW_BLINK_PHASES && phase % 2 === 1;
+  });
+}
+
+function getEewFeatureKey(feature) {
+  return String(feature.properties.code ?? feature.properties.name ?? feature.id ?? "");
 }
 
 function getLocalAreaStationMembership(geojson, stationFeatures) {
@@ -2841,6 +3098,7 @@ function buildStationIntensityData(data, elapsedSec = Infinity) {
 
 function getCurrentIntensityProperties(properties, elapsedSec = Infinity) {
   const isSimulation = Number.isFinite(elapsedSec);
+  const observed = !isSimulation || elapsedSec >= properties.pArrivalSec;
   const waveState = isSimulation && properties.sArrivalSec > elapsedSec ? "p" : "s";
   const riseProfile = getGroundRiseProfile(properties);
   const riseProgress = isSimulation
@@ -2868,6 +3126,7 @@ function getCurrentIntensityProperties(properties, elapsedSec = Infinity) {
   const currentClass = toJmaIntensityClass(currentIntensityValue);
 
   return {
+    observed,
     waveState,
     riseProgress: Number(riseProgress.toFixed(3)),
     currentIntensityValue: Number(currentIntensityValue.toFixed(2)),
@@ -2961,14 +3220,12 @@ function buildStationIntensityFeatures(data) {
       const ground = getGroundModelAt(station.longitude, station.latitude);
       const actualObservation = getPresetStationObservation(station);
       const preset = getSelectedPreset();
-      const presetGapIntensityValue = preset
-        ? estimatePresetGapIntensity(station.longitude, station.latitude, preset)
-        : 0;
+      if (preset && !actualObservation) {
+        return null;
+      }
       const intensityValue = actualObservation
         ? actualObservation.intensityValue
-        : preset
-          ? presetGapIntensityValue
-          : estimateIntensityAtPoint(station.longitude, station.latitude);
+        : estimateIntensityAtPoint(station.longitude, station.latitude);
       const intensityClass = toJmaIntensityClass(intensityValue);
       const epicentralDistanceKm = haversineKilometers(
         [state.longitude, state.latitude],
@@ -2998,6 +3255,10 @@ function buildStationIntensityFeatures(data) {
           predictedIntensityColor: intensityClass.color,
           actualObserved: Boolean(actualObservation),
           observationStatus: actualObservation ? "実観測" : preset ? "欠測（当時の観測点なし・補完）" : "推定",
+          measuredIntensity:
+            actualObservation?.measuredIntensity == null
+              ? null
+              : Number(actualObservation.measuredIntensity),
           intensityValue: Number(intensityValue.toFixed(2)),
           intensityLabel: intensityClass.label,
           intensityShortLabel: intensityClass.shortLabel,
@@ -3020,7 +3281,8 @@ function buildStationIntensityFeatures(data) {
           coordinates: [station.longitude, station.latitude],
         },
       };
-    });
+    })
+    .filter(Boolean);
 
   return stationIntensityFeatureCache;
 }
