@@ -26,6 +26,41 @@ const EARTHQUAKE_PRESETS = [
     depthKm: 24,
     magnitude: 9.0,
     epicenterName: "三陸沖",
+    observedStations: [
+      { stationId: "00518", intensityValue: 6.6 },
+    ],
+    eewForecastAreas: ["東北", "関東", "新潟", "長野", "静岡"],
+  },
+  {
+    id: "osaka-northern-2018",
+    label: "大阪北部地震（2018）",
+    latitude: 34 + 50.6 / 60,
+    longitude: 135 + 37.2 / 60,
+    depthKm: 13,
+    magnitude: 6.1,
+    epicenterName: "大阪府北部",
+    observedStations: [
+      { stationId: "02670", intensityValue: 5.6 },
+      { stationId: "02678", intensityValue: 5.6 },
+      { stationId: "02682", intensityValue: 5.6 },
+      { stationId: "02683", intensityValue: 5.6 },
+      { stationId: "02687", intensityValue: 5.6 },
+    ],
+    eewForecastAreas: ["近畿"],
+  },
+  {
+    id: "kumamoto-2016",
+    label: "熊本地震（2016）",
+    latitude: 32 + 45.2 / 60,
+    longitude: 130 + 45.7 / 60,
+    depthKm: 12,
+    magnitude: 7.3,
+    epicenterName: "熊本県熊本地方",
+    observedStations: [
+      { stationId: "03947", intensityValue: 6.6 },
+      { stationId: "03944", intensityValue: 6.6 },
+    ],
+    eewForecastAreas: ["九州"],
   },
 ];
 const INTENSITY_CLASSES = [
@@ -113,6 +148,7 @@ let shindoStationData;
 let shindoStationLoadPromise;
 let stationIntensityFeatureCache;
 let stationPopup;
+let stationClickPopup;
 let stationHoverEventsBound = false;
 let locationResolveTimer;
 let simulationFrame;
@@ -124,6 +160,8 @@ let localAreaStationMembershipCache;
 const SOURCE_LINKS = [
   { label: "気象庁", href: "https://www.jma.go.jp/" },
   { label: "東北地方太平洋沖地震（2011）", href: "https://www.data.jma.go.jp/eqev/data/2011_03_11_tohoku/" },
+  { label: "大阪北部地震（2018）", href: "https://www.data.jma.go.jp/eqev/data/higai/20180618_oosaka_jishin_menu.html" },
+  { label: "熊本地震（2016）", href: "https://www.data.jma.go.jp/eqev/data/2016_04_14_kumamoto/index.html" },
   { label: "地震本部", href: "https://www.jishin.go.jp/" },
   { label: "国土数値情報", href: "https://nlftp.mlit.go.jp/ksj/" },
   { label: "J-SHIS", href: "https://www.j-shis.bosai.go.jp/" },
@@ -309,12 +347,32 @@ function applyEarthquakePreset(presetId) {
   }
 }
 
+function getSelectedPreset() {
+  return EARTHQUAKE_PRESETS.find((preset) => preset.id === state.selectedPresetId) ?? null;
+}
+
+function getPresetStationObservation(station) {
+  const preset = getSelectedPreset();
+  if (!preset?.observedStations) {
+    return null;
+  }
+
+  return (
+    preset.observedStations.find((observation) => observation.stationId === station.id) ??
+    preset.observedStations.find(
+      (observation) => observation.stationName && station.name.includes(observation.stationName),
+    ) ??
+    null
+  );
+}
+
 function setupMobileSheets() {
   document.querySelectorAll(".sim-panel").forEach((panel) => {
     setSheetState(panel, isCompactViewport() ? "collapsed" : "open");
     const handle = panel.querySelector(".sheet-handle");
 
     let startY = 0;
+    let isDraggingSheet = false;
     const toggleSheet = () => {
       const current = panel.dataset.sheetState ?? "open";
       setSheetState(panel, current === "collapsed" ? "open" : "collapsed");
@@ -353,6 +411,24 @@ function setupMobileSheets() {
       }
 
       startY = event.clientY;
+      isDraggingSheet = false;
+      panel.setPointerCapture?.(event.pointerId);
+    });
+
+    panel.addEventListener("pointermove", (event) => {
+      if (!isCompactViewport()) {
+        return;
+      }
+
+      const deltaY = event.clientY - startY;
+      if (Math.abs(deltaY) < 6) {
+        return;
+      }
+
+      isDraggingSheet = true;
+      const baseOffset = panel.dataset.sheetState === "collapsed" ? getCollapsedSheetOffset(panel) : 0;
+      const nextOffset = clamp(baseOffset + deltaY, 0, getCollapsedSheetOffset(panel));
+      panel.style.transform = `translateY(${nextOffset}px)`;
     });
 
     panel.addEventListener("pointerup", (event) => {
@@ -361,13 +437,23 @@ function setupMobileSheets() {
       }
 
       const deltaY = event.clientY - startY;
-      if (Math.abs(deltaY) < 28) {
+      panel.style.transform = "";
+      if (!isDraggingSheet && panel.dataset.sheetState === "collapsed") {
+        setSheetState(panel, "open");
+        return;
+      }
+
+      if (Math.abs(deltaY) < 12) {
         return;
       }
 
       setSheetState(panel, deltaY > 0 ? "collapsed" : "open");
     });
   });
+}
+
+function getCollapsedSheetOffset(panel) {
+  return Math.max(panel.getBoundingClientRect().height - 230, 0);
 }
 
 function isCompactViewport() {
@@ -619,6 +705,8 @@ async function showMapLayers() {
 
   addMapLayers();
   setupStationHoverPopup();
+  moveLayerToTop("shindo-station-points");
+  moveLayerToTop("shindo-station-labels");
   fitInitialMapBounds(getGeoJsonBounds(municipalityDisplayData));
   loadGroundModel()
     .then(() => {
@@ -700,7 +788,7 @@ function addMapLayers() {
       ],
       "line-opacity": ["interpolate", ["linear"], ["zoom"], 4, 0.22, 7, 0.34, 10, 0.46],
       "line-width": ["interpolate", ["linear"], ["zoom"], 4, 0.9, 7, 1.35, 10, 1.9],
-      "line-dasharray": ["case", ["==", ["get", "kind"], "deformation_zone"], ["literal", [1.2, 2.2]], ["literal", [4, 2]]],
+      "line-dasharray": [4, 2],
     },
   });
 
@@ -789,7 +877,7 @@ function addMapLayers() {
     source: "shindo-stations",
     layout: {
       "text-field": ["get", "intensityShortLabel"],
-      "text-font": ["Open Sans Regular"],
+      "text-font": ["Noto Sans Regular"],
       "text-size": ["interpolate", ["linear"], ["zoom"], 4, 8, 8, 9.5, 11, 10.5],
       "text-allow-overlap": true,
       "text-ignore-placement": true,
@@ -854,7 +942,11 @@ function addMapLayers() {
 
 function addLayerIfMissing(layer) {
   if (!map.getLayer(layer.id)) {
-    map.addLayer(layer);
+    try {
+      map.addLayer(layer);
+    } catch (error) {
+      console.warn(`Layer ${layer.id} could not be added`, error);
+    }
   }
 }
 
@@ -965,6 +1057,12 @@ function setupStationHoverPopup() {
     className: "station-popup",
     offset: 10,
   });
+  stationClickPopup = new maplibregl.Popup({
+    closeButton: true,
+    closeOnClick: true,
+    className: "station-popup",
+    offset: 14,
+  });
 
   map.on("mouseenter", "shindo-station-points", () => {
     map.getCanvas().style.cursor = "pointer";
@@ -976,24 +1074,22 @@ function setupStationHoverPopup() {
       return;
     }
 
-    const properties = feature.properties;
-    const waveLabel =
-      properties.waveState === "p"
-        ? `P波到達 / S波 ${Number(properties.sArrivalSec).toFixed(1)}秒`
-        : `震度${properties.intensityLabel}`;
-
     stationPopup
       .setLngLat(event.lngLat)
-      .setHTML(
-        [
-          `<strong>${escapeHtml(properties.name)}</strong>`,
-          `<span>${escapeHtml(properties.areaName ?? "")}</span>`,
-          `<span>${escapeHtml(waveLabel)}</span>`,
-          `<span>現在計測震度 ${Number(properties.currentIntensityValue).toFixed(1)}</span>`,
-          `<span>予測最大 ${properties.predictedIntensityLabel}（${Number(properties.predictedIntensityValue).toFixed(1)}）</span>`,
-          `<span>震央距離 ${Number(properties.epicentralDistanceKm).toFixed(0)} km</span>`,
-        ].join(""),
-      )
+      .setHTML(stationPopupHtml(feature.properties))
+      .addTo(map);
+  });
+
+  map.on("click", "shindo-station-points", (event) => {
+    const feature = event.features?.[0];
+    if (!feature) {
+      return;
+    }
+
+    event.preventDefault();
+    stationClickPopup
+      .setLngLat(event.lngLat)
+      .setHTML(stationPopupHtml(feature.properties))
       .addTo(map);
   });
 
@@ -1001,6 +1097,25 @@ function setupStationHoverPopup() {
     map.getCanvas().style.cursor = "";
     stationPopup.remove();
   });
+}
+
+function stationPopupHtml(properties) {
+  const waveLabel =
+    properties.waveState === "p"
+      ? `P波到達 / S波 ${Number(properties.sArrivalSec).toFixed(1)}秒`
+      : `震度${properties.intensityLabel}`;
+  const currentValue = Number(properties.currentIntensityValue ?? properties.intensityValue ?? 0);
+  const predictedValue = Number(properties.predictedIntensityValue ?? 0);
+
+  return [
+    `<strong>${escapeHtml(properties.name)}</strong>`,
+    `<span>${escapeHtml(properties.areaName ?? "")}</span>`,
+    `<span>${escapeHtml(waveLabel)}</span>`,
+    `<span>現在震度 ${escapeHtml(properties.intensityLabel ?? "0")}（計測震度 ${currentValue.toFixed(1)}）</span>`,
+    `<span>最大震度 ${escapeHtml(properties.predictedIntensityLabel ?? "0")}（計測震度 ${predictedValue.toFixed(1)}）</span>`,
+    `<span>震央距離 ${Number(properties.epicentralDistanceKm ?? 0).toFixed(0)} km</span>`,
+    `<span>P波 ${Number(properties.pArrivalSec ?? 0).toFixed(1)}秒 / S波 ${Number(properties.sArrivalSec ?? 0).toFixed(1)}秒</span>`,
+  ].join("");
 }
 
 function startSimulation() {
@@ -1566,6 +1681,11 @@ async function updateEpicenter(options = {}) {
       .setLngLat(lngLat)
       .addTo(map);
 
+    markerElement.addEventListener("click", (event) => {
+      event.stopPropagation();
+      epicenterMarker.getPopup()?.addTo(map);
+    });
+
     epicenterMarker.on("dragend", () => {
       const markerLngLat = epicenterMarker.getLngLat();
       state.latitude = Number(markerLngLat.lat.toFixed(3));
@@ -1710,6 +1830,7 @@ function buildIntensityAreaData(geojson, elapsedSec = Infinity) {
   }
 
   const isSimulation = Number.isFinite(elapsedSec);
+  const selectedPreset = getSelectedPreset();
   const predictedStationFeatures = shindoStationData ? buildStationIntensityFeatures(shindoStationData) : [];
   const stationFeatures = shindoStationData
     ? isSimulation
@@ -1738,13 +1859,17 @@ function buildIntensityAreaData(geojson, elapsedSec = Infinity) {
         ? Math.max(...areaStations.map((stationFeature) => stationFeature.properties.intensityValue))
         : isSimulation
           ? 0
-          : estimateMaxIntensityForFeature(feature);
+          : selectedPreset
+            ? 0
+            : estimateMaxIntensityForFeature(feature);
     const predictedIntensityValue =
       predictedAreaStations.length > 0
         ? Math.max(
             ...predictedAreaStations.map((stationFeature) => stationFeature.properties.predictedIntensityValue),
           )
-        : estimateMaxIntensityForFeature(feature);
+        : selectedPreset
+          ? 0
+          : estimateMaxIntensityForFeature(feature);
     const intensityClass = toJmaIntensityClass(intensityValue);
     const predictedIntensityClass = toJmaIntensityClass(predictedIntensityValue);
 
@@ -1775,12 +1900,16 @@ function buildIntensityAreaData(geojson, elapsedSec = Infinity) {
     ...feature,
     properties: {
       ...feature.properties,
-      eewWarning: shouldIssueEew && feature.properties.predictedIntensityRank >= 4,
+      eewWarning: selectedPreset
+        ? isPresetEewWarningFeature(selectedPreset, feature)
+        : shouldIssueEew && feature.properties.predictedIntensityRank >= 4,
       eewForecastArea: getEewForecastAreaName(feature.properties.name),
     },
   }));
 
-  applyAdaptiveEewExpansion(features, shouldIssueEew);
+  if (!selectedPreset) {
+    applyAdaptiveEewExpansion(features, shouldIssueEew);
+  }
   const warningForecastAreas = new Set(
     features
       .filter((feature) => feature.properties.eewWarning)
@@ -1843,6 +1972,16 @@ function applyAdaptiveEewExpansion(features, shouldIssueEew) {
   });
 }
 
+function isPresetEewWarningFeature(preset, feature) {
+  const forecastArea = getEewForecastAreaName(feature.properties.name);
+  return (preset.eewForecastAreas ?? []).some(
+    (areaName) =>
+      areaName === forecastArea ||
+      areaName === feature.properties.name ||
+      (FORECAST_AREA_GROUP_MEMBERS[areaName] ?? []).includes(forecastArea),
+  );
+}
+
 function getLocalAreaStationMembership(geojson, stationFeatures) {
   if (
     localAreaStationMembershipCache &&
@@ -1875,17 +2014,7 @@ function getLocalAreaStationMembership(geojson, stationFeatures) {
 
 function compactForecastAreas(areaNames) {
   const sortedNames = sortForecastAreas([...new Set(areaNames)]);
-  const groups = [
-    { name: "北海道", members: ["北海道道央", "北海道道南", "北海道道北", "北海道道東"] },
-    { name: "関東", members: ["東京", "神奈川", "埼玉", "千葉", "茨城", "栃木", "群馬", "山梨"] },
-    { name: "東北", members: ["青森", "岩手", "宮城", "秋田", "山形", "福島"] },
-    { name: "北陸", members: ["新潟", "富山", "石川", "福井"] },
-    { name: "東海", members: ["静岡", "愛知", "岐阜", "三重"] },
-    { name: "近畿", members: ["滋賀", "京都", "大阪", "兵庫", "奈良", "和歌山"] },
-    { name: "中国", members: ["鳥取", "島根", "岡山", "広島", "山口"] },
-    { name: "四国", members: ["徳島", "香川", "愛媛", "高知"] },
-    { name: "九州", members: ["福岡", "佐賀", "長崎", "熊本", "大分", "宮崎", "鹿児島"] },
-  ];
+  const groups = Object.entries(FORECAST_AREA_GROUP_MEMBERS).map(([name, members]) => ({ name, members }));
   const remaining = new Set(sortedNames);
   const compacted = [];
 
@@ -1899,6 +2028,18 @@ function compactForecastAreas(areaNames) {
 
   return sortForecastAreasForDisplay([...compacted, ...remaining]);
 }
+
+const FORECAST_AREA_GROUP_MEMBERS = {
+  北海道: ["北海道道央", "北海道道南", "北海道道北", "北海道道東"],
+  関東: ["東京", "神奈川", "埼玉", "千葉", "茨城", "栃木", "群馬", "山梨"],
+  東北: ["青森", "岩手", "宮城", "秋田", "山形", "福島"],
+  北陸: ["新潟", "富山", "石川", "福井"],
+  東海: ["静岡", "愛知", "岐阜", "三重"],
+  近畿: ["滋賀", "京都", "大阪", "兵庫", "奈良", "和歌山"],
+  中国: ["鳥取", "島根", "岡山", "広島", "山口"],
+  四国: ["徳島", "香川", "愛媛", "高知"],
+  九州: ["福岡", "佐賀", "長崎", "熊本", "大分", "宮崎", "鹿児島"],
+};
 
 const FORECAST_AREA_ORDER = [
   "北海道",
@@ -2353,7 +2494,13 @@ function buildStationIntensityFeatures(data) {
     .filter((station) => station.active)
     .map((station) => {
       const ground = getGroundModelAt(station.longitude, station.latitude);
-      const intensityValue = estimateIntensityAtPoint(station.longitude, station.latitude);
+      const actualObservation = getPresetStationObservation(station);
+      const preset = getSelectedPreset();
+      const intensityValue = actualObservation
+        ? actualObservation.intensityValue
+        : preset
+          ? 0
+          : estimateIntensityAtPoint(station.longitude, station.latitude);
       const intensityClass = toJmaIntensityClass(intensityValue);
       const epicentralDistanceKm = haversineKilometers(
         [state.longitude, state.latitude],
@@ -2381,6 +2528,7 @@ function buildStationIntensityFeatures(data) {
           predictedIntensityShortLabel: intensityClass.shortLabel,
           predictedIntensityRank: intensityClass.rank,
           predictedIntensityColor: intensityClass.color,
+          actualObserved: Boolean(actualObservation),
           intensityValue: Number(intensityValue.toFixed(2)),
           intensityLabel: intensityClass.label,
           intensityShortLabel: intensityClass.shortLabel,

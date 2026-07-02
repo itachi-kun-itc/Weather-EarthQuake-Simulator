@@ -796,7 +796,7 @@ h1 {
     padding: 24px 14px 14px;
     overflow: auto;
     touch-action: pan-y;
-    transition: transform 180ms ease;
+    transition: transform 120ms ease-out;
   }
 
   .sim-panel[data-sheet-state="collapsed"] {
