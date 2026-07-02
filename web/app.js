@@ -17,6 +17,17 @@ const EARTHQUAKE_MODEL = {
   eewProcessingDelaySec: 2.0,
   defaultSiteAmplification: 0,
 };
+const EARTHQUAKE_PRESETS = [
+  {
+    id: "tohoku-2011",
+    label: "東北地方太平洋沖地震（2011）",
+    latitude: 38 + 6.2 / 60,
+    longitude: 142 + 51.6 / 60,
+    depthKm: 24,
+    magnitude: 9.0,
+    epicenterName: "三陸沖",
+  },
+];
 const INTENSITY_CLASSES = [
   { label: "0", shortLabel: "0", min: 0, color: "#d9dde3", textColor: "#1f2937", rank: 0 },
   { label: "1", shortLabel: "1", min: 0.5, color: "#ffffff", textColor: "#111827", rank: 1 },
@@ -38,10 +49,11 @@ const state = {
   epicenterName: "未選択",
   municipalityName: "未選択",
   maxIntensityLabel: "未計算",
-  epicenterEditEnabled: false,
+  epicenterEditEnabled: true,
   showStationLayer: false,
   showRegionLayer: true,
   showEewWarningLayer: false,
+  selectedPresetId: "",
   eewWarningForecastAreas: [],
   maxIntensityHistory: [],
   simulationRunning: false,
@@ -54,6 +66,7 @@ const els = {
   longitude: document.querySelector("#longitude-input"),
   depth: document.querySelector("#depth-input"),
   magnitude: document.querySelector("#magnitude-input"),
+  historicalEarthquake: document.querySelector("#historical-earthquake-select"),
   municipalityOutput: document.querySelector("#municipality-output"),
   maxIntensityOutput: document.querySelector("#max-intensity-output"),
   epicenterEditToggle: document.querySelector("#epicenter-edit-toggle"),
@@ -110,6 +123,7 @@ let simulationRenderBucket = -1;
 let localAreaStationMembershipCache;
 const SOURCE_LINKS = [
   { label: "気象庁", href: "https://www.jma.go.jp/" },
+  { label: "東北地方太平洋沖地震（2011）", href: "https://www.data.jma.go.jp/eqev/data/2011_03_11_tohoku/" },
   { label: "地震本部", href: "https://www.jishin.go.jp/" },
   { label: "国土数値情報", href: "https://nlftp.mlit.go.jp/ksj/" },
   { label: "J-SHIS", href: "https://www.j-shis.bosai.go.jp/" },
@@ -131,6 +145,7 @@ let lastManagedEpicenter = {
 setupTabs();
 renderDepthOptions();
 renderMagnitudeOptions();
+renderEarthquakePresetOptions();
 bindSimulationControls();
 setupMobileSheets();
 preventNonMapZoom();
@@ -192,6 +207,26 @@ function renderMagnitudeOptions() {
   els.magnitude.replaceChildren(...magnitudeOptions);
 }
 
+function renderEarthquakePresetOptions() {
+  if (!els.historicalEarthquake) {
+    return;
+  }
+
+  const noneOption = document.createElement("option");
+  noneOption.value = "";
+  noneOption.textContent = "指定なし";
+
+  const presetOptions = EARTHQUAKE_PRESETS.map((preset) => {
+    const option = document.createElement("option");
+    option.value = preset.id;
+    option.textContent = preset.label;
+    return option;
+  });
+
+  els.historicalEarthquake.replaceChildren(noneOption, ...presetOptions);
+  els.historicalEarthquake.value = state.selectedPresetId;
+}
+
 function bindSimulationControls() {
   [els.latitude, els.longitude].forEach((input) => {
     input.addEventListener("input", () => {
@@ -206,6 +241,7 @@ function bindSimulationControls() {
   els.longitude.addEventListener("input", () => updateStateFromInputs({ resolveLocation: true }));
   els.depth.addEventListener("input", () => updateStateFromInputs());
   els.magnitude.addEventListener("input", () => updateStateFromInputs());
+  els.historicalEarthquake?.addEventListener("change", () => applyEarthquakePreset(els.historicalEarthquake.value));
   els.epicenterEditToggle.addEventListener("change", () => updateEpicenterEditMode());
   els.stationLayerToggle.addEventListener("change", () => updateDisplayMode());
   els.regionLayerToggle.addEventListener("change", () => updateDisplayMode());
@@ -228,6 +264,7 @@ function bindSimulationControls() {
     state.longitude = 139.767;
     state.depthKm = 10;
     state.magnitude = 6.0;
+    state.selectedPresetId = "";
     state.epicenterName = "未選択";
     state.municipalityName = "未選択";
     invalidateIntensityEstimateCache();
@@ -239,6 +276,37 @@ function bindSimulationControls() {
   syncInputs();
   updateDisplayMode();
   updateSimulationAvailability();
+}
+
+function applyEarthquakePreset(presetId) {
+  state.selectedPresetId = presetId;
+  const preset = EARTHQUAKE_PRESETS.find((item) => item.id === presetId);
+
+  if (!preset) {
+    syncInputs();
+    updateDisplayMode();
+    updateSimulationAvailability();
+    return;
+  }
+
+  state.latitude = Number(preset.latitude.toFixed(3));
+  state.longitude = Number(preset.longitude.toFixed(3));
+  state.depthKm = preset.depthKm;
+  state.magnitude = preset.magnitude;
+  state.epicenterName = preset.epicenterName;
+  state.municipalityName = "海域";
+  invalidateIntensityEstimateCache();
+  syncInputs();
+  updateEpicenter({ resolveLocation: true });
+
+  if (map) {
+    map.easeTo({
+      center: [state.longitude, state.latitude],
+      zoom: Math.max(map.getZoom(), 6),
+      duration: 450,
+      essential: true,
+    });
+  }
 }
 
 function setupMobileSheets() {
@@ -1029,7 +1097,7 @@ function getSimulationElapsedSec(now = performance.now()) {
 }
 
 function toSimulationBucket(elapsedSec) {
-  return Number.isFinite(elapsedSec) ? Math.max(Math.floor(elapsedSec * 10), 0) : Infinity;
+  return Number.isFinite(elapsedSec) ? Math.max(Math.floor(elapsedSec * 5), 0) : Infinity;
 }
 
 function updateSimulationSummary(elapsedSec = getSimulationStationElapsedSec()) {
@@ -1141,7 +1209,7 @@ function wavePolygonFeatureCollection(radiusKm) {
   };
 }
 
-function buildGeodesicCircle(center, radiusKm, steps = 72) {
+function buildGeodesicCircle(center, radiusKm, steps = 56) {
   const coordinates = [];
 
   for (let index = 0; index <= steps; index += 1) {
@@ -1332,6 +1400,9 @@ function updateStateFromInputs(options = {}) {
   state.longitude = parseClampedInput(els.longitude.value, state.longitude, 117, 154);
   state.depthKm = clamp(Number(els.depth.value), 0, 500);
   state.magnitude = parseClampedInput(els.magnitude.value, state.magnitude, 0.1, 10);
+  if (!options.preservePreset) {
+    state.selectedPresetId = "";
+  }
   invalidateIntensityEstimateCache();
   updateEpicenter();
 
@@ -1413,6 +1484,9 @@ function syncInputs() {
   els.longitude.value = state.longitude.toFixed(3);
   els.depth.value = String(state.depthKm);
   els.magnitude.value = state.magnitude.toFixed(1);
+  if (els.historicalEarthquake) {
+    els.historicalEarthquake.value = state.selectedPresetId;
+  }
   els.epicenterRegion.value = state.epicenterName;
   els.municipalityOutput.textContent = state.municipalityName;
   els.maxIntensityOutput.textContent = state.maxIntensityLabel;
@@ -1802,6 +1876,7 @@ function getLocalAreaStationMembership(geojson, stationFeatures) {
 function compactForecastAreas(areaNames) {
   const sortedNames = sortForecastAreas([...new Set(areaNames)]);
   const groups = [
+    { name: "北海道", members: ["北海道道央", "北海道道南", "北海道道北", "北海道道東"] },
     { name: "関東", members: ["東京", "神奈川", "埼玉", "千葉", "茨城", "栃木", "群馬", "山梨"] },
     { name: "東北", members: ["青森", "岩手", "宮城", "秋田", "山形", "福島"] },
     { name: "北陸", members: ["新潟", "富山", "石川", "福井"] },
@@ -1826,6 +1901,7 @@ function compactForecastAreas(areaNames) {
 }
 
 const FORECAST_AREA_ORDER = [
+  "北海道",
   "北海道道央",
   "北海道道南",
   "北海道道北",
@@ -1967,6 +2043,7 @@ function forecastAreaDisplayGroupIndex(areaName) {
 
 function isBroadForecastArea(areaName) {
   return [
+    "北海道",
     "北海道道央",
     "北海道道南",
     "北海道道北",
