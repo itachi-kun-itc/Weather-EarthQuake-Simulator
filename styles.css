@@ -419,9 +419,16 @@ h1 {
   cursor: not-allowed;
 }
 
-.simulation-stop {
-  width: 100%;
+.simulation-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   margin-top: 12px;
+}
+
+.simulation-stop,
+.simulation-pause {
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 6px;
   padding: 10px 12px;
@@ -545,7 +552,7 @@ h1 {
   display: block;
   height: 230px;
   margin: 0;
-  padding: 0 8px 0 28px;
+  padding: 0 8px 0 46px;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-gutter: stable;
@@ -556,7 +563,7 @@ h1 {
 }
 
 #max-station-list li {
-  padding: 4px 0;
+  padding: 4px 0 4px 2px;
   text-align: left;
 }
 

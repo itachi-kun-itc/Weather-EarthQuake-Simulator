@@ -91,6 +91,15 @@
               </label>
             </div>
 
+            <label class="field">
+              <span>震度配色</span>
+              <select id="intensity-color-scheme">
+                <option value="low">低コントラスト</option>
+                <option value="normal" selected>通常</option>
+                <option value="high">高コントラスト</option>
+              </select>
+            </label>
+
             <dl class="result-list">
               <div>
                 <dt>市町村</dt>
@@ -159,7 +168,10 @@
               <ol id="max-station-list"></ol>
             </section>
 
-            <button class="simulation-stop" id="simulation-stop" type="button">シミュレーション中止</button>
+            <div class="simulation-actions">
+              <button class="simulation-pause" id="simulation-pause" type="button">一時停止</button>
+              <button class="simulation-stop" id="simulation-stop" type="button">シミュレーション中止</button>
+            </div>
           </section>
 
           <section class="intensity-legend" aria-label="震度凡例">
