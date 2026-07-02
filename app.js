@@ -107,7 +107,6 @@ let simulationStartedAt;
 let simulationPreviousEpicenterEditEnabled = false;
 let simulationEpicenter = [state.longitude, state.latitude];
 let simulationRenderBucket = -1;
-let waveRadiusRefreshFrame = null;
 let localAreaStationMembershipCache;
 const SOURCE_LINKS = [
   { label: "気象庁", href: "https://www.jma.go.jp/" },
@@ -176,11 +175,17 @@ function renderDepthOptions() {
 }
 
 function renderMagnitudeOptions() {
+  if (!els.magnitude) {
+    return;
+  }
+
+  const selectedMagnitude = state.magnitude.toFixed(1);
   const magnitudeOptions = Array.from({ length: 100 }, (_, index) => {
     const magnitude = ((index + 1) / 10).toFixed(1);
     const option = document.createElement("option");
     option.value = magnitude;
     option.textContent = magnitude;
+    option.selected = magnitude === selectedMagnitude;
     return option;
   });
 
@@ -277,7 +282,8 @@ function setSheetState(panel, stateName) {
   panel.dataset.sheetState = stateName;
   const handle = panel.querySelector(".sheet-handle");
   if (handle) {
-    handle.textContent = stateName === "collapsed" ? "︿" : "﹀";
+    handle.textContent = stateName === "collapsed" ? "∧" : "∨";
+    handle.setAttribute("aria-expanded", String(stateName === "open"));
   }
 }
 
@@ -323,7 +329,6 @@ function setupViewportStability() {
     if (map) {
       map.resize();
     }
-    scheduleWaveRadiusRefresh();
   };
 
   window.addEventListener("resize", handleViewportChange, { passive: true });
@@ -361,7 +366,14 @@ async function initEarthquakeMap() {
     minZoom: 4,
     maxZoom: 10,
     attributionControl: false,
+    dragRotate: false,
+    pitchWithRotate: false,
+    touchPitch: false,
   });
+
+  map.dragRotate.disable();
+  map.touchZoomRotate.disableRotation();
+  map.keyboard?.disableRotation?.();
 
   addZoomOnlyControl();
   addSourceInfoControl();
@@ -378,15 +390,6 @@ async function initEarthquakeMap() {
     syncInputs();
     updateEpicenter({ resolveLocation: true, enforceManagedArea: true });
   });
-
-  map.on("zoom", () => {
-    if (!state.simulationRunning) {
-      return;
-    }
-    scheduleWaveRadiusRefresh();
-  });
-  map.on("move", () => scheduleWaveRadiusRefresh());
-  map.on("resize", () => scheduleWaveRadiusRefresh());
 
   try {
     await onceMapLoaded();
@@ -458,8 +461,15 @@ function addSourceInfoControl() {
       ).join("");
 
       button.addEventListener("click", () => {
-        const expanded = panel.classList.toggle("hidden");
-        button.setAttribute("aria-expanded", String(!expanded));
+        const isHidden = panel.classList.toggle("hidden");
+        button.setAttribute("aria-expanded", String(!isHidden));
+      });
+
+      document.addEventListener("pointerdown", (event) => {
+        if (!container.contains(event.target)) {
+          panel.classList.add("hidden");
+          button.setAttribute("aria-expanded", "false");
+        }
       });
 
       container.append(button, panel);
@@ -676,37 +686,64 @@ function addMapLayers() {
   updateLayerVisibility("shindo-station-labels", state.showStationLayer);
 
   addLayerIfMissing({
-    id: "p-wave-circle",
-    type: "circle",
+    id: "p-wave-fill",
+    type: "fill",
     source: "p-wave",
     paint: {
-      "circle-color": "rgba(45, 212, 255, 0.08)",
-      "circle-opacity": 1,
-      "circle-radius": ["get", "radiusPx"],
-      "circle-stroke-color": "#7de7ff",
-      "circle-stroke-opacity": 0.9,
-      "circle-stroke-width": 2,
+      "fill-color": "rgba(45, 212, 255, 0.08)",
+      "fill-opacity": 1,
     },
   });
 
   addLayerIfMissing({
-    id: "s-wave-circle",
-    type: "circle",
-    source: "s-wave",
+    id: "p-wave-line",
+    type: "line",
+    source: "p-wave",
     paint: {
-      "circle-color": "rgba(255, 55, 95, 0.1)",
-      "circle-opacity": 1,
-      "circle-radius": ["get", "radiusPx"],
-      "circle-stroke-color": "#ff6b7f",
-      "circle-stroke-opacity": 0.95,
-      "circle-stroke-width": 3,
+      "line-color": "#7de7ff",
+      "line-opacity": 0.9,
+      "line-width": 2,
     },
   });
+
+  addLayerIfMissing({
+    id: "s-wave-fill",
+    type: "fill",
+    source: "s-wave",
+    paint: {
+      "fill-color": "rgba(255, 55, 95, 0.1)",
+      "fill-opacity": 1,
+    },
+  });
+
+  addLayerIfMissing({
+    id: "s-wave-line",
+    type: "line",
+    source: "s-wave",
+    paint: {
+      "line-color": "#ff6b7f",
+      "line-opacity": 0.95,
+      "line-width": 3,
+    },
+  });
+
+  moveLayerToTop("p-wave-fill");
+  moveLayerToTop("p-wave-line");
+  moveLayerToTop("s-wave-fill");
+  moveLayerToTop("s-wave-line");
+  moveLayerToTop("shindo-station-points");
+  moveLayerToTop("shindo-station-labels");
 }
 
 function addLayerIfMissing(layer) {
   if (!map.getLayer(layer.id)) {
     map.addLayer(layer);
+  }
+}
+
+function moveLayerToTop(layerId) {
+  if (map?.getLayer(layerId)) {
+    map.moveLayer(layerId);
   }
 }
 
@@ -853,7 +890,6 @@ function startSimulation() {
   simulationEpicenter = [state.longitude, state.latitude];
   state.maxIntensityHistory = [];
   simulationRenderBucket = -1;
-  waveRadiusRefreshFrame = null;
   state.simulationRunning = true;
   state.epicenterEditEnabled = false;
   els.epicenterEditToggle.checked = false;
@@ -863,7 +899,7 @@ function startSimulation() {
   updateDisplayMode();
   els.setupPanel.classList.add("hidden");
   els.simulationPanel.classList.remove("hidden");
-  setSheetState(els.simulationPanel, "collapsed");
+  setSheetState(els.simulationPanel, isCompactViewport() ? "collapsed" : "open");
   updateSimulationSummary();
   simulationStartedAt = performance.now();
   cancelAnimationFrame(simulationFrame);
@@ -873,10 +909,6 @@ function startSimulation() {
 function stopSimulation() {
   state.simulationRunning = false;
   cancelAnimationFrame(simulationFrame);
-  if (waveRadiusRefreshFrame !== null) {
-    cancelAnimationFrame(waveRadiusRefreshFrame);
-    waveRadiusRefreshFrame = null;
-  }
   simulationFrame = null;
   simulationStartedAt = null;
   simulationRenderBucket = -1;
@@ -885,7 +917,7 @@ function stopSimulation() {
   updateEpicenterEditMode();
   els.setupPanel.classList.remove("hidden");
   els.simulationPanel.classList.add("hidden");
-  setSheetState(els.setupPanel, "open");
+  setSheetState(els.setupPanel, isCompactViewport() ? "collapsed" : "open");
   setWaveRadiusData(0, 0);
   updateIntensityLayer();
   updateSimulationAvailability();
@@ -897,8 +929,10 @@ function tickSimulation(now) {
   }
 
   const elapsedSec = getSimulationElapsedSec(now);
-  const pRadiusKm = elapsedSec * EARTHQUAKE_MODEL.pWaveVelocityKmPerSec;
-  const sRadiusKm = elapsedSec * EARTHQUAKE_MODEL.sWaveVelocityKmPerSec;
+  const rawPRadiusKm = elapsedSec * EARTHQUAKE_MODEL.pWaveVelocityKmPerSec;
+  const rawSRadiusKm = elapsedSec * EARTHQUAKE_MODEL.sWaveVelocityKmPerSec;
+  const pRadiusKm = Math.max(rawPRadiusKm, rawSRadiusKm + 0.01);
+  const sRadiusKm = Math.min(rawSRadiusKm, pRadiusKm - 0.01);
   const currentBucket = toSimulationBucket(elapsedSec);
 
   setWaveRadiusData(pRadiusKm, sRadiusKm);
@@ -1017,30 +1051,15 @@ function setWaveRadiusData(pRadiusKm, sRadiusKm) {
   const sSource = map?.getSource("s-wave");
 
   if (pSource) {
-    pSource.setData(waveRadiusFeatureCollection(pRadiusKm));
+    pSource.setData(wavePolygonFeatureCollection(pRadiusKm));
   }
 
   if (sSource) {
-    sSource.setData(waveRadiusFeatureCollection(sRadiusKm));
+    sSource.setData(wavePolygonFeatureCollection(sRadiusKm));
   }
 }
 
-function scheduleWaveRadiusRefresh() {
-  if (!state.simulationRunning || waveRadiusRefreshFrame !== null) {
-    return;
-  }
-
-  waveRadiusRefreshFrame = requestAnimationFrame(() => {
-    waveRadiusRefreshFrame = null;
-    const elapsedSec = getSimulationElapsedSec();
-    setWaveRadiusData(
-      elapsedSec * EARTHQUAKE_MODEL.pWaveVelocityKmPerSec,
-      elapsedSec * EARTHQUAKE_MODEL.sWaveVelocityKmPerSec,
-    );
-  });
-}
-
-function waveRadiusFeatureCollection(radiusKm) {
+function wavePolygonFeatureCollection(radiusKm) {
   if (!Number.isFinite(radiusKm) || radiusKm <= 0) {
     return emptyFeatureCollection();
   }
@@ -1052,27 +1071,56 @@ function waveRadiusFeatureCollection(radiusKm) {
         type: "Feature",
         properties: {
           radiusKm: Number(radiusKm.toFixed(2)),
-          radiusPx: kilometersToScreenPixels(radiusKm),
         },
         geometry: {
-          type: "Point",
-          coordinates: simulationEpicenter,
+          type: "Polygon",
+          coordinates: [buildGeodesicCircle(simulationEpicenter, radiusKm)],
         },
       },
     ],
   };
 }
 
-function kilometersToScreenPixels(radiusKm) {
-  if (!map) {
-    return 0;
+function buildGeodesicCircle(center, radiusKm, steps = 72) {
+  const coordinates = [];
+
+  for (let index = 0; index <= steps; index += 1) {
+    const bearingDeg = (index / steps) * 360;
+    coordinates.push(destinationPoint(center, bearingDeg, radiusKm));
   }
 
-  const metersPerPixel =
-    (156543.03392 * Math.cos(toRadians(simulationEpicenter[1]))) / 2 ** map.getZoom();
-  const canvas = map.getCanvas();
-  const maxVisibleRadius = Math.hypot(canvas.clientWidth, canvas.clientHeight) * 1.2;
-  return Math.min(Math.max((radiusKm * 1000) / metersPerPixel, 0), maxVisibleRadius);
+  return coordinates;
+}
+
+function destinationPoint([longitude, latitude], bearingDeg, distanceKm) {
+  const angularDistance = distanceKm / EARTH_RADIUS_KM;
+  const bearing = toRadians(bearingDeg);
+  const lat1 = toRadians(latitude);
+  const lon1 = toRadians(longitude);
+  const sinLat1 = Math.sin(lat1);
+  const cosLat1 = Math.cos(lat1);
+  const sinAngularDistance = Math.sin(angularDistance);
+  const cosAngularDistance = Math.cos(angularDistance);
+
+  const lat2 = Math.asin(
+    sinLat1 * cosAngularDistance + cosLat1 * sinAngularDistance * Math.cos(bearing),
+  );
+  const lon2 =
+    lon1 +
+    Math.atan2(
+      Math.sin(bearing) * sinAngularDistance * cosLat1,
+      cosAngularDistance - sinLat1 * Math.sin(lat2),
+    );
+
+  return [normalizeLongitude(toDegrees(lon2)), toDegrees(lat2)];
+}
+
+function normalizeLongitude(longitude) {
+  if (!Number.isFinite(longitude)) {
+    return longitude;
+  }
+
+  return ((longitude + 540) % 360) - 180;
 }
 
 function emptyFeatureCollection() {
@@ -1222,9 +1270,11 @@ function updateStateFromInputs(options = {}) {
   if (state.simulationRunning) {
     updateSimulationSummary();
     const elapsedSec = getSimulationElapsedSec();
+    const rawPRadiusKm = elapsedSec * EARTHQUAKE_MODEL.pWaveVelocityKmPerSec;
+    const rawSRadiusKm = elapsedSec * EARTHQUAKE_MODEL.sWaveVelocityKmPerSec;
     setWaveRadiusData(
-      elapsedSec * EARTHQUAKE_MODEL.pWaveVelocityKmPerSec,
-      elapsedSec * EARTHQUAKE_MODEL.sWaveVelocityKmPerSec,
+      Math.max(rawPRadiusKm, rawSRadiusKm + 0.01),
+      Math.min(rawSRadiusKm, Math.max(rawPRadiusKm, rawSRadiusKm + 0.01) - 0.01),
     );
   }
 
@@ -1270,6 +1320,10 @@ function invalidateIntensityEstimateCache() {
 }
 
 function syncInputs() {
+  if (els.magnitude && els.magnitude.options.length === 0) {
+    renderMagnitudeOptions();
+  }
+
   els.latitude.value = state.latitude.toFixed(3);
   els.longitude.value = state.longitude.toFixed(3);
   els.depth.value = String(state.depthKm);

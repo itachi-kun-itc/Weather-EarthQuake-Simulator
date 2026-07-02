@@ -162,20 +162,20 @@ h1 {
 }
 
 .source-info-control {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .source-info-button {
   display: grid;
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 6px;
+  border-radius: 10px;
   background: rgba(82, 87, 92, 0.92);
   color: #ffffff;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-style: italic;
   font-weight: 700;
 }
@@ -183,7 +183,7 @@ h1 {
 .source-info-panel {
   display: grid;
   gap: 6px;
-  min-width: 124px;
+  min-width: 156px;
   margin-top: 8px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 6px;
@@ -225,22 +225,34 @@ h1 {
 
 .sheet-handle {
   position: absolute;
-  top: -25px;
+  top: -28px;
   left: 50%;
   display: block;
-  width: 76px;
-  height: 36px;
+  width: 92px;
+  height: 40px;
   border: 1px solid var(--line);
   border-bottom: 0;
-  border-radius: 76px 76px 0 0;
+  border-radius: 92px 92px 0 0;
   background: rgba(2, 4, 5, 0.9);
   color: #d8e5eb;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 900;
-  line-height: 36px;
+  line-height: 48px;
   text-align: center;
   touch-action: none;
+  transform: translateX(-50%);
+}
+
+.sheet-handle::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  width: 24px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(216, 229, 235, 0.28);
   transform: translateX(-50%);
 }
 
@@ -771,20 +783,20 @@ h1 {
 
   .sheet-handle {
     position: absolute;
-    top: -25px;
+    top: -28px;
     left: 50%;
     display: block;
-    width: 76px;
-    height: 36px;
+    width: 92px;
+    height: 40px;
     border: 1px solid var(--line);
     border-bottom: 0;
-    border-radius: 76px 76px 0 0;
+    border-radius: 92px 92px 0 0;
     background: rgba(2, 4, 5, 0.9);
     color: #d8e5eb;
     cursor: grab;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 900;
-    line-height: 36px;
+    line-height: 48px;
     text-align: center;
     touch-action: none;
     transform: translateX(-50%);
