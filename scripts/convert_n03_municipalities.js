@@ -85,23 +85,35 @@ fs.writeFileSync(
 );
 
 fs.mkdirSync(path.dirname(namesOutputPath), { recursive: true });
-fs.writeFileSync(
-  namesOutputPath,
-  JSON.stringify(
-    {
-      source: sourceName,
-      schema,
-      count: municipalityNames.length,
-      municipalities: municipalityNames,
-    },
-    null,
-    2,
-  ),
-);
+let wroteMunicipalityNames = true;
+try {
+  fs.writeFileSync(
+    namesOutputPath,
+    JSON.stringify(
+      {
+        source: sourceName,
+        schema,
+        count: municipalityNames.length,
+        municipalities: municipalityNames,
+      },
+      null,
+      2,
+    ),
+  );
+} catch (error) {
+  if (error.code !== "EPERM") {
+    throw error;
+  }
+
+  wroteMunicipalityNames = false;
+  console.warn(`Skipped locked municipality names file: ${path.relative(root, namesOutputPath)}`);
+}
 
 console.log(`Input schema: ${schema}`);
 console.log(`Wrote ${features.length} municipalities to ${path.relative(root, outputPath)}`);
-console.log(`Wrote ${municipalityNames.length} municipality names to ${path.relative(root, namesOutputPath)}`);
+if (wroteMunicipalityNames) {
+  console.log(`Wrote ${municipalityNames.length} municipality names to ${path.relative(root, namesOutputPath)}`);
+}
 
 function firstExistingDirectory(directories) {
   const directory = directories.find((candidate) => fs.existsSync(candidate));
@@ -124,6 +136,7 @@ function findFile(extension) {
 function normalizeMunicipalityRecord(record, schema) {
   if (schema === "jma_weather_city") {
     const code = record.regioncode;
+    const name = cleanWeatherCityName(record.regionname, record.name);
 
     return {
       code,
@@ -131,8 +144,8 @@ function normalizeMunicipalityRecord(record, schema) {
       prefecture: record.regionname.match(/^(東京都|北海道|(?:京都|大阪)府|.{2,3}県)/u)?.[0] ?? "",
       subprefecture: "",
       county: "",
-      municipality: record.name,
-      name: record.regionname,
+      municipality: name,
+      name,
       nameKana: record.namekana,
     };
   }
@@ -167,6 +180,15 @@ function municipalityName(municipality) {
   }
 
   return [municipality.prefecture, area, name].filter(Boolean).join("");
+}
+
+function cleanWeatherCityName(regionName, fallbackName) {
+  return (
+    String(regionName ?? "").match(/^気象庁予報警報規程別表第四の二に示す「(.+)」の区域$/)?.[1] ??
+    fallbackName ??
+    regionName ??
+    ""
+  );
 }
 
 function readDbf(filePath) {

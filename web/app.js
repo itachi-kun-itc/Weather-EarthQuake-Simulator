@@ -194,13 +194,8 @@ function renderMagnitudeOptions() {
 
 function bindSimulationControls() {
   [els.latitude, els.longitude].forEach((input) => {
-    input.addEventListener("beforeinput", (event) => {
-      if (event.data && !/^[0-9.]+$/.test(event.data)) {
-        event.preventDefault();
-      }
-    });
     input.addEventListener("input", () => {
-      input.value = sanitizeDecimalInput(input.value);
+      validateCoordinateInput(input, { report: true });
     });
     input.addEventListener("blur", () => {
       updateStateFromInputs();
@@ -250,25 +245,55 @@ function setupMobileSheets() {
   document.querySelectorAll(".sim-panel").forEach((panel) => {
     setSheetState(panel, isCompactViewport() ? "collapsed" : "open");
     const handle = panel.querySelector(".sheet-handle");
-    if (!handle) {
-      return;
-    }
 
     let startY = 0;
-
-    handle.addEventListener("click", () => {
+    const toggleSheet = () => {
       const current = panel.dataset.sheetState ?? "open";
       setSheetState(panel, current === "collapsed" ? "open" : "collapsed");
+    };
+
+    if (handle) {
+      handle.addEventListener("click", toggleSheet);
+
+      handle.addEventListener("pointerdown", (event) => {
+        startY = event.clientY;
+        handle.setPointerCapture(event.pointerId);
+      });
+
+      handle.addEventListener("pointerup", (event) => {
+        const deltaY = event.clientY - startY;
+        if (Math.abs(deltaY) < 10) {
+          return;
+        }
+
+        setSheetState(panel, deltaY > 0 ? "collapsed" : "open");
+      });
+    }
+
+    panel.addEventListener("click", (event) => {
+      if (!isCompactViewport() || panel.dataset.sheetState !== "collapsed") {
+        return;
+      }
+
+      event.preventDefault();
+      toggleSheet();
     });
 
-    handle.addEventListener("pointerdown", (event) => {
+    panel.addEventListener("pointerdown", (event) => {
+      if (!isCompactViewport()) {
+        return;
+      }
+
       startY = event.clientY;
-      handle.setPointerCapture(event.pointerId);
     });
 
-    handle.addEventListener("pointerup", (event) => {
+    panel.addEventListener("pointerup", (event) => {
+      if (!isCompactViewport()) {
+        return;
+      }
+
       const deltaY = event.clientY - startY;
-      if (Math.abs(deltaY) < 10) {
+      if (Math.abs(deltaY) < 28) {
         return;
       }
 
@@ -681,11 +706,11 @@ function addMapLayers() {
     source: "shindo-stations",
     paint: {
       "circle-color": ["case", ["==", ["get", "waveState"], "p"], "#7de7ff", ["get", "intensityColor"]],
-      "circle-opacity": ["case", ["==", ["get", "waveState"], "p"], 0.56, 0.94],
-      "circle-radius": 8,
+      "circle-opacity": ["case", ["==", ["get", "waveState"], "p"], 0.68, 0.98],
+      "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 7.5, 7, 9, 10, 10.5],
       "circle-stroke-color": ["case", ["==", ["get", "waveState"], "p"], "#e9fbff", "#ffffff"],
-      "circle-stroke-opacity": 0.9,
-      "circle-stroke-width": ["case", ["==", ["get", "waveState"], "p"], 0.8, 1.1],
+      "circle-stroke-opacity": 1,
+      "circle-stroke-width": ["case", ["==", ["get", "waveState"], "p"], 1.1, 1.4],
     },
   });
   updateLayerVisibility("shindo-station-points", state.showStationLayer);
@@ -930,15 +955,9 @@ function startSimulation() {
   updateIntensityLayer();
   updateSimulationSummary(0);
   els.simulationStart.textContent = "シミュレーション中止";
-  if (usesSeparateSimulationPanel()) {
-    els.setupPanel.classList.add("hidden");
-    els.simulationPanel.classList.remove("hidden");
-    setSheetState(els.simulationPanel, "collapsed");
-  } else {
-    els.setupPanel.classList.remove("hidden");
-    els.simulationPanel.classList.add("hidden");
-    setSheetState(els.setupPanel, "open");
-  }
+  els.setupPanel.classList.add("hidden");
+  els.simulationPanel.classList.remove("hidden");
+  setSheetState(els.simulationPanel, isCompactViewport() ? "collapsed" : "open");
   cancelAnimationFrame(simulationFrame);
   tickSimulation(simulationStartedAt);
 }
@@ -997,6 +1016,8 @@ function tickSimulation(now) {
     state.epicenterEditEnabled = simulationPreviousEpicenterEditEnabled;
     els.epicenterEditToggle.checked = state.epicenterEditEnabled;
     updateEpicenterEditMode();
+    els.simulationStart.textContent = "シミュレーション開始";
+    updateSimulationAvailability();
     return;
   }
 
@@ -1023,7 +1044,7 @@ function updateSimulationSummary(elapsedSec = getSimulationStationElapsedSec()) 
   );
   const observedStations = stationFeatures
     .sort((a, b) => b.properties.currentIntensityValue - a.properties.currentIntensityValue)
-    .slice(0, 24);
+    .slice(0, 100);
   const maxClass = INTENSITY_CLASSES.find((item) => item.rank === maxRank) ?? INTENSITY_CLASSES[0];
   const maxValue = observedStations[0]?.properties.currentIntensityValue ?? 0;
 
@@ -1032,6 +1053,7 @@ function updateSimulationSummary(elapsedSec = getSimulationStationElapsedSec()) 
   els.simulationEpicenter.textContent = `${state.latitude.toFixed(3)}, ${state.longitude.toFixed(3)}`;
   els.simulationRegionName.textContent = state.epicenterName;
   els.simulationDepth.textContent = formatDepth(state.depthKm);
+  els.maxIntensityOutput.textContent = state.maxIntensityLabel;
   els.maxStationList.replaceChildren(
     ...(observedStations.length > 0
       ? observedStations.map((feature) => {
@@ -1298,6 +1320,14 @@ function withoutInteriorRings(geojson) {
 }
 
 function updateStateFromInputs(options = {}) {
+  if (!validateCoordinateInput(els.latitude, { report: true }) || !validateCoordinateInput(els.longitude, { report: true })) {
+    return;
+  }
+
+  if (isPendingDecimalInput(els.latitude.value) || isPendingDecimalInput(els.longitude.value)) {
+    return;
+  }
+
   state.latitude = parseClampedInput(els.latitude.value, state.latitude, 20, 47);
   state.longitude = parseClampedInput(els.longitude.value, state.longitude, 117, 154);
   state.depthKm = clamp(Number(els.depth.value), 0, 500);
@@ -1338,6 +1368,23 @@ function sanitizeDecimalInput(value) {
       return true;
     })
     .join("");
+}
+
+function validateCoordinateInput(input, options = {}) {
+  const value = input.value.trim();
+  const valid = value === "" || value === "." || /^\d+(\.\d*)?$/.test(value);
+  input.setCustomValidity(valid ? "" : "数字と小数点だけで入力してください");
+
+  if (!valid && options.report) {
+    input.reportValidity();
+  }
+
+  return valid;
+}
+
+function isPendingDecimalInput(value) {
+  const trimmed = value.trim();
+  return trimmed === "" || trimmed === ".";
 }
 
 function parseClampedInput(value, fallback, min, max) {
@@ -1486,7 +1533,8 @@ async function updateLocationNames() {
       : null;
     const seaArea = municipality
       ? null
-      : findFeatureAtPoint(seaAreas, state.longitude, state.latitude);
+      : findFeatureAtPoint(seaAreas, state.longitude, state.latitude) ??
+        findNearestSeaArea(seaAreas, state.longitude, state.latitude);
     inManagedArea = Boolean(municipality || seaArea);
     if (
       isExcludedTerritoryName(municipality?.properties?.name) ||
@@ -1496,12 +1544,12 @@ async function updateLocationNames() {
       inManagedArea = false;
     }
 
-    state.municipalityName = municipality ? municipality.properties.name : "該当なし";
+    state.municipalityName = municipality ? cleanDisplayAreaName(municipality.properties.name) : "該当なし";
     state.epicenterName = localArea
-      ? localArea.properties.name
+      ? cleanDisplayAreaName(localArea.properties.name)
       : seaArea
-        ? seaArea.properties.name
-        : "管轄外";
+        ? cleanDisplayAreaName(seaArea.properties.name)
+        : "最寄り海域なし";
 
   } catch (error) {
     state.municipalityName = "判定できません";
@@ -1515,7 +1563,13 @@ async function updateLocationNames() {
 }
 
 function isExcludedTerritoryName(name) {
-  return Boolean(name && /北方領土|樺太|サハリン|竹島|択捉|国後|色丹|歯舞/.test(name));
+  return Boolean(name && /北方領土|樺太|サハリン|竹島|択捉|択捉島|国後|国後島|色丹|色丹島|歯舞|歯舞群島/.test(name));
+}
+
+function cleanDisplayAreaName(name) {
+  return String(name ?? "")
+    .replace(/^気象庁予報警報規程別表第四の二に示す「(.+)」の区域$/, "$1")
+    .trim();
 }
 
 function updateIntensityLayer() {
