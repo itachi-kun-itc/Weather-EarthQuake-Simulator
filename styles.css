@@ -40,7 +40,7 @@ select {
 }
 
 .app-shell {
-  height: 100vh;
+  height: var(--app-height, 100vh);
   min-height: 520px;
   background:
     radial-gradient(circle at 24% 18%, rgba(38, 217, 255, 0.08), transparent 28%),
@@ -161,6 +161,50 @@ h1 {
   border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.source-info-control {
+  margin-top: 8px;
+}
+
+.source-info-button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  background: rgba(82, 87, 92, 0.92);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.source-info-panel {
+  display: grid;
+  gap: 6px;
+  min-width: 124px;
+  margin-top: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 6px;
+  padding: 9px 10px;
+  background: rgba(82, 87, 92, 0.96);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+.source-info-panel a {
+  color: #ffffff;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.source-info-panel a:hover,
+.source-info-panel a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
 .maplibregl-canvas.epicenter-edit-enabled {
   cursor: crosshair;
 }
@@ -176,10 +220,36 @@ h1 {
   padding: 14px;
   background: rgba(2, 4, 5, 0.84);
   backdrop-filter: blur(10px);
+  transition: transform 180ms ease;
 }
 
 .sheet-handle {
-  display: none;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  display: block;
+  width: 76px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 76px 76px 0 0;
+  background: rgba(2, 4, 5, 0.9);
+  color: #d8e5eb;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 36px;
+  text-align: center;
+  touch-action: none;
+  transform: translateX(-50%);
+}
+
+.sim-panel[data-sheet-state="collapsed"] {
+  transform: translateY(calc(-100% + 46px));
+}
+
+.sim-panel[data-sheet-state="open"] {
+  transform: translateY(0);
 }
 
 .sim-panel-head {
@@ -323,9 +393,16 @@ h1 {
   padding: 11px 12px;
   background: #e11d48;
   color: #ffffff;
-  cursor: default;
+  cursor: pointer;
   font-size: 0.96rem;
   font-weight: 800;
+}
+
+.simulation-start:disabled {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.55);
+  cursor: not-allowed;
 }
 
 .simulation-stop {
@@ -415,6 +492,10 @@ h1 {
 
 .simulation-layer-toggles .toggle-row {
   margin: 0;
+}
+
+.simulation-layer-toggles .toggle-row:has(#simulation-eew-warning-toggle) {
+  grid-column: 1 / -1;
 }
 
 .max-stations-block {
@@ -632,12 +713,17 @@ h1 {
 
 @media (max-width: 720px) {
   body {
-    overflow: auto;
+    overflow: hidden;
   }
 
   .app-shell {
-    height: calc(100svh - 70px);
+    height: calc(var(--app-height, 100svh) - 70px);
     min-height: 540px;
+  }
+
+  .field input,
+  .field select {
+    font-size: 16px;
   }
 
   .panel {
@@ -664,7 +750,7 @@ h1 {
     top: auto;
     bottom: 0;
     width: 100%;
-    max-height: min(72svh, 560px);
+    max-height: min(calc(var(--app-height, 100svh) * 0.72), 560px);
     border-right: 0;
     border-bottom: 0;
     border-left: 0;

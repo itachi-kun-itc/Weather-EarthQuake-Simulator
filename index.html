@@ -2,7 +2,10 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
     <title>Weather EarthQuake Simulator</title>
     <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" />
     <link rel="stylesheet" href="./styles.css?v=0.1.0" />
@@ -50,7 +53,7 @@
               </label>
               <label class="toggle-row">
                 <input id="eew-warning-toggle" type="checkbox" />
-                <span>緊急地震速報を表示</span>
+                <span>緊急地震速報（警報）</span>
               </label>
             </div>
 
@@ -84,7 +87,7 @@
               </label>
               <label class="field">
                 <span>マグニチュード</span>
-                <input id="magnitude-input" type="text" inputmode="decimal" autocomplete="off" pattern="[0-9.]*" />
+                <select id="magnitude-input"></select>
               </label>
             </div>
 
@@ -145,6 +148,10 @@
                 <input id="simulation-station-layer-toggle" type="checkbox" />
                 <span>観測点</span>
               </label>
+              <label class="toggle-row">
+                <input id="simulation-eew-warning-toggle" type="checkbox" />
+                <span>緊急地震速報（警報）</span>
+              </label>
             </div>
 
             <section class="max-stations-block">
@@ -171,8 +178,8 @@
             </div>
           </section>
 
-          <section class="eew-forecast-panel hidden" id="eew-forecast-panel" aria-label="緊急地震速報（警報）地域">
-            <h2>緊急地震速報（警報）地域</h2>
+          <section class="eew-forecast-panel hidden" id="eew-forecast-panel" aria-label="緊急地震速報（警報）">
+            <h2>緊急地震速報（警報）</h2>
             <ul id="eew-forecast-list"></ul>
           </section>
         </div>
